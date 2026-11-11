@@ -10,7 +10,7 @@ title: 桥牌叫牌学习大纲
 
 <div class="course-grid">
 
-  <a href="./chapters/01-normal-opening" class="course-card">
+  <a href="./01-normal-opening" class="course-card">
     <div class="card-icon">♠️</div>
     <div class="card-content">
       <h2>第一章：正常开叫与阻击开叫</h2>
@@ -18,7 +18,7 @@ title: 桥牌叫牌学习大纲
     </div>
   </a>
 
-  <a href="./chapters/02-first-response" class="course-card">
+  <a href="./02-first-response" class="course-card">
     <div class="card-icon">♥️</div>
     <div class="card-content">
       <h2>第二章：一阶花色应叫</h2>
@@ -26,7 +26,7 @@ title: 桥牌叫牌学习大纲
     </div>
   </a>
 
-  <a href="./chapters/03-nt-response" class="course-card">
+  <a href="./03-nt-response" class="course-card">
     <div class="card-icon">♦️</div>
     <div class="card-content">
       <h2>第三章：无将应叫</h2>
@@ -34,7 +34,7 @@ title: 桥牌叫牌学习大纲
     </div>
   </a>
 
-  <a href="./chapters/04-strong-response" class="course-card">
+  <a href="./04-strong-response" class="course-card">
     <div class="card-icon">♣️</div>
     <div class="card-content">
       <h2>第四章：2♣ 强牌应叫</h2>
@@ -42,7 +42,7 @@ title: 桥牌叫牌学习大纲
     </div>
   </a>
 
-  <a href="./chapters/05-preemptive-opening" class="course-card">
+  <a href="./05-preemptive-opening" class="course-card">
     <div class="card-icon">🚧</div>
     <div class="card-content">
       <h2>第五章：阻击叫应叫</h2>
@@ -50,7 +50,7 @@ title: 桥牌叫牌学习大纲
     </div>
   </a>
 
-  <a href="./chapters/06-competitive-bidding" class="course-card">
+  <a href="./06-competitive-bidding" class="course-card">
     <div class="card-icon">⚔️</div>
     <div class="card-content">
       <h2>第六章：竞争叫</h2>
