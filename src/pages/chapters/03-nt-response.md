@@ -331,8 +331,8 @@ title: 第三章：无将开叫后的应叫
 
 ---
 <div class="chapter-nav">
-  <a href="./02-first-response" class="nav-btn prev">← 上一章：一阶花色应叫</a>
-  <a href="./04-strong-response" class="nav-btn next">下一章：2♣ 强牌应叫 →</a>
+  <a href="/chapters/02-first-response" class="nav-btn prev">← 上一章：一阶花色应叫</a>
+  <a href="/chapters/04-strong-response" class="nav-btn next">下一章：2♣ 强牌应叫 →</a>
 </div>
 
 <style>

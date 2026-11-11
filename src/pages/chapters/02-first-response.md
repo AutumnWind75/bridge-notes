@@ -479,8 +479,8 @@ title: 第二章：一阶花色应叫
 
 ---
 <div class="chapter-nav">
-  <a href="./01-normal-opening" class="nav-btn prev">← 上一章：正常开叫</a>
-  <a href="./03-nt-response" class="nav-btn next">下一章：无将应叫 →</a>
+  <a href="/chapters/01-normal-opening" class="nav-btn prev">← 上一章：正常开叫</a>
+  <a href="/chapters/03-nt-response" class="nav-btn next">下一章：无将应叫 →</a>
 </div>
 
 <style>

@@ -221,7 +221,7 @@ title: 第一章：正常开叫
 ---
 <div class="chapter-nav">
   <a href="/chapters" class="nav-btn prev">← 返回目录</a>
-  <a href="./02-first-response" class="nav-btn next">下一章：第一口应叫 →</a>
+  <a href="/chapters/02-first-response" class="nav-btn next">下一章：第一口应叫 →</a>
 </div>
 
 <style>
