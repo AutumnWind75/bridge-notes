@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="我的桥牌叫牌学习网站">
+	<main>
+		<h1>欢迎来到我的桥牌叫牌学习网站</h1>
+		<p>这里记录了从零开始的桥牌叫牌体系。</p>
+		
+		<!-- 这是一个指向 /chapters 的链接 -->
+		<a href="/chapters" class="start-btn">开始学习叫牌 →</a>
+	</main>
+</Layout>
+
+<style>
+	main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+		font-family: sans-serif;
+	}
+	.start-btn {
+		margin-top: 20px;
+		padding: 12px 24px;
+		background-color: #8b5cf6; /* Astro 风格的主色调 */
+		color: white;
+		text-decoration: none;
+		border-radius: 8px;
+		font-size: 1.2rem;
+		font-weight: bold;
+		transition: background-color 0.3s;
+	}
+	.start-btn:hover {
+		background-color: #7c3aed;
+	}
+</style>
