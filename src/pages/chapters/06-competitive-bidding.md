@@ -8,7 +8,7 @@ title: 第六章：竞争叫
 ## 敌方开叫 1Y 后的应叫策略
 
 <div class="quote-box">
-  <p>为了便于描述，我们设定：敌方开叫了 <strong>1Y</strong>。<strong>Z</strong> 代表比 Y 级别更高的未叫花色，<strong>X</strong> 代表比 Y 级别更低的未叫花色。</p>
+  <p>为了便于描述，我们设定：敌方开叫了 <strong>1Y</strong>。<strong>Z</strong> 代表比 Y 级别更高的未叫花色，<strong>L</strong> 代表比 Y 级别更低的未叫花色。</p>
 </div>
 
 <div class="j2nt-table-wrapper">
@@ -19,23 +19,23 @@ title: 第六章：竞争叫
 <th>NT</th>
 <th>Z（较高级未叫套）</th>
 <th style="color: #e11d48;">Y（敌方开叫）</th>
-<th>X（较低级未叫套）</th>
+<th>L（较低级未叫套）</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="call-col"><strong>1 阶</strong></td>
 <td>第 2 家：15-18 点，均型<br>第 4 家：12-15 点，均型<br>后续应叫同开1NT</td>
-<td>5+ 套，8-16 点</td>
+<td>5 张以上套，8-16 点</td>
 <td style="color: #94a3b8;">——</td>
 <td style="color: #94a3b8;">——</td>
 </tr>
 <tr>
 <td class="call-col"><strong>2 阶</strong></td>
-<td>第 2 家：<strong>最低级别的 2 个未叫套</strong><br>第 4 家：19-20 点，后 <strong>3♣ Stayman</strong></td>
+<td>第 2 家：<span class="term" title="必须是未叫花色的 5-5 套、8-16 点的牌，更强的牌应该加倍。"><strong>最低级别的 2 个未叫套</strong></span><br>第 4 家：19-20 点，后 <strong>3♣ Stayman</strong></td>
 <td>阻击叫</td>
-<td><strong>迈克尔斯扣叫: </strong><br>若Y为低花则至少5-5高花，8+点，点集中在长套上<br>若Y为高花则5-5另一高花和任一低花，10+点，点集中在长套上</td>
-<td>5+ 套，11-16 点</td>
+<td><strong>迈克尔斯扣叫: </strong><br>若Y为低花则至少5-5高花，8点以上，点集中在长套上<br>若Y为高花则5-5另一高花和任一低花，10点以上，点集中在长套上</td>
+<td>5 张以上套，11-16 点</td>
 </tr>
 <tr>
 <td class="call-col"><strong>3+ 阶</strong></td>
@@ -47,6 +47,14 @@ title: 第六章：竞争叫
 </tbody>
 </table>
 </div>
+
+## 加倍（Double / X）
+
+敌方开叫 **1Y** 后，**Double（X）** 表示：
+
+- 12+ 点，其他花色都有 3 张以上支持；
+- <span class="term" title="出套的意思就是 5 张套，在同伴逼叫后自己可以再把这套叫出来表示自己有这套。">17+ 点加倍出套</span>；
+- 19+ 点任意牌型。
 
 ---
 <div class="chapter-nav">
@@ -104,6 +112,12 @@ title: 第六章：竞争叫
   .j2nt-table tr:last-child td { border-bottom: none; }
   .j2nt-table tr:hover td { background: #f8fafc; }
   .call-col { width: 15%; white-space: nowrap; }
+  .term {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 3px;
+    cursor: help;
+  }
 
   /* 底部导航按钮 */
   .chapter-nav {

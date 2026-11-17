@@ -61,8 +61,8 @@ import { questions } from '../data/questions.js';
           <div class="pad-row action-row">
             <button class="pad-btn alert-btn">Alert</button>
             <button class="pad-btn pass-btn" id="btn-pass">Pass</button>
-            <button class="pad-btn double-btn" id="btn-double" style="display: none;">X</button>
-            <button class="pad-btn redouble-btn" id="btn-redouble" style="display: none;">XX</button>
+            <button class="pad-btn double-btn" id="btn-double">X</button>
+            <button class="pad-btn redouble-btn" id="btn-redouble">XX</button>
           </div>
         </div>
 
@@ -127,6 +127,7 @@ import { questions } from '../data/questions.js';
     
     .pad-btn { background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1.5rem; font-weight: bold; font-family: sans-serif; padding: 8px 0; cursor: pointer; flex: 1; box-shadow: 0 2px 0 #cbd5e1; transition: 0.1s; display: flex; align-items: center; justify-content: center; color: #1e293b; }
     .pad-btn:active { transform: translateY(2px); box-shadow: none; }
+    .pad-btn:disabled { opacity: 0.45; cursor: not-allowed; box-shadow: none; }
     .pad-btn.red { color: #dc2626; }
     .pad-btn.selected { background: #fef08a; border-color: #eab308; box-shadow: 0 2px 0 #eab308; }
 
@@ -260,104 +261,124 @@ import { questions } from '../data/questions.js';
 
     // 检查是否允许加倍
     function checkDoubleOptions() {
-      dom.btnDouble.style.display = 'none';
-      dom.btnRedouble.style.display = 'none';
-      if (historyBids.length === 0) return;
+      dom.btnDouble.style.display = 'block';
+      dom.btnRedouble.style.display = 'block';
+    }
 
-      let lastBid = null;
-      for (let i = historyBids.length - 1; i >= 0; i--) {
-        if (historyBids[i].bid !== 'Pass') {
-          lastBid = historyBids[i];
-          break;
-        }
-      }
+    function updateBidAvailability() {
+      const levelsMap = { C: 1, D: 2, H: 3, S: 4, NT: 5 };
+      const lastContract = [...historyBids].reverse().find(item => !['Pass', 'X', 'XX'].includes(item.bid));
+      const lastContractLevel = lastContract ? Number(lastContract.bid[0]) : 0;
+      const lastContractSuit = lastContract ? lastContract.bid.substring(1) : null;
+      const lastBid = [...historyBids].reverse().find(item => item.bid !== 'Pass');
+      const opponentSeats = ['W', 'E'];
 
-      function getExplanationAuction() {
-        const auction = historyBids.map(item => item.bid);
-        let stateKey = 'start';
+      document.querySelectorAll('.level-btn').forEach(button => {
+        const level = Number(button.dataset.val);
+        const hasLegalSuit = ['C', 'D', 'H', 'S', 'NT'].some(suit => (
+          level > lastContractLevel
+          || (level === lastContractLevel && levelsMap[suit] > levelsMap[lastContractSuit])
+        ));
+        button.disabled = !hasLegalSuit;
+      });
 
-        while (stateKey) {
-          const state = currentScenario.script[stateKey];
-          if (!state || state.turn === 'player') {
-            if (stateKey !== 'start') break;
-
-            const nextBids = Object.keys(state.next);
-            const preferredBid = nextBids.find(bid => {
-              const nextState = currentScenario.script[state.next[bid]];
-              return nextState && nextState.turn !== 'end';
-            }) || nextBids[0];
-            if (!preferredBid) break;
-            auction.push(preferredBid);
-            stateKey = state.next[preferredBid];
-            continue;
-          }
-
-          if (state.turn === 'end') break;
-          Object.values(state.bids || {}).forEach(bid => auction.push(bid));
-          stateKey = state.next;
-        }
-
-        return auction;
-      }
-
-      async function prefetchBidMeanings() {
-        const cachedMeanings = explanationCache.get(currentScenario.id);
-        if (cachedMeanings) {
-          bidMeanings = cachedMeanings;
+      document.querySelectorAll('.suit-btn').forEach(button => {
+        if (!selectedLevel) {
+          button.disabled = false;
           return;
         }
+        const level = Number(selectedLevel);
+        const suit = button.dataset.val;
+        button.disabled = level < lastContractLevel
+          || (level === lastContractLevel && levelsMap[suit] <= levelsMap[lastContractSuit]);
+      });
 
-        bidMeanings = new Map();
-        try {
-          const response = await fetch(explanationApiUrl, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              dealer: currentScenario.dealer,
-              vulnerability: currentScenario.vul === '双无' ? 'none' : currentScenario.vul,
-              auction: getExplanationAuction(),
-              seat: 'S'
-            })
-          });
+      dom.btnDouble.disabled = !lastBid
+        || lastBid.bid === 'X'
+        || lastBid.bid === 'XX'
+        || !opponentSeats.includes(lastBid.seat);
+      dom.btnRedouble.disabled = !lastBid
+        || lastBid.bid !== 'X'
+        || !opponentSeats.includes(lastBid.seat);
+    }
 
-          if (!response.ok) {
-            throw new Error(`叫牌解释接口返回 ${response.status}`);
-          }
+    function getExplanationAuction() {
+      const auction = historyBids.map(item => item.bid);
+      let stateKey = 'start';
 
-          const result = await response.json();
-          const bids = Array.isArray(result) ? result : result.bids;
-          if (!Array.isArray(bids)) {
-            throw new Error('叫牌解释接口返回格式无效');
-          }
+      while (stateKey) {
+        const state = currentScenario.script[stateKey];
+        if (!state || state.turn === 'player') {
+          if (stateKey !== 'start') break;
 
-          bids.forEach(item => {
-            if (item && typeof item.bid === 'string' && typeof item.meaning === 'string') {
-              bidMeanings.set(item.bid, item.meaning);
-            }
-          });
-          explanationCache.set(currentScenario.id, bidMeanings);
-        } catch (error) {
-          console.error('无法预加载叫牌解释：', error);
-          throw error;
+          const nextBids = Object.keys(state.next);
+          const preferredBid = nextBids.find(bid => {
+            const nextState = currentScenario.script[state.next[bid]];
+            return nextState && nextState.turn !== 'end';
+          }) || nextBids[0];
+          if (!preferredBid) break;
+          auction.push(preferredBid);
+          stateKey = state.next[preferredBid];
+          continue;
         }
+
+        if (state.turn === 'end') break;
+        Object.values(state.bids || {}).forEach(bid => auction.push(bid));
+        stateKey = state.next;
       }
 
-      async function getBidMeaning(bid) {
-        try {
-          await explanationRequest;
-        } catch {
-          return '暂时无法获取该叫品的解释。';
+      return auction;
+    }
+
+    async function prefetchBidMeanings() {
+      const cachedMeanings = explanationCache.get(currentScenario.id);
+      if (cachedMeanings) {
+        bidMeanings = cachedMeanings;
+        return;
+      }
+
+      bidMeanings = new Map();
+      try {
+        const response = await fetch(explanationApiUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            dealer: currentScenario.dealer,
+            vulnerability: currentScenario.vul === '双无' ? 'none' : currentScenario.vul,
+            auction: getExplanationAuction(),
+            seat: 'S'
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error(`叫牌解释接口返回 ${response.status}`);
         }
-        return bidMeanings.get(bid) || '一般不会这样叫。';
-      }
-      if (!lastBid) return;
 
-      const opponentSeats = ['W', 'E'];
-      if (lastBid.bid === 'X') {
-        if (opponentSeats.includes(lastBid.seat)) dom.btnRedouble.style.display = 'block';
-      } else if (lastBid.bid !== 'XX') {
-        if (opponentSeats.includes(lastBid.seat)) dom.btnDouble.style.display = 'block';
+        const result = await response.json();
+        const bids = Array.isArray(result) ? result : result.bids;
+        if (!Array.isArray(bids)) {
+          throw new Error('叫牌解释接口返回格式无效');
+        }
+
+        bids.forEach(item => {
+          if (item && typeof item.bid === 'string' && typeof item.meaning === 'string') {
+            bidMeanings.set(item.bid, item.meaning);
+          }
+        });
+        explanationCache.set(currentScenario.id, bidMeanings);
+      } catch (error) {
+        console.error('无法预加载叫牌解释：', error);
+        throw error;
       }
+    }
+
+    async function getBidMeaning(bid) {
+      try {
+        await explanationRequest;
+      } catch {
+        return '暂时无法获取该叫品的解释。';
+      }
+      return bidMeanings.get(bid) || '一般不会这样叫。';
     }
 
     // ==========================================
@@ -458,6 +479,7 @@ import { questions } from '../data/questions.js';
         
         if (selectedLevel) document.querySelector(`.level-btn[data-val="${selectedLevel}"]`).classList.add('selected');
         if (selectedSuit) document.querySelector(`.suit-btn[data-val="${selectedSuit}"]`).classList.add('selected');
+        updateBidAvailability();
       }
     }
 
@@ -516,6 +538,7 @@ import { questions } from '../data/questions.js';
         document.querySelectorAll('.level-btn').forEach(b => b.classList.remove('selected'));
         btn.classList.add('selected');
         selectedLevel = btn.dataset.val;
+        updateBidAvailability();
         if (selectedSuit) handlePadSubmit();
       };
     });

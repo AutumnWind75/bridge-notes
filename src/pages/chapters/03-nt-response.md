@@ -21,7 +21,7 @@ title: 第三章：无将开叫后的应叫
     <h3>2♣ 斯台曼（Stayman）</h3>
   </div>
   <div class="response-body">
-    <p><strong>目的：</strong> 寻找 4-4 高花配合。应叫人通常有 8+ 点，且至少有一门 4 张高花。</p>
+    <p><strong>目的：</strong> 寻找 4-4 高花配合。应叫人通常有 8 点以上，且至少有一门 4 张高花。</p>
     <div class="j2nt-table-wrapper">
 <table class="j2nt-table">
 <thead>
@@ -144,7 +144,7 @@ title: 第三章：无将开叫后的应叫
     <h3>3♥ / 3♠（低花 5-4，逼局）</h3>
   </div>
   <div class="response-body">
-    <p><strong>条件：</strong> 双低花至少 5-4，逼局实力（通常 10+ 点）。</p>
+    <p><strong>条件：</strong> 双低花至少 5-4，逼局实力（通常 10 点以上）。</p>
     <div class="j2nt-table-wrapper">
 <table class="j2nt-table">
 <thead>

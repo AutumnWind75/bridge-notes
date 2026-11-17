@@ -1,0 +1,356 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="叫牌含义查询">
+  <main class="lookup-container">
+    <div class="header-actions">
+      <h1>🔎 叫牌含义查询</h1>
+      <a href="/" class="back-link">返回首页</a>
+    </div>
+
+    <div class="game-board">
+      <div class="record-container">
+        <div class="settings">
+          <label>
+            发牌人
+            <select id="dealer">
+              <option value="N">北 (N)</option>
+              <option value="E">东 (E)</option>
+              <option value="S">南 (S)</option>
+              <option value="W">西 (W)</option>
+            </select>
+          </label>
+          <label>
+            局况
+            <select id="vulnerability">
+              <option value="none">双无</option>
+              <option value="NS">南北有局</option>
+              <option value="EW">东西有局</option>
+              <option value="both">双方有局</option>
+            </select>
+          </label>
+        </div>
+        <div class="bidding-record" id="bidding-record">
+          <div class="empty-record">请选择叫品...</div>
+        </div>
+      </div>
+
+      <div class="action-area">
+        <div id="prompt-text" class="prompt-text">请选择第一口叫品</div>
+        <div class="bidding-pad">
+          <div class="pad-row">
+            <button class="pad-btn level-btn" data-val="1">1</button>
+            <button class="pad-btn level-btn" data-val="2">2</button>
+            <button class="pad-btn level-btn" data-val="3">3</button>
+            <button class="pad-btn level-btn" data-val="4">4</button>
+            <button class="pad-btn level-btn" data-val="5">5</button>
+            <button class="pad-btn level-btn" data-val="6">6</button>
+            <button class="pad-btn level-btn" data-val="7">7</button>
+          </div>
+          <div class="pad-row">
+            <button class="pad-btn suit-btn" data-val="C">♣</button>
+            <button class="pad-btn suit-btn red" data-val="D">♦</button>
+            <button class="pad-btn suit-btn red" data-val="H">♥</button>
+            <button class="pad-btn suit-btn" data-val="S">♠</button>
+            <button class="pad-btn suit-btn" data-val="NT">NT</button>
+          </div>
+          <div class="pad-row">
+            <button class="pad-btn pass-btn" id="btn-pass">Pass</button>
+            <button class="pad-btn double-btn" id="btn-double">X</button>
+            <button class="pad-btn redouble-btn" id="btn-redouble">XX</button>
+          </div>
+        </div>
+        <div class="button-row">
+          <button id="btn-undo" class="secondary-btn">撤销上次叫牌</button>
+          <button id="btn-clear" class="secondary-btn">清空叫牌</button>
+        </div>
+        <div id="meaning" class="meaning" aria-live="polite"></div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .lookup-container { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; font-family: sans-serif; }
+  .header-actions { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+  .back-link { color: #2563eb; font-weight: bold; text-decoration: none; }
+  .game-board { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); overflow: hidden; }
+  .record-container { background: #d1d5db; padding: 1rem; display: flex; flex-direction: column; align-items: center; border-bottom: 1px solid #9ca3af; }
+  .settings { display: flex; gap: 1rem; margin-bottom: 1rem; }
+  .settings label { color: #475569; font-size: 0.9rem; font-weight: bold; }
+  .settings select { margin-left: 0.35rem; padding: 0.35rem; border: 1px solid #94a3b8; border-radius: 5px; background: #fff; }
+  .bidding-record { width: 100%; max-width: 450px; display: flex; justify-content: center; }
+  .empty-record { color: #4b5563; font-style: italic; font-weight: bold; margin-top: 1rem; }
+  .bidding-table { border-collapse: collapse; width: 100%; background: #d1d5db; text-align: center; font-family: ui-monospace, monospace; font-size: 1.4rem; border: 1px solid #9ca3af; }
+  .bidding-table th { background: #ffffff; padding: 0.6rem; font-size: 1.2rem; color: #000; border-right: 1px solid #d1d5db; }
+  .bidding-table td { padding: 0.5rem; border-right: 1px solid #d1d5db; border-top: 1px solid #d1d5db; color: #1e293b; height: 40px; }
+  .bid-pass { color: #000; font-weight: 900; font-size: 1.6rem; }
+  .bid-x { color: #000; font-weight: bold; }
+  .bid-suit-red { color: #dc2626; }
+  .bid-suit-black { color: #000; }
+  .action-area { padding: 1.5rem; text-align: center; }
+  .prompt-text { font-weight: bold; margin-bottom: 1rem; color: #334155; }
+  .bidding-pad { background: #e2e8f0; padding: 10px; border-radius: 8px; display: inline-flex; flex-direction: column; gap: 8px; width: 100%; max-width: 450px; }
+  .pad-row { display: flex; gap: 8px; justify-content: center; }
+  .pad-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1.5rem; font-weight: bold; padding: 8px 0; cursor: pointer; flex: 1; box-shadow: 0 2px 0 #cbd5e1; color: #1e293b; }
+  .pad-btn:active { transform: translateY(2px); box-shadow: none; }
+  .pad-btn:disabled { opacity: 0.45; cursor: not-allowed; box-shadow: none; }
+  .pad-btn.red { color: #dc2626; }
+  .pad-btn.selected { background: #fef08a; border-color: #eab308; }
+  .pass-btn { background: #15803d; color: white; border-color: #166534; }
+  .double-btn { background: #ef4444; color: white; border-color: #b91c1c; }
+  .redouble-btn { background: #3b82f6; color: white; border-color: #1d4ed8; }
+  .secondary-btn { margin-top: 1rem; padding: 0.8rem 2rem; background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; }
+  .button-row { display: flex; justify-content: center; gap: 0.75rem; }
+  .meaning { min-height: 2rem; margin-top: 1rem; color: #334155; line-height: 1.6; }
+  @media (max-width: 600px) {
+    .settings { flex-direction: column; gap: 0.5rem; }
+    .pad-btn { font-size: 1.2rem; padding: 6px 0; }
+    .bidding-table { font-size: 1.1rem; }
+  }
+</style>
+
+<script>
+  const apiUrl = import.meta.env.PUBLIC_BIDDING_API_URL || 'http://localhost:8000/explain-bids';
+  const historyBids = [];
+  let selectedLevel = null;
+  let selectedSuit = null;
+  let pendingBid = null;
+  let pendingReady = false;
+  let pendingMeaning = '';
+
+  const dom = {
+    dealer: document.getElementById('dealer'),
+    vulnerability: document.getElementById('vulnerability'),
+    record: document.getElementById('bidding-record'),
+    prompt: document.getElementById('prompt-text'),
+    meaning: document.getElementById('meaning'),
+    undo: document.getElementById('btn-undo'),
+    clear: document.getElementById('btn-clear'),
+  };
+
+  function formatBid(bid) {
+    if (bid === 'Pass' || bid === 'P') return '<span class="bid-pass">—</span>';
+    if (bid === 'X' || bid === 'XX') return `<span class="bid-x">${bid}</span>`;
+    const level = bid[0];
+    const suit = bid.substring(1);
+    const suitHtml = {
+      C: '<span class="bid-suit-black">♣</span>',
+      D: '<span class="bid-suit-red">♦</span>',
+      H: '<span class="bid-suit-red">♥</span>',
+      S: '<span class="bid-suit-black">♠</span>',
+      NT: 'NT',
+    }[suit];
+    return `${level}${suitHtml}`;
+  }
+
+  function renderRecord() {
+    if (historyBids.length === 0) {
+      dom.record.innerHTML = '<div class="empty-record">请选择叫品...</div>';
+      return;
+    }
+
+    const seats = ['W', 'N', 'E', 'S'];
+    const startSeatIndex = seats.indexOf(dom.dealer.value);
+    let html = '<table class="bidding-table"><thead><tr><th>W</th><th>N</th><th>E</th><th>S</th></tr></thead><tbody>';
+    let row = '';
+    let seatIndex = startSeatIndex;
+
+    for (let index = 0; index < startSeatIndex; index++) row += '<td></td>';
+    historyBids.forEach(item => {
+      row += `<td>${formatBid(item.bid)}</td>`;
+      seatIndex++;
+      if (seatIndex === 4) {
+        html += `<tr>${row}</tr>`;
+        row = '';
+        seatIndex = 0;
+      }
+    });
+    if (row) {
+      while (seatIndex < 4) {
+        row += '<td></td>';
+        seatIndex++;
+      }
+      html += `<tr>${row}</tr>`;
+    }
+    dom.record.innerHTML = `${html}</tbody></table>`;
+  }
+
+  function getCurrentSeat() {
+    const seats = ['W', 'N', 'E', 'S'];
+    const dealerIndex = seats.indexOf(dom.dealer.value);
+    return seats[(dealerIndex + historyBids.length) % seats.length];
+  }
+
+  function sameSide(firstSeat, secondSeat) {
+    return ['N', 'S'].includes(firstSeat) === ['N', 'S'].includes(secondSeat);
+  }
+
+  function updateBidAvailability() {
+    const levelsMap = { C: 1, D: 2, H: 3, S: 4, NT: 5 };
+    const lastContract = [...historyBids].reverse().find(item => !['Pass', 'X', 'XX'].includes(item.bid));
+    const lastContractLevel = lastContract ? Number(lastContract.bid[0]) : 0;
+    const lastContractSuit = lastContract ? lastContract.bid.substring(1) : null;
+    const currentSeat = getCurrentSeat();
+    const lastBid = [...historyBids].reverse().find(item => item.bid !== 'Pass');
+    const trailingPasses = historyBids.reduce((count, item) => item.bid === 'Pass' ? count + 1 : 0, 0);
+    const auctionEnded = trailingPasses >= (lastContract ? 3 : 4);
+    const canDouble = lastContract
+      && lastBid?.bid === lastContract.bid
+      && !sameSide(lastContract.seat, currentSeat);
+    const canRedouble = lastBid?.bid === 'X'
+      && lastBid.seat
+      && !sameSide(lastBid.seat, currentSeat);
+
+    document.querySelectorAll('.level-btn').forEach(button => {
+      const level = Number(button.dataset.val);
+      const hasLegalSuit = ['C', 'D', 'H', 'S', 'NT'].some(suit => (
+        level > lastContractLevel
+        || (level === lastContractLevel && levelsMap[suit] > levelsMap[lastContractSuit])
+      ));
+      button.disabled = auctionEnded || !hasLegalSuit;
+    });
+
+    document.querySelectorAll('.suit-btn').forEach(button => {
+      if (!selectedLevel) {
+        button.disabled = auctionEnded;
+        return;
+      }
+      const level = Number(selectedLevel);
+      const suit = button.dataset.val;
+      button.disabled = auctionEnded
+        || level < lastContractLevel
+        || (level === lastContractLevel && levelsMap[suit] <= levelsMap[lastContractSuit]);
+    });
+    document.getElementById('btn-double').disabled = auctionEnded || !canDouble;
+    document.getElementById('btn-redouble').disabled = auctionEnded || !canRedouble;
+    document.getElementById('btn-pass').disabled = auctionEnded;
+  }
+
+  function resetPending() {
+    pendingBid = null;
+    pendingReady = false;
+    pendingMeaning = '';
+    selectedLevel = null;
+    selectedSuit = null;
+    document.querySelectorAll('.pad-btn').forEach(button => button.classList.remove('selected'));
+    updateBidAvailability();
+  }
+
+  function commitPendingBid() {
+    if (!pendingBid || !pendingReady) return;
+    const bid = pendingBid;
+    const meaning = pendingMeaning;
+    historyBids.push({ bid, seat: getCurrentSeat() });
+    resetPending();
+    renderRecord();
+    dom.meaning.textContent = meaning;
+    const lastContract = [...historyBids].reverse().find(item => !['Pass', 'X', 'XX'].includes(item.bid));
+    const trailingPasses = historyBids.reduce((count, item) => item.bid === 'Pass' ? count + 1 : 0, 0);
+    if (trailingPasses >= (lastContract ? 3 : 4)) {
+      dom.prompt.textContent = lastContract
+        ? '叫牌结束：定约后连续三次 Pass。'
+        : 'All Pass：开局连续四次 Pass。';
+    } else {
+      dom.prompt.textContent = `已固定 ${bid}，请选择下一口叫品。`;
+    }
+    updateBidAvailability();
+  }
+
+  async function selectBid(bid) {
+    if (pendingBid === bid && pendingReady) {
+      commitPendingBid();
+      return;
+    }
+
+    pendingBid = bid;
+    pendingReady = false;
+    dom.meaning.textContent = '正在查询该叫品及后续叫品含义...';
+    try {
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          dealer: dom.dealer.value,
+          vulnerability: dom.vulnerability.value,
+          auction: historyBids.map(item => item.bid),
+          candidate_bid: bid,
+          seat: 'S',
+        }),
+      });
+      if (!response.ok) throw new Error(`接口返回 ${response.status}`);
+      const result = await response.json();
+      if (pendingBid !== bid) return;
+      if (result.valid === false) {
+        pendingBid = null;
+        dom.meaning.textContent = result.error || '该叫品无效。';
+        return;
+      }
+      const explanations = Array.isArray(result) ? result : result.bids;
+      const explanation = Array.isArray(explanations)
+        ? explanations.find(item => item.bid === bid)
+        : null;
+      pendingMeaning = explanation?.meaning || '一般不会这样叫。';
+      pendingReady = true;
+      dom.meaning.textContent = `${pendingMeaning}（再次点击确认这一口叫品）`;
+      dom.prompt.textContent = `已查询 ${bid}，再次点击后固定这一口。`;
+    } catch (error) {
+      console.error('无法查询叫牌含义：', error);
+      dom.meaning.textContent = '暂时无法获取叫牌含义，请确认 Python 接口已启动。';
+      pendingBid = null;
+    }
+  }
+
+  function submitContract() {
+    if (!selectedLevel || !selectedSuit) return;
+    const bid = `${selectedLevel}${selectedSuit}`;
+    selectBid(bid);
+  }
+
+  document.querySelectorAll('.level-btn').forEach(button => {
+    button.onclick = () => {
+      document.querySelectorAll('.level-btn').forEach(item => item.classList.remove('selected'));
+      button.classList.add('selected');
+      selectedLevel = button.dataset.val;
+      updateBidAvailability();
+    };
+  });
+  document.querySelectorAll('.suit-btn').forEach(button => {
+    button.onclick = () => {
+      if (!selectedLevel) {
+        dom.prompt.textContent = '请先选择阶数 (1-7)！';
+        return;
+      }
+      document.querySelectorAll('.suit-btn').forEach(item => item.classList.remove('selected'));
+      button.classList.add('selected');
+      selectedSuit = button.dataset.val;
+      submitContract();
+    };
+  });
+  document.getElementById('btn-pass').onclick = () => selectBid('Pass');
+  document.getElementById('btn-double').onclick = () => selectBid('X');
+  document.getElementById('btn-redouble').onclick = () => selectBid('XX');
+  dom.undo.onclick = () => {
+    if (pendingBid) {
+      resetPending();
+      dom.meaning.textContent = '';
+      dom.prompt.textContent = '已取消待确认的叫品。';
+      return;
+    }
+    if (historyBids.length === 0) return;
+    historyBids.pop();
+    dom.meaning.textContent = '';
+    dom.prompt.textContent = '已撤销上次叫牌。';
+    renderRecord();
+    updateBidAvailability();
+  };
+  dom.clear.onclick = () => {
+    historyBids.length = 0;
+    resetPending();
+    dom.prompt.textContent = '请选择第一口叫品';
+    dom.meaning.textContent = '';
+    renderRecord();
+  };
+  updateBidAvailability();
+</script>

@@ -6,7 +6,7 @@ title: 第五章：应叫阻击叫
 # 第五章：应叫阻击叫
 
 <div class="quote-box">
-  <p><strong>弱二开叫描述：</strong> 第 1/2/3 家为弱阻击，<strong>6-10 点，6+ 张套</strong>（套越长，点力可酌情降低）；第 4 家为 <strong>9-12 点，6+ 张好套</strong>。</p>
+  <p><strong>弱二开叫描述：</strong> 第 1/2/3 家为弱阻击，<strong>6-10 点，6 张以上套</strong>（套越长，点力可酌情降低）；第 4 家为 <strong>9-12 点，6 张以上好套</strong>。</p>
 </div>
 
 ## 5.1 第一应叫（同伴开叫 2<span class="suit red">♦</span>/2<span class="suit red">♥</span>/2<span class="suit black">♠</span> 后）
@@ -36,7 +36,7 @@ title: 第五章：应叫阻击叫
 </tr>
 <tr>
 <td class="call-col"><strong>跳叫三阶新高花</strong></td>
-<td>如 2<span class="suit red">♥</span> - 3<span class="suit black">♠</span>。表示 6+ 张好套，对开叫高花不支持，<strong>邀请实力</strong>。</td>
+<td>如 2<span class="suit red">♥</span> - 3<span class="suit black">♠</span>。表示 6 张以上好套，对开叫高花不支持，<strong>邀请实力</strong>。</td>
 </tr>
 <tr>
 <td class="call-col"><strong>3NT / 4<span class="suit red">♥</span> / 4<span class="suit black">♠</span></strong></td>

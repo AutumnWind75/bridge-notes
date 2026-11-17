@@ -6,7 +6,7 @@ title: 第四章：2♣ 强牌应叫
 # 第四章：2♣ 强牌应叫
 
 <div class="quote-box">
-  <p><strong>2♣ 开叫描述：</strong> 强开叫。均型牌 22+ 点；3 个以上防守速胜墩；高花单套 9 赢墩以上（大牌点 18+ 点）；低花单套 10 赢墩以上；55+ 以上双套（大牌点 20+ 点）。</p>
+  <p><strong>2♣ 开叫描述：</strong> 强开叫。22 点以上任意牌型。</p>
 </div>
 
 ## 4.1 第一应叫（2♣ - ?）
@@ -28,15 +28,15 @@ title: 第四章：2♣ 强牌应叫
 <tbody>
 <tr>
 <td class="call-col"><strong>2♦</strong></td>
-<td>通常为 <strong>7 点以下的弱牌</strong>；或者是不适合其他示强应叫的 8+ 点牌。这是最常用的等待叫（示弱）。</td>
+<td>通常为 <strong>7 点以下的弱牌</strong>；或者是不适合其他示强应叫的 8 点以上牌。这是最常用的等待叫（示弱）。</td>
 </tr>
 <tr>
 <td class="call-col"><strong>2NT</strong></td>
-<td><strong>8+ 点</strong>，均型或半均型，可以有 5 张低花套，属于积极应叫。</td>
+<td><strong>8 点以上</strong>，均型或半均型，可以有 5 张低花套，属于积极应叫。</td>
 </tr>
 <tr>
 <td class="call-col"><strong>2<span class="suit red">♥</span> / 2<span class="suit black">♠</span> / 3<span class="suit black">♣</span> / 3<span class="suit red">♦</span></strong></td>
-<td>实套。要求 8-9 点；5 张套需带两大牌，或 6+ 张以上；若达 10+ 点则不作严格要求。</td>
+<td>实套。要求 8-9 点；5 张套需带两大牌，或 6 张以上；若达 10 点以上则不作严格要求。</td>
 </tr>
 </tbody>
 </table>
@@ -72,7 +72,7 @@ title: 第四章：2♣ 强牌应叫
 </tr>
 <tr>
 <td class="call-col"><strong>3<span class="suit red">♥</span> / 3<span class="suit black">♠</span></strong></td>
-<td>表示有 4 张高花，且 5+ 张 <span class="suit red">♦</span> 套。22+ 点逼局，通常为 6-4 套或非均型 5-4 套。</td>
+<td>表示有 4 张高花，且 5 张以上 <span class="suit red">♦</span> 套。22 点以上逼局，通常为 6-4 套或非均型 5-4 套。</td>
 </tr>
 </tbody>
 </table>
@@ -111,7 +111,7 @@ title: 第四章：2♣ 强牌应叫
 </tr>
 <tr>
 <td class="call-col"><strong>4<span class="suit black">♣</span></strong></td>
-<td>6+ 张 <span class="suit black">♣</span> 好套，确定将牌。</td>
+<td>6 张以上 <span class="suit black">♣</span> 好套，确定将牌。</td>
 </tr>
 </tbody>
 </table>

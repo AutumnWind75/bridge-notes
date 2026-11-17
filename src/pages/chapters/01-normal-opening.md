@@ -7,7 +7,7 @@ title: 第一章：正常开叫
 
 <div class="intro-card">
   <p>在桥牌中，第一个开口叫牌的人称为<strong>发牌人（Dealer）</strong>。如果你拿到了牌，且前面的人都没有叫牌（Pass），就轮到你<strong>开叫</strong>了。</p>
-  <p>开叫的首要任务，是向搭档传递两个核心信息：<strong>大牌点（HCP）</strong>与<strong>牌型分布</strong>。</p>
+  <p>开叫的首要任务，是向搭档传递两个核心信息：<strong>大牌点（HCP，以下简称“点”）</strong>与<strong>牌型分布</strong>。</p>
   <p class="note">💡 本章我们将学习最基础的<strong>正常开叫</strong>，并在最后介绍用来干扰对手的<strong>阻击性开叫</strong>。</p>
 </div>
 
@@ -60,7 +60,7 @@ title: 第一章：正常开叫
         <tr>
           <th>开叫</th>
           <th>最少张数</th>
-          <th>大牌点</th>
+          <th>点</th>
           <th>描述与条件</th>
           <th>否定性加倍</th>
         </tr>
@@ -108,7 +108,7 @@ title: 第一章：正常开叫
           </td>
           <td>0</td>
           <td>—</td>
-          <td>22 点以上均型，或 18+ 且 9 赢墩以上强牌。</td>
+          <td>22 点以上任意牌型。</td>
           <td>—</td>
         </tr>
         <tr>
@@ -158,7 +158,7 @@ title: 第一章：正常开叫
 
 <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
   <div class="tip-card">
-    <h3>💪 大牌点集中在长套中</h3>
+    <h3>💪 点集中在长套中</h3>
     <p>A、K、Q 等大牌应在将牌花色里，才能在实战中兑现为赢墩。如果大牌散落在旁门，阻击效率会极低。</p>
   </div>
   <div class="tip-card">
@@ -180,7 +180,7 @@ title: 第一章：正常开叫
         <tr>
           <th>叫品</th>
           <th>张数要求</th>
-          <th>大牌点</th>
+          <th>点</th>
           <th>描述与条件</th>
         </tr>
       </thead>
@@ -193,13 +193,13 @@ title: 第一章：正常开叫
         </tr>
         <tr>
           <td class="call"><strong>3<span class="suit black">♣</span> / 3<span class="suit red">♦</span> / 3<span class="suit red">♥</span> / 3<span class="suit black">♠</span></strong></td>
-          <td>6+ 张<br>（通常 7 张）</td>
+          <td>6 张以上<br>（通常 7 张）</td>
           <td><span class="hcp">弱牌</span></td>
-          <td><strong>无局</strong>时 6 张不错的套可叫；<strong>有局</strong>时必须保证 7+ 好套。</td>
+          <td><strong>无局</strong>时 6 张不错的套可叫；<strong>有局</strong>时必须保证 7 张以上好套。</td>
         </tr>
         <tr>
           <td class="call"><strong>4<span class="suit black">♣</span> / 4<span class="suit red">♦</span></strong></td>
-          <td>7+ 张</td>
+          <td>7 张以上</td>
           <td><span class="hcp">弱牌</span></td>
           <td>高阶阻击。严格遵循“23 原则”估算赢墩。</td>
         </tr>
