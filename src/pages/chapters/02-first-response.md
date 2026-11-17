@@ -176,7 +176,7 @@ title: 第二章：一阶花色应叫
 <div class="response-section highlight-section">
   <div class="response-header">
     <span class="badge purple">进阶</span>
-    <h3>Splinter 叫牌法 <span class="marker fg">FG</span></h3>
+    <h3>Splinter 叫 <span class="marker fg">FG</span></h3>
   </div>
   <div class="response-body">
     <p><strong>条件：</strong> 11 点以上，4 张以上将牌支持，所叫花色单缺，且无 4 张高花。</p>

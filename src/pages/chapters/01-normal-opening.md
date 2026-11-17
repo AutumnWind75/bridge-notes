@@ -15,39 +15,18 @@ title: 第一章：正常开叫
 
 拿到一手牌，不要立刻去查表，请按以下顺序在大脑中过一遍：
 
-<div class="decision-tree">
-  <div class="step">
-    <div class="step-num">1</div>
-    <div class="step-content">
-      <div class="step-title">看是否满足 2<span class="suit black">♣</span> 强开叫</div>
-      <p>如果满足，优先叫 2<span class="suit black">♣</span>（这表示你极强，通常不关心普通定约，直奔满贯）。</p>
-    </div>
+<div class="response-section highlight-section">
+  <div class="response-header">
+    <span class="badge purple">总结</span>
+    <h3>第一口开叫</h3>
   </div>
-
-  <div class="step">
-    <div class="step-num">2</div>
-    <div class="step-content">
-      <div class="step-title">看是否为均型牌</div>
-      <p>如果是均型牌，先看能不能叫无将：<br>
-      15-17 点叫 <strong>1NT</strong>；20-21 点叫 <strong>2NT</strong>。</p>
-    </div>
-  </div>
-
-  <div class="step">
-    <div class="step-num">3</div>
-    <div class="step-content">
-      <div class="step-title">看是否能做 1 阶花色开叫</div>
-      <p>如果不是均型，或点力不满足无将，看是否有：<br>
-      5 张高花，或者 3 张低花（12-21 点）。</p>
-    </div>
-  </div>
-
-  <div class="step">
-    <div class="step-num">4</div>
-    <div class="step-content">
-      <div class="step-title">都不满足</div>
-      <p>如果点力不足 12 点，正常情况应安静地 Pass。但如果有一门 6 张以上的畸形长套，即使点力很弱，也可以直接高阶叫出以干扰对手，这属于<a href="#preemptive" class="inline-link">本章末尾的“阻击性开叫”</a>。</p>
-    </div>
+  <div class="response-body">
+    <ol class="compact-list">
+      <li>先检查是否满足 2<span class="suit black">♣</span> 强开叫；若满足，优先叫 2<span class="suit black">♣</span>。</li>
+      <li>均型牌看无将范围：15-17 点叫 <strong>1NT</strong>，20-21 点叫 <strong>2NT</strong>。</li>
+      <li>非均型且有 12-21 点时，优先开叫 5 张高花；没有 5 张高花时，按规则开叫 <strong>1<span class="suit black">♣</span></strong> 或 <strong>1<span class="suit red">♦</span></strong>。</li>
+      <li>都不满足时通常 Pass；若有 6 张以上的畸形长套，也可以考虑<a href="#preemptive" class="inline-link">阻击性开叫</a>。</li>
+    </ol>
   </div>
 </div>
 
@@ -106,8 +85,8 @@ title: 第一章：正常开叫
             <strong>2<span class="suit black">♣</span></strong> 
             <span class="badge">强牌</span>
           </td>
-          <td>0</td>
           <td>—</td>
+          <td><span class="hcp">22+</span></td>
           <td>22 点以上任意牌型。</td>
           <td>—</td>
         </tr>
@@ -244,66 +223,62 @@ title: 第一章：正常开叫
     border-radius: 6px;
   }
 
-  /* 决策树样式 */
-  .decision-tree {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin: 2rem 0;
-    position: relative;
+  .response-section {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
   }
-  .decision-tree::before {
-    content: '';
-    position: absolute;
-    left: 20px;
-    top: 10px;
-    bottom: 10px;
-    width: 2px;
-    background-color: #e2e8f0;
-    z-index: 0;
+  .response-section.highlight-section {
+    border-color: #fcd34d;
   }
-  .step {
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-    z-index: 1;
-    background: transparent;
-  }
-  .step-num {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #8b5cf6;
-    color: white;
-    font-weight: bold;
+  .response-header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-right: 1.5rem;
-    box-shadow: 0 0 0 4px #ffffff;
-    font-size: 1.1rem;
-  }
-  .step-content {
-    background: #ffffff;
     padding: 1rem 1.5rem;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-    flex-grow: 1;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
   }
-  .step-title {
-    display: block;
-    font-size: 1.05rem;
-    color: #0f172a;
-    margin-bottom: 0.4rem;
-    font-weight: bold;
+  .highlight-section .response-header {
+    background: #fffbeb;
+    border-bottom-color: #fcd34d;
   }
-  .step-content p {
+  .response-header h3 {
     margin: 0;
+    font-size: 1.1rem;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    padding: 0 6px;
+    border-radius: 12px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-right: 0.8rem;
+    flex-shrink: 0;
+  }
+  .badge.purple { background-color: #8b5cf6; }
+  .response-body {
+    padding: 1rem 1.25rem;
     color: #475569;
-    font-size: 0.95rem;
     line-height: 1.6;
+  }
+  .response-body p { margin: 0 0 0.75rem; }
+  .response-body p:last-child { margin-bottom: 0; }
+  .compact-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    line-height: 1.8;
   }
   
   /* 行内超链接 */
@@ -392,7 +367,7 @@ title: 第一章：正常开叫
     color: #64748b;
     font-size: 0.9em;
   }
-  .badge {
+  .modern-table .badge {
     display: inline-block;
     background-color: #f59e0b;
     color: white;
