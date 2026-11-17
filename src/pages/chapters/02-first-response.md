@@ -32,6 +32,7 @@ title: 第二章：一阶花色应叫
 
 <div class="quote-box">
   <p>低花开叫通常只保证 3 张。因为你不知道搭档到底是 3 张还是 5 张，所以应叫的核心思路是：<strong>“优先寻找高花配合”</strong>或<strong>“寻找无将定约”</strong>，暂时不急于加叫低花。</p>
+  <p>以下应叫均适用于<strong>没有敌方插叫</strong>的情况：叫牌序列为若干个 Pass 后，搭档开叫 1♣ 或 1♦，上家 Pass，再轮到你应叫。</p>
 </div>
 
 <div class="response-section">
@@ -84,11 +85,7 @@ title: 第二章：一阶花色应叫
     <h3>低花简单加叫（低花反加叫） <span class="marker f1">F1</span></h3>
   </div>
   <div class="response-body">
-    <p><strong>条件：</strong></p>
-    <ul class="compact-list">
-      <li><strong>1♣ - 2♣：</strong> 11+ 点，5+ 张支持；<strong>或</strong> 13+ 点，4+ 张支持。</li>
-      <li><strong>1♦ - 2♦：</strong> 11+ 点，5+ 张支持（由于同伴开叫 1♦，4 张支持不足以反加叫）。</li>
-    </ul>
+    <p><strong>条件：</strong> 11 点以上，5+ 张支持，逼叫一轮。</p>
     <p><strong>逻辑：</strong> 在传统自然叫牌法中，加叫低花原本表示弱牌。现代体系将其改为<strong>强牌逼叫</strong>（即“低花反加叫”），旨在区分强弱。它告诉搭档：“我们至少有 11 点，别轻易 Pass。”</p>
   </div>
 </div>
@@ -126,7 +123,7 @@ title: 第二章：一阶花色应叫
     <p><strong>条件：</strong> 5+ 张将牌支持。</p>
     <ul class="compact-list">
       <li><strong>1♣ - 3♣：</strong> 5-7 点，5+ 张支持，阻击叫。</li>
-      <li><strong>1♦ - 3♦：</strong> 7- 点（通常 5-7 点），5+ 张支持，阻击叫。</li>
+      <li><strong>1♦ - 3♦：</strong> 5-7 点，5+ 张支持，阻击叫。</li>
     </ul>
     <p><strong>逻辑：</strong> 这是纯粹的干扰性加叫。由于跳过了 2 阶，既占据了对手寻找高花配合的空间，又因为点力极低，不会给同伴传递错误的进局期望。</p>
   </div>
@@ -187,7 +184,7 @@ title: 第二章：一阶花色应叫
       <br>• 搭档开叫 1♣ 时：双跳叫 <strong>3♦</strong>、<strong>3♥</strong> 或 <strong>3♠</strong>。
       <br>• 搭档开叫 1♦ 时：双跳叫 <strong>3♥</strong> 或 <strong>3♠</strong>。
     </p>
-    <p><strong>逻辑：</strong> 这是一个非常强大的满贯试探约定叫。当你对搭档的低花有极好的支持（5张以上），且牌型极度畸形（在所叫花色上有单张或缺门）时，通过双跳叫来告诉搭档：“我有进局实力，强力支持你的低花，且这门花色我是单缺！” 搭档如果在你的单缺花色上没有浪费大牌点，就能轻松判断满贯。</p>
+    <p><strong>逻辑：</strong> 这是一个非常强大的满贯试探约定叫。当你对搭档的低花有极好的支持（4张以上），且牌型极度畸形（在所叫花色上有单张或缺门）时，通过双跳叫来告诉搭档：“我有进局实力，强力支持你的低花，且这门花色我是单缺！” 搭档如果在你的单缺花色上没有浪费大牌点，就能轻松判断满贯。</p>
   
 
 <div class="splinter-example">

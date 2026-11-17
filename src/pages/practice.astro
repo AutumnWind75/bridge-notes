@@ -1,0 +1,547 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { questions } from '../data/questions.js';
+---
+
+<Layout title="叫牌实战练习">
+  <main class="practice-container">
+    <div class="header-actions">
+      <h1>🎯 叫牌实战演练</h1>
+      <div class="mode-selector">
+        <button id="btn-prev-q" class="nav-q">⬅ 上一题</button>
+        <span id="q-index" style="font-weight:bold; color:#64748b; margin: 0 1rem;">第 1 题</span>
+        <button id="btn-next-q" class="nav-q">下一题 ➡</button>
+      </div>
+    </div>
+
+    <!-- 游戏主面板 -->
+    <div class="game-board">
+      
+      <!-- 顶部：局况与叫牌表 -->
+      <div class="record-container">
+        <div class="vul-info" id="vul-info">局况：双无</div>
+        <div class="bidding-record" id="bidding-record">
+          <div class="empty-record">等待叫牌...</div>
+        </div>
+      </div>
+
+      <!-- 牌桌区域 -->
+      <div class="table-area">
+        <div class="seat-marker north">北 (N)</div>
+        <div class="seat-marker west">西 (W)</div>
+        <div class="seat-marker east">东 (E)</div>
+        <div class="my-hand bottom">
+          <span class="player-name" id="hand-title">南 (你)</span>
+          <div class="cards-container" id="my-cards"></div>
+        </div>
+      </div>
+
+      <!-- 底部：操作区域 -->
+      <div class="action-area">
+        <div id="prompt-text" style="font-weight: bold; margin-bottom: 1rem; color: #334155;">准备开始...</div>
+        
+        <!-- 叫牌面板 -->
+        <div class="bidding-pad" id="bidding-pad" style="display: none;">
+          <div class="pad-row" id="levels-row">
+            <button class="pad-btn level-btn" data-val="1">1</button>
+            <button class="pad-btn level-btn" data-val="2">2</button>
+            <button class="pad-btn level-btn" data-val="3">3</button>
+            <button class="pad-btn level-btn" data-val="4">4</button>
+            <button class="pad-btn level-btn" data-val="5">5</button>
+            <button class="pad-btn level-btn" data-val="6">6</button>
+            <button class="pad-btn level-btn" data-val="7">7</button>
+          </div>
+          <div class="pad-row" id="suits-row">
+            <button class="pad-btn suit-btn" data-val="C">♣</button>
+            <button class="pad-btn suit-btn red" data-val="D">♦</button>
+            <button class="pad-btn suit-btn red" data-val="H">♥</button>
+            <button class="pad-btn suit-btn" data-val="S">♠</button>
+            <button class="pad-btn suit-btn" data-val="NT" style="font-size: 1.2rem; font-weight: 900;">NT</button>
+          </div>
+          <div class="pad-row action-row">
+            <button class="pad-btn alert-btn">Alert</button>
+            <button class="pad-btn pass-btn" id="btn-pass">Pass</button>
+            <button class="pad-btn double-btn" id="btn-double" style="display: none;">X</button>
+            <button class="pad-btn redouble-btn" id="btn-redouble" style="display: none;">XX</button>
+          </div>
+        </div>
+
+        <button id="btn-restart" class="secondary-btn" style="display: none;">重试本题</button>
+        <button id="btn-continue" class="secondary-btn" style="display: none;">继续叫牌</button>
+      </div>
+    </div>
+
+  </main>
+
+  <style>
+    /* 基础布局 */
+    .practice-container { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; font-family: sans-serif; }
+    .header-actions { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
+    .nav-q { padding: 0.5rem 1rem; border: 1px solid #cbd5e1; background: #f8fafc; cursor: pointer; font-weight: bold; border-radius: 6px; color: #334155; }
+    .nav-q:hover { background: #e2e8f0; }
+
+    /* 游戏面板 */
+    .game-board { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); overflow: hidden; }
+    
+    /* 局况与叫牌表容器 */
+    .record-container { background: #d1d5db; padding: 1rem; display: flex; flex-direction: column; align-items: center; border-bottom: 1px solid #9ca3af; }
+    .vul-info { font-size: 0.85rem; font-weight: bold; color: #4b5563; margin-bottom: 0.5rem; align-self: flex-start; padding-left: 1rem;}
+    
+    /* 还原截图中的经典表格样式 */
+    .bidding-record { width: 100%; max-width: 450px; display: flex; justify-content: center; }
+    .empty-record { color: #4b5563; font-style: italic; font-weight: bold; margin-top: 2rem; }
+    
+    .bidding-table { border-collapse: collapse; width: 100%; background: #d1d5db; text-align: center; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 1.4rem; border: 1px solid #9ca3af; }
+    .bidding-table th { background: #ffffff; padding: 0.6rem; font-size: 1.2rem; color: #000000; border-right: 1px solid #d1d5db; font-family: sans-serif; font-weight: bold; }
+    .bidding-table th:last-child { border-right: none; }
+    .bidding-table td { padding: 0.5rem; border-right: 1px solid #d1d5db; border-top: 1px solid #d1d5db; color: #1e293b; font-weight: 500; height: 40px; vertical-align: middle; }
+    .bidding-table td:last-child { border-right: none; }
+    
+    /* 叫品样式 */
+    .bid-pass { color: #000000; font-weight: 900; font-size: 1.6rem; line-height: 1; letter-spacing: -2px; }
+    .bid-x { color: #000000; font-weight: bold; font-size: 1.4rem; font-family: sans-serif; }
+    .bid-suit-red { color: #dc2626; font-size: 1.5rem; line-height: 1; }
+    .bid-suit-black { color: #000000; font-size: 1.5rem; line-height: 1; }
+    .bid-end { font-weight: 900; font-size: 1.6rem; color: #000000; }
+    .bid-question { font-weight: bold; font-size: 1.5rem; color: #334155; }
+
+    /* 牌桌区域 */
+    .table-area { padding: 3rem 1rem; background: #f1f5f9; position: relative; display: flex; justify-content: center; }
+    .seat-marker { position: absolute; font-weight: bold; color: #94a3b8; font-size: 0.9rem; }
+    .seat-marker.north { top: 1rem; left: 50%; transform: translateX(-50%); }
+    .seat-marker.west { left: 1rem; top: 50%; transform: translateY(-50%); }
+    .seat-marker.east { right: 1rem; top: 50%; transform: translateY(-50%); }
+    .my-hand { background: #ffffff; border: 2px solid #8b5cf6; border-radius: 8px; padding: 1.5rem 2rem 1rem 2rem; box-shadow: 0 4px 10px rgba(139, 92, 246, 0.1); position: relative; width: 100%; max-width: 600px; }
+    .player-name { font-size: 0.85rem; font-weight: bold; color: #8b5cf6; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #ffffff; padding: 0 8px; border-radius: 10px; border: 1px solid #8b5cf6; }
+    .cards-container { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+    .suit-group { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; font-family: monospace; font-size: 1.25rem; font-weight: bold; }
+    .suit-title { font-size: 1.4rem; margin-bottom: 0.2rem; }
+    .suit-group.red .suit-title, .suit-group.red .card-text { color: #dc2626; }
+    .suit-group.black .suit-title, .suit-group.black .card-text { color: #0f172a; }
+
+    /* 操作区与叫牌面板 */
+    .action-area { padding: 1.5rem; text-align: center; border-top: 1px solid #e2e8f0; }
+    
+    .bidding-pad { background: #e2e8f0; padding: 10px; border-radius: 8px; display: inline-flex; flex-direction: column; gap: 8px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); width: 100%; max-width: 450px; }
+    .pad-row { display: flex; gap: 8px; justify-content: center; }
+    
+    .pad-btn { background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1.5rem; font-weight: bold; font-family: sans-serif; padding: 8px 0; cursor: pointer; flex: 1; box-shadow: 0 2px 0 #cbd5e1; transition: 0.1s; display: flex; align-items: center; justify-content: center; color: #1e293b; }
+    .pad-btn:active { transform: translateY(2px); box-shadow: none; }
+    .pad-btn.red { color: #dc2626; }
+    .pad-btn.selected { background: #fef08a; border-color: #eab308; box-shadow: 0 2px 0 #eab308; }
+
+    .alert-btn { background: #60a5fa; color: white; font-size: 1.2rem; border-color: #3b82f6; box-shadow: 0 2px 0 #3b82f6; flex: 2; }
+    .pass-btn { background: #15803d; color: white; font-size: 1.4rem; border-color: #166534; box-shadow: 0 2px 0 #166534; flex: 2; }
+    .double-btn { background: #ef4444; color: white; border-color: #b91c1c; box-shadow: 0 2px 0 #b91c1c; flex: 1; font-size: 1.2rem; }
+    .redouble-btn { background: #3b82f6; color: white; border-color: #1d4ed8; box-shadow: 0 2px 0 #1d4ed8; flex: 1; font-size: 1.2rem; }
+    
+    .secondary-btn { padding: 0.8rem 2rem; background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; }
+
+    @media (max-width: 600px) {
+      .cards-container { gap: 1rem; }
+      .pad-btn { font-size: 1.2rem; padding: 6px 0; }
+      .bidding-table { font-size: 1.1rem; }
+      .bidding-table th { font-size: 1rem; padding: 0.4rem; }
+    }
+
+  </style>
+
+  <script define:vars={{ questions }}>
+
+    // ==========================================
+    // 全局状态与 DOM
+    // ==========================================
+    let currentQIndex = 0;
+    let currentScenario = questions[currentQIndex];
+    let currentState = null;
+    let historyBids = []; 
+    
+    let selectedLevel = null;
+    let selectedSuit = null;
+    let bidMeanings = new Map();
+    const explanationCache = new Map();
+    let explanationRequest = Promise.resolve();
+
+    const dom = {
+      qIndex: document.getElementById('q-index'),
+      btnPrev: document.getElementById('btn-prev-q'),
+      btnNext: document.getElementById('btn-next-q'),
+      vulInfo: document.getElementById('vul-info'),
+      record: document.getElementById('bidding-record'),
+      promptText: document.getElementById('prompt-text'),
+      pad: document.getElementById('bidding-pad'),
+      myCards: document.getElementById('my-cards'),
+      btnPass: document.getElementById('btn-pass'),
+      btnDouble: document.getElementById('btn-double'),
+      btnRedouble: document.getElementById('btn-redouble'),
+      btnRestart: document.getElementById('btn-restart'),
+      btnContinue: document.getElementById('btn-continue'),
+    };
+    const explanationApiUrl = import.meta.env.PUBLIC_BIDDING_API_URL || 'http://localhost:8000/explain-bids';
+
+    // ==========================================
+    // 辅助函数
+    // ==========================================
+    function formatBid(bid) {
+      if (bid === 'Pass' || bid === 'P') return '<span class="bid-pass">—</span>';
+      if (bid === 'X' || bid === 'XX') return `<span class="bid-x">${bid}</span>`;
+      
+      let level = bid[0];
+      let suit = bid.substring(1); 
+      let suitHtml = '';
+      if (suit === 'S') suitHtml = '<span class="bid-suit-black">♠</span>';
+      else if (suit === 'H') suitHtml = '<span class="bid-suit-red">♥</span>';
+      else if (suit === 'D') suitHtml = '<span class="bid-suit-red">♦</span>';
+      else if (suit === 'C') suitHtml = '<span class="bid-suit-black">♣</span>';
+      else if (suit === 'NT') suitHtml = 'NT';
+      return `${level}${suitHtml}`;
+    }
+
+    function renderRecord(showEndSymbol = false, showQuestionMark = false) {
+      const seats = ['W', 'N', 'E', 'S'];
+      let startSeatIndex = seats.indexOf(currentScenario.dealer);
+      
+      let html = `<table class="bidding-table"><thead><tr><th>W</th><th>N</th><th>E</th><th>S</th></tr></thead><tbody>`;
+      let currentRowHtml = '';
+      
+      for (let i = 0; i < startSeatIndex; i++) currentRowHtml += `<td></td>`;
+      let currentSeatIndex = startSeatIndex;
+
+      // 渲染历史叫牌
+      historyBids.forEach((item) => {
+        currentRowHtml += `<td>${formatBid(item.bid)}</td>`;
+        currentSeatIndex++;
+        if (currentSeatIndex === 4) {
+          html += `<tr>${currentRowHtml}</tr>`;
+          currentRowHtml = '';
+          currentSeatIndex = 0;
+        }
+      });
+
+      // 渲染 ? 或 =
+      if (showQuestionMark || showEndSymbol) {
+        if (currentSeatIndex === 0 && currentRowHtml === '') {
+          currentRowHtml = `<td>${showEndSymbol ? '<span class="bid-end">=</span>' : '<span class="bid-question">?</span>'}</td>`;
+        } else {
+          currentRowHtml += `<td>${showEndSymbol ? '<span class="bid-end">=</span>' : '<span class="bid-question">?</span>'}</td>`;
+        }
+        currentSeatIndex++;
+      }
+
+      // 补齐表格剩下的空格
+      if (currentRowHtml !== '') {
+        while (currentSeatIndex < 4 && currentSeatIndex !== 0) {
+          currentRowHtml += `<td></td>`;
+          currentSeatIndex++;
+        }
+        html += `<tr>${currentRowHtml}</tr>`;
+      }
+      
+      html += `</tbody></table>`;
+      dom.record.innerHTML = html;
+    }
+
+    function renderHand(pbn) {
+      const suits = { S: [], H: [], D: [], C: [] };
+      pbn.split('.').forEach(part => {
+        const [suit, cards] = part.split(':');
+        if (cards) suits[suit] = cards.split('');
+      });
+      let html = '';
+      ['S', 'H', 'D', 'C'].forEach(suit => {
+        if (suits[suit].length > 0) {
+          const colorClass = (suit === 'H' || suit === 'D') ? 'red' : 'black';
+          const symbol = { S: '♠', H: '♥', D: '♦', C: '♣' }[suit];
+          html += `<div class="suit-group ${colorClass}"><div class="suit-title">${symbol}</div><div class="card-text">${suits[suit].join(' ')}</div></div>`;
+        }
+      });
+      dom.myCards.innerHTML = html;
+    }
+
+    // 检查是否允许加倍
+    function checkDoubleOptions() {
+      dom.btnDouble.style.display = 'none';
+      dom.btnRedouble.style.display = 'none';
+      if (historyBids.length === 0) return;
+
+      let lastBid = null;
+      for (let i = historyBids.length - 1; i >= 0; i--) {
+        if (historyBids[i].bid !== 'Pass') {
+          lastBid = historyBids[i];
+          break;
+        }
+      }
+
+      function getExplanationAuction() {
+        const auction = historyBids.map(item => item.bid);
+        let stateKey = 'start';
+
+        while (stateKey) {
+          const state = currentScenario.script[stateKey];
+          if (!state || state.turn === 'player') {
+            if (stateKey !== 'start') break;
+
+            const nextBids = Object.keys(state.next);
+            const preferredBid = nextBids.find(bid => {
+              const nextState = currentScenario.script[state.next[bid]];
+              return nextState && nextState.turn !== 'end';
+            }) || nextBids[0];
+            if (!preferredBid) break;
+            auction.push(preferredBid);
+            stateKey = state.next[preferredBid];
+            continue;
+          }
+
+          if (state.turn === 'end') break;
+          Object.values(state.bids || {}).forEach(bid => auction.push(bid));
+          stateKey = state.next;
+        }
+
+        return auction;
+      }
+
+      async function prefetchBidMeanings() {
+        const cachedMeanings = explanationCache.get(currentScenario.id);
+        if (cachedMeanings) {
+          bidMeanings = cachedMeanings;
+          return;
+        }
+
+        bidMeanings = new Map();
+        try {
+          const response = await fetch(explanationApiUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              dealer: currentScenario.dealer,
+              vulnerability: currentScenario.vul === '双无' ? 'none' : currentScenario.vul,
+              auction: getExplanationAuction(),
+              seat: 'S'
+            })
+          });
+
+          if (!response.ok) {
+            throw new Error(`叫牌解释接口返回 ${response.status}`);
+          }
+
+          const result = await response.json();
+          const bids = Array.isArray(result) ? result : result.bids;
+          if (!Array.isArray(bids)) {
+            throw new Error('叫牌解释接口返回格式无效');
+          }
+
+          bids.forEach(item => {
+            if (item && typeof item.bid === 'string' && typeof item.meaning === 'string') {
+              bidMeanings.set(item.bid, item.meaning);
+            }
+          });
+          explanationCache.set(currentScenario.id, bidMeanings);
+        } catch (error) {
+          console.error('无法预加载叫牌解释：', error);
+          throw error;
+        }
+      }
+
+      async function getBidMeaning(bid) {
+        try {
+          await explanationRequest;
+        } catch {
+          return '暂时无法获取该叫品的解释。';
+        }
+        return bidMeanings.get(bid) || '一般不会这样叫。';
+      }
+      if (!lastBid) return;
+
+      const opponentSeats = ['W', 'E'];
+      if (lastBid.bid === 'X') {
+        if (opponentSeats.includes(lastBid.seat)) dom.btnRedouble.style.display = 'block';
+      } else if (lastBid.bid !== 'XX') {
+        if (opponentSeats.includes(lastBid.seat)) dom.btnDouble.style.display = 'block';
+      }
+    }
+
+    // ==========================================
+    // 核心流程
+    // ==========================================
+    function handlePadSubmit() {
+      if (!selectedLevel || !selectedSuit) return;
+      const bid = `${selectedLevel}${selectedSuit}`;
+      
+      // 校验叫品合法性
+      const levelsMap = { 'C': 1, 'D': 2, 'H': 3, 'S': 4, 'NT': 5 };
+      let isValid = true;
+      for (let i = historyBids.length - 1; i >= 0; i--) {
+        const lastBid = historyBids[i].bid;
+        if (lastBid !== 'Pass' && lastBid !== 'X' && lastBid !== 'XX') {
+          const lastLevel = parseInt(lastBid[0]);
+          const lastSuit = lastBid.substring(1);
+          if (parseInt(selectedLevel) < lastLevel || 
+             (parseInt(selectedLevel) === lastLevel && levelsMap[selectedSuit] <= levelsMap[lastSuit])) {
+            isValid = false;
+          }
+          break;
+        }
+      }
+
+      if (!isValid) {
+        dom.promptText.innerHTML = "<span style='color:#e11d48'>叫品不合法！必须高于场上已有的叫品。</span>";
+        return;
+      }
+
+      document.querySelectorAll('.pad-btn').forEach(b => b.classList.remove('selected'));
+      selectedLevel = null;
+      selectedSuit = null;
+      
+      submitPlayerBid(bid);
+    }
+
+    async function submitPlayerBid(bid) {
+      dom.pad.style.display = 'none';
+      const meaning = await getBidMeaning(bid);
+      historyBids.push({ seat: 'S', bid: bid });
+      
+      let nextStateKey = currentState.next[bid];
+      if (!nextStateKey && bid === 'X') nextStateKey = currentState.next['Pass']; // 容错
+      
+      if (nextStateKey) {
+        if (currentState === currentScenario.script.start && bid === '1D') {
+          showFeedback(
+            '🎉 第一轮判断正确！',
+            meaning,
+            () => transitionTo(nextStateKey)
+          );
+        } else {
+          transitionTo(nextStateKey);
+        }
+      } else {
+        // 如果剧本没有写这一步的分支，直接结束
+        endGame("剧本未配置该叫品的后续分支。");
+      }
+    }
+
+    function transitionTo(stateKey) {
+      currentState = currentScenario.script[stateKey];
+      
+      if (currentState.turn === 'end') {
+        renderRecord(true, false);
+        const isSuccess = stateKey.includes('success');
+        const title = isSuccess ? '🎉 答对了！' : '再想一想';
+        const color = isSuccess ? '#15803d' : '#b91c1c';
+        dom.pad.style.display = 'none';
+
+        const lastPlayerBid = [...historyBids].reverse().find(item => item.seat === 'S')?.bid;
+        getBidMeaning(lastPlayerBid).then(meaning => {
+          const message = `${meaning}<br>${currentState.message}`;
+          if (isSuccess) {
+            dom.promptText.innerHTML = `${title}<br><span style="color:${color}; font-size: 1rem; font-weight: normal; margin-top: 10px; display: inline-block;">${message}</span>`;
+            dom.btnRestart.style.display = 'inline-block';
+          } else {
+            showFeedback(title, message, startGame);
+          }
+        });
+      }
+      else if (currentState.turn === 'ai') {
+        const bidsObj = currentState.bids;
+        for (const [seat, bid] of Object.entries(bidsObj)) {
+          historyBids.push({ seat: seat, bid: bid });
+        }
+        renderRecord(false, false);
+        transitionTo(currentState.next);
+      } 
+      else if (currentState.turn === 'player') {
+        dom.promptText.textContent = "轮到你叫牌了";
+        dom.pad.style.display = 'inline-flex';
+        
+        // 渲染带有 ? 的表格
+        renderRecord(false, true);
+        checkDoubleOptions();
+        
+        if (selectedLevel) document.querySelector(`.level-btn[data-val="${selectedLevel}"]`).classList.add('selected');
+        if (selectedSuit) document.querySelector(`.suit-btn[data-val="${selectedSuit}"]`).classList.add('selected');
+      }
+    }
+
+    function showFeedback(title, message, onContinue) {
+      dom.pad.style.display = 'none';
+      dom.btnRestart.style.display = 'none';
+      dom.promptText.innerHTML = `${title}<br><span style="color:#1e293b; font-size: 1rem; font-weight: normal; margin-top: 10px; display: inline-block;">${message}</span>`;
+      dom.btnContinue.style.display = 'inline-block';
+      dom.btnContinue.onclick = () => {
+        dom.btnContinue.style.display = 'none';
+        onContinue();
+      };
+    }
+
+    function startGame() {
+      currentScenario = questions[currentQIndex];
+      historyBids = [];
+      
+      // 如果剧本节点里自带 preBids (比如 N, E 已经 Pass)，直接填入历史
+      if (currentScenario.script.start.preBids) {
+        for (const [seat, bid] of Object.entries(currentScenario.script.start.preBids)) {
+          historyBids.push({ seat: seat, bid: bid });
+        }
+      }
+
+      currentState = currentScenario.script.start;
+      selectedLevel = null;
+      selectedSuit = null;
+      
+      renderHand(currentScenario.myHand);
+      dom.qIndex.textContent = `第 ${currentQIndex + 1} / ${questions.length} 题`;
+      dom.vulInfo.textContent = `局况：${currentScenario.vul}`;
+      
+      dom.btnRestart.style.display = 'none';
+      dom.btnContinue.style.display = 'none';
+      dom.pad.style.display = 'none';
+      dom.promptText.textContent = "准备开始...";
+
+      explanationRequest = prefetchBidMeanings();
+      transitionTo('start');
+    }
+
+    function endGame(msg) {
+      renderRecord(true, false);
+      dom.promptText.innerHTML = `⚠️ 本题需要重新开始<br><span style="color:#b91c1c; font-size: 1rem; font-weight: normal; margin-top: 10px; display: inline-block;">${msg}</span>`;
+      dom.pad.style.display = 'none';
+      dom.btnRestart.style.display = 'none';
+      showFeedback('⚠️ 本题需要重新开始', msg, startGame);
+    }
+
+    // ==========================================
+    // 5. 事件绑定
+    // ==========================================
+    document.querySelectorAll('.level-btn').forEach(btn => {
+      btn.onclick = () => {
+        document.querySelectorAll('.level-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        selectedLevel = btn.dataset.val;
+        if (selectedSuit) handlePadSubmit();
+      };
+    });
+
+    document.querySelectorAll('.suit-btn').forEach(btn => {
+      btn.onclick = () => {
+        if (!selectedLevel) {
+          dom.promptText.innerHTML = "<span style='color:#e11d48'>请先选择阶数 (1-7)！</span>";
+          return;
+        }
+        document.querySelectorAll('.suit-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        selectedSuit = btn.dataset.val;
+        handlePadSubmit();
+      };
+    });
+
+    dom.btnPass.onclick = () => submitPlayerBid('Pass');
+    dom.btnDouble.onclick = () => submitPlayerBid('X');
+    dom.btnRedouble.onclick = () => submitPlayerBid('XX');
+
+    dom.btnRestart.onclick = startGame;
+    dom.btnPrev.onclick = () => { if (currentQIndex > 0) { currentQIndex--; startGame(); } };
+    dom.btnNext.onclick = () => { if (currentQIndex < questions.length - 1) { currentQIndex++; startGame(); } };
+
+    // 初始加载
+    startGame();
+  </script>
+</Layout>
