@@ -12,6 +12,12 @@ title: 第六章：竞争叫
   <p><strong>以下逻辑只适用于自己和同伴此前均没有动作。若自己或同伴此前已经叫牌、加倍或再加倍，应参考后文。</strong></p>
 </div>
 
+<div class="artificial-opening-note">
+  <strong>⚠️ 特殊人为开叫提醒</strong>
+  <p>面对精确叫牌法的 <strong>1♣</strong>，以及数学叫牌法的 <strong>1♣</strong> 和 <strong>1♦</strong> 这三种与实际叫出花色无关的人为开叫时，叫出敌方开叫花色均视为<strong>出套</strong>，而不是扣叫。</p>
+  <p>其中，精确叫牌法的 <strong>1♣</strong> 和数学叫牌法的强 <strong>1♣</strong> 属于强开叫：对其<strong>加倍</strong>表示双高花 5-4 以上；无局 8+ 点，有局 11+ 点。</p>
+</div>
+
 <div class="response-section highlight-section">
   <div class="response-header">
     <span class="badge purple">总结</span>
@@ -70,7 +76,7 @@ title: 第六章：竞争叫
 <tr>
 <td class="call-col"><strong>1 阶</strong></td>
 <td>第 2 家：15-18 点，均型<br>第 4 家：12-15 点，均型<br><span class="term" title="若为第四家叫 1NT，则后续 Stayman 应叫所需的点力也需要相应提升。">后续应叫同开 1NT</span></td>
-<td><span class="term" title="更强的牌应该加倍。">5 张以上套，8-16 点</span></td>
+<td>5 张以上套，8-16 点</td>
 <td style="color: #94a3b8;">——</td>
 <td style="color: #94a3b8;">——</td>
 </tr>
@@ -169,6 +175,27 @@ title: 第六章：竞争叫
   }
   .quote-box p { margin: 0 0 0.5rem 0; line-height: 1.6; }
   .quote-box p:last-child { margin-bottom: 0; }
+  .artificial-opening-note {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border: 1px solid #fcd34d;
+    border-left: 4px solid #f59e0b;
+    border-radius: 8px;
+    background: #fffbeb;
+    color: #78350f;
+    line-height: 1.6;
+  }
+  .artificial-opening-note > strong:first-child {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: #92400e;
+  }
+  .artificial-opening-note p {
+    margin: 0 0 0.5rem;
+  }
+  .artificial-opening-note p:last-child {
+    margin-bottom: 0;
+  }
 
   /* 花色颜色 */
   .suit.red { color: #e11d48; font-size: 1.15em; line-height: 1; }
