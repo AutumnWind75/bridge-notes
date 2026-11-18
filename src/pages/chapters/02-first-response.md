@@ -226,26 +226,79 @@ title: 第二章：一阶花色应叫
 <div class="response-section highlight-section" style="margin-top: 2rem;">
   <div class="response-header">
     <span class="badge purple">决策</span>
-    <h3>强牌应对 1♦ 开叫的进阶决策逻辑</h3>
+    <h3>同伴开叫一阶低花，第一口应叫的决策逻辑</h3>
   </div>
   <div class="response-body">
-<h4 style="color: #1e293b; margin-top: 1.5rem;">一、 邀请实力（约 11-12 点，非逼局）</h4>
-<p>此区间以寻找最安全的定约为核心，必须严格遵守高花优先。</p>
-<ul class="compact-list">
-  <li><strong>持 4 张高花：</strong> 无条件优先应叫 <strong>1♥ 或 1♠</strong>。即使有 ♦ 配合，也需先寻找 4-4 或 5-3 高花配合。</li>
-  <li><strong>无 4 张高花，有 ♦ 支持：</strong> 有单缺时首选 <strong>Splinter</strong>（3♥ 或 3♠），再考虑叫 <strong>2♦</strong>。</li>
-  <li><strong>无 4 张高花，均型：</strong> 叫 <strong>2NT</strong>，发出标准的无将邀请。</li>
-  <li><strong>持 6 张以上 ♣：</strong> 叫 <strong>3♣</strong>，IG。</li>
-</ul>
+<div class="decision-table-wrapper">
+  <table class="decision-table">
+    <thead>
+      <tr>
+        <th>开叫 1♦</th>
+        <th>弱实力<br>6-10 点</th>
+        <th>邀请实力<br>11-12 点</th>
+        <th>逼局实力<br>13 点以上</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>持 4 张高花</th>
+        <td colspan="3"><strong>1♥ 或 1♠</strong>（逼局实力应优先支持同伴将牌）</td>
+      </tr>
+      <tr>
+        <th>无 4 张高花，有 ♦ 支持</th>
+        <td><strong>3♦</strong><br><span>跳加叫，阻击</span></td>
+        <td colspan="2">5+支持，无单缺：<strong>2♦</strong><br>4+支持，有单缺：<strong> Splinter</strong></td>
+      </tr>
+      <tr>
+        <th>无 4 张高花，均型</th>
+        <td><strong>1NT</strong></td>
+        <td><strong>2NT</strong><br><span>无将邀请</span></td>
+        <td><strong>3NT</strong><br><span>封局止叫</span></td>
+      </tr>
+      <tr>
+        <th>有梅花套</th>
+        <td>——</td>
+        <td>有 6 张 ♣：<strong>3♣</strong><br><span>邀请</span></td>
+        <td>有 5 张 ♣：<strong>2♣</strong><br><span>逼局</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-<h4 style="color: #1e293b; margin-top: 1.5rem;">二、 逼局实力（13 点以上，FG）</h4>
-<p>此区间必须进局，可以放宽 Walsh 原则，直接建立低花配合或利用高阶约定叫。</p>
-<ul class="compact-list">
-  <li><strong>持 4 张高花：</strong> 若有 5 张以上 ♦，可直接应叫 <strong>2♦</strong>（低花反加叫，F1），后续可通过扣叫确认高花或满贯。否则应该叫1♥ 或 1♠。</li>
-  <li><strong>无 4 张高花，有 ♦ 支持：</strong> 有单缺时首选 <strong>Splinter</strong>，再考虑叫 <strong>2♦</strong>。</li>
-  <li><strong>无 4 张高花，均型：</strong> 叫 <strong>3NT</strong>。通常封局止叫。</li>
-  <li><strong>持 5 张以上 ♣：</strong> 叫 <strong>2♣</strong>，FG。</li>
-</ul>
+<div class="decision-table-wrapper">
+  <table class="decision-table">
+    <thead>
+      <tr>
+        <th>开叫 1♣</th>
+        <th>弱实力<br>6-10 点</th>
+        <th>邀请实力<br>11-12 点</th>
+        <th>逼局实力<br>13 点以上</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>持 4 张高花</th>
+        <td colspan="3"><strong>1♥ 或 1♠</strong>（逼局实力应优先支持同伴将牌）</td>
+      </tr>
+      <tr>
+        <th>无 4 张高花，有 ♣ 支持</th>
+        <td><strong>3♣</strong><br><span>跳加叫，阻击</span></td>
+        <td colspan="2">5+ 支持，无单缺：<strong>2♣</strong><br>4+ 支持，有单缺：<strong> Splinter</strong></td>
+      </tr>
+      <tr>
+        <th>无 4 张高花，均型</th>
+        <td><strong>1NT</strong></td>
+        <td><strong>2NT</strong><br><span>无将邀请</span></td>
+        <td><strong>3NT</strong><br><span>封局止叫</span></td>
+      </tr>
+      <tr>
+        <th>无 4 张高花，有 4 张 ♦</th>
+        <td colspan="3"><strong>1♦</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+更弱的点力应考虑阻击叫。
   </div>
 </div>
 
@@ -264,6 +317,7 @@ title: 第二章：一阶花色应叫
     <ul class="compact-list">
       <li><strong>平加叫</strong>（如 1♥-2♥）：7-10 点，3 张以上支持。 <span class="marker ig">IG</span>（建设性邀请）。</li>
       <li><strong>跳加叫</strong>（如 1♥-3♥）：5-7 点，通常 4 张以上支持。阻击叫，不逼叫，给对手制造困难。</li>
+      <li><strong>伯根加叫</strong>：叫 <strong>3♣</strong> 表示 4 张以上支持、7-9 点；叫 <strong>3♦</strong> 表示 4 张以上支持、10-12 点。</li>
       <li><strong>直接进局加叫</strong>（如 1♥-4♥）：<strong>想打并止叫。</strong>表示点力足够进局且有 5 张以上支持，但属于“限制性”牌力（通常没有满贯兴趣）。</li>
     </ul>
     <p><strong>逻辑与“好牌慢叫”：</strong> 很多初学者以为 13 点以上就应该直接叫 4♥ 进局。但桥牌界有一句名言：<strong>“好牌慢叫”</strong>。如果你有进局实力且仍有满贯可能性，你应该先叫 <strong>2NT（Jacoby 2NT 约定叫）</strong> 或通过其他逼叫手段慢慢试探。只有在确定这手牌“打 4M 就够了”时，才直接封局。</p>
@@ -883,6 +937,69 @@ title: 第二章：一阶花色应叫
   .j2nt-table tr:hover td { background: #f8fafc; }
   
   .call-col { width: 35%; white-space: nowrap; }
+  .decision-table-wrapper {
+    margin: 1.5rem 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .decision-table {
+    width: 100%;
+    min-width: 680px;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+  .decision-table th,
+  .decision-table td {
+    padding: 0.85rem 1rem;
+    border-right: 1px solid #e2e8f0;
+    border-bottom: 1px solid #f1f5f9;
+    line-height: 1.5;
+  }
+  .decision-table tr > *:last-child { border-right: none; }
+  .decision-table thead th {
+    background: #f8fafc;
+    color: #475569;
+    font-weight: 600;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .decision-table tbody th {
+    width: 24%;
+    background: #fafafa;
+    color: #334155;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .decision-table td {
+    color: #334155;
+    vertical-align: middle;
+  }
+  .decision-table td strong {
+    color: #1e293b;
+    font-size: 1.05rem;
+  }
+  .decision-table td span {
+    color: #64748b;
+    font-size: 0.85rem;
+  }
+  .decision-table tbody tr:last-child th,
+  .decision-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  .decision-narrative {
+    margin-top: 1.5rem;
+    color: #475569;
+    line-height: 1.6;
+  }
+  .decision-narrative h4 {
+    margin: 1rem 0 0.35rem;
+    color: #1e293b;
+  }
+  .decision-narrative h4:first-child { margin-top: 0; }
+  .decision-narrative p { margin: 0; }
 </style>
 
 <script>

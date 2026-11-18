@@ -14,8 +14,9 @@ title: 第六章：竞争叫
 
 <div class="artificial-opening-note">
   <strong>⚠️ 特殊人为开叫提醒</strong>
-  <p>面对精确叫牌法的 <strong>1♣</strong>，以及数学叫牌法的 <strong>1♣</strong> 和 <strong>1♦</strong> 这三种与实际叫出花色无关的人为开叫时，叫出敌方开叫花色均视为<strong>出套</strong>，而不是扣叫。</p>
-  <p>其中，精确叫牌法的 <strong>1♣</strong> 和数学叫牌法的强 <strong>1♣</strong> 属于强开叫：对其<strong>加倍</strong>表示双高花 5-4 以上；无局 8+ 点，有局 11+ 点。</p>
+  <p>面对精确叫牌法的 <strong>1♣</strong>，以及数学叫牌法的 <strong>1♣</strong> 和 <strong>1♦</strong> 这三种与实际叫出花色无关的人为开叫时，叫出敌方开叫花色均视为<strong>出套</strong>或<strong>阻击</strong>，而不是扣叫。</p>
+  <p>其中，精确叫牌法和数学叫牌法的 <strong>1♣</strong> 均属于强开叫：对其<strong>加倍</strong>表示双高花 5-4 以上；无局 8+ 点，有局 11+ 点。</p>
+  <p>其他叫品含义均保持不变。</p>
 </div>
 
 <div class="response-section highlight-section">
@@ -82,7 +83,7 @@ title: 第六章：竞争叫
 </tr>
 <tr>
 <td class="call-col"><strong>2 阶</strong></td>
-<td>第 2 家：8-16 点，<span class="term" title="必须是 5-5 最低级别未叫套。更强的牌应该加倍。"><strong>最低级别的 2 个未叫套</strong></span><br>第 4 家：19-20 点，均型，后 <strong>3♣ Stayman</strong></td>
+<td>第 2 家：8-16 点，<span class="term" title="例如 1♦-2NT 表示5张♣和5张♥；1♦-Pass-1♥-2NT 表示5张♣和5张♠"><strong>最低级别的 2 个未叫套</strong></span><br>第 4 家：19-20 点，均型，后 <strong>3♣ Stayman</strong></td>
 <td>阻击叫</td>
 <td><strong>迈克尔斯扣叫: </strong><br>若Y为低花则至少5-5高花，8点以上，点集中在长套上<br>若Y为高花则5-5另一高花和任一低花，10点以上，点集中在长套上</td>
 <td>5 张以上套，11-16 点</td>
