@@ -35,6 +35,89 @@ title: 第二章：一阶花色应叫
   <p>以下应叫均适用于<strong>没有敌方插叫</strong>的情况：叫牌序列为若干个 Pass 后，搭档开叫 1♣ 或 1♦，上家 Pass，再轮到你应叫。</p>
 </div>
 
+
+<div class="response-section highlight-section" style="margin-top: 2rem;">
+  <div class="response-header">
+    <span class="badge purple">决策</span>
+    <h3>同伴开叫一阶低花，第一口应叫的决策逻辑</h3>
+  </div>
+  <div class="response-body">
+
+<div class="decision-table-wrapper">
+  <table class="decision-table">
+    <thead>
+      <tr>
+        <th>开叫 1♣</th>
+        <th>弱实力<br>6-10 点</th>
+        <th>邀请实力<br>11-12 点</th>
+        <th>逼局实力<br>13 点以上</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>持 4 张高花</th>
+        <td colspan="3"><strong>1♥ 或 1♠</strong>（逼局实力应优先支持同伴将牌）</td>
+      </tr>
+      <tr>
+        <th>无 4 张高花，有 5 张 ♣</th>
+        <td><strong>3♣</strong><br><span>跳加叫，建设性阻击</span></td>
+        <td colspan="2">无单缺：<strong>2♣</strong><br>有单缺：<span class="term" data-tooltip="3阶双跳新花报单缺"><strong>Splinter</strong></span></td>
+      </tr>
+      <tr>
+        <th>无 4 张高花，均型</th>
+        <td><strong>1NT</strong></td>
+        <td><strong>2NT</strong><br><span>无将邀请</span></td>
+        <td><strong>3NT</strong><br><span>封局止叫</span></td>
+      </tr>
+      <tr>
+        <th>无 4 张高花，有 4 张 ♦</th>
+        <td colspan="3"><strong>1♦</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="decision-table-wrapper">
+  <table class="decision-table">
+    <thead>
+      <tr>
+        <th>开叫 1♦</th>
+        <th>弱实力<br>6-10 点</th>
+        <th>邀请实力<br>11-12 点</th>
+        <th>逼局实力<br>13 点以上</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>持 4 张高花</th>
+        <td colspan="3"><strong>1♥ 或 1♠</strong>（逼局实力应优先支持同伴将牌）</td>
+      </tr>
+      <tr>
+        <th>无 4 张高花，有 5 张 ♦</th>
+        <td><strong>3♦</strong><br><span>跳加叫，建设性阻击</span></td>
+        <td colspan="2">无单缺：<strong>2♦</strong><br>有单缺：<span class="term" data-tooltip="3阶双跳新花报单缺"><strong>Splinter</strong></span></td>
+      </tr>
+      <tr>
+        <th>无 4 张高花，均型</th>
+        <td><strong>1NT</strong></td>
+        <td><strong>2NT</strong><br><span>无将邀请</span></td>
+        <td><strong>3NT</strong><br><span>封局止叫</span></td>
+      </tr>
+      <tr>
+        <th>有梅花套</th>
+        <td>——</td>
+        <td>有 6 张 ♣：<strong>3♣</strong><br><span>邀请</span></td>
+        <td>有 5 张 ♣：<strong>2♣</strong><br><span>逼局</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+更弱的点力应考虑阻击叫。
+  </div>
+</div>
+
+
 <div class="response-section">
   <div class="response-header">
     <span class="badge purple">1</span>
@@ -179,7 +262,7 @@ title: 第二章：一阶花色应叫
     <h3>Splinter 叫 <span class="marker fg">FG</span></h3>
   </div>
   <div class="response-body">
-    <p><strong>条件：</strong> 11 点以上，4 张以上将牌支持，所叫花色单缺，且无 4 张高花。</p>
+    <p><strong>条件：</strong> 11 点以上，5 张以上将牌支持，所叫花色单缺，且无 4 张高花。</p>
     <p><strong>叫品：</strong> 
       <br>• 搭档开叫 1♣ 时：双跳叫 <strong>3♦</strong>、<strong>3♥</strong> 或 <strong>3♠</strong>。
       <br>• 搭档开叫 1♦ 时：双跳叫 <strong>3♥</strong> 或 <strong>3♠</strong>。
@@ -223,17 +306,20 @@ title: 第二章：一阶花色应叫
   </div>
 </div>
 
+## 第二部分：搭档开叫一阶高花（1♥ / 1♠）
+
+
 <div class="response-section highlight-section" style="margin-top: 2rem;">
   <div class="response-header">
     <span class="badge purple">决策</span>
-    <h3>同伴开叫一阶低花，第一口应叫的决策逻辑</h3>
+    <h3><strong>（没整理完！！！！！！！！）</strong>同伴开叫一阶高花，第一口应叫的决策逻辑</h3>
   </div>
   <div class="response-body">
 <div class="decision-table-wrapper">
   <table class="decision-table">
     <thead>
       <tr>
-        <th>开叫 1♦</th>
+        <th>开叫 1♥</th>
         <th>弱实力<br>6-10 点</th>
         <th>邀请实力<br>11-12 点</th>
         <th>逼局实力<br>13 点以上</th>
@@ -241,16 +327,16 @@ title: 第二章：一阶花色应叫
     </thead>
     <tbody>
       <tr>
-        <th>持 4 张高花</th>
-        <td colspan="3"><strong>1♥ 或 1♠</strong>（逼局实力应优先支持同伴将牌）</td>
+        <th>持 4 张 ♠</th>
+        <td colspan="3"><strong>1♠</strong>（逼局实力应优先支持同伴将牌）</td>
       </tr>
       <tr>
-        <th>无 4 张高花，有 ♦ 支持</th>
-        <td><strong>3♦</strong><br><span>跳加叫，阻击</span></td>
-        <td colspan="2">5+支持，无单缺：<strong>2♦</strong><br>4+支持，有单缺：<strong> Splinter</strong></td>
+        <th>有 ♥ 支持</th>
+        <td>3+ 支持：<strong>2♥</strong><br>4+ 支持：<strong>3♣</strong>（伯根加叫）</td>
+        <td colspan="2">5+支持，无单缺：<strong>2♦</strong><br>4+支持，有单缺：<span class="term" data-tooltip="3阶双跳新花报单缺"><strong>Splinter</strong></span></td>
       </tr>
       <tr>
-        <th>无 4 张高花，均型</th>
+        <th>无 4 张 ♠，均型</th>
         <td><strong>1NT</strong></td>
         <td><strong>2NT</strong><br><span>无将邀请</span></td>
         <td><strong>3NT</strong><br><span>封局止叫</span></td>
@@ -269,7 +355,7 @@ title: 第二章：一阶花色应叫
   <table class="decision-table">
     <thead>
       <tr>
-        <th>开叫 1♣</th>
+        <th>开叫 1♠</th>
         <th>弱实力<br>6-10 点</th>
         <th>邀请实力<br>11-12 点</th>
         <th>逼局实力<br>13 点以上</th>
@@ -283,7 +369,7 @@ title: 第二章：一阶花色应叫
       <tr>
         <th>无 4 张高花，有 ♣ 支持</th>
         <td><strong>3♣</strong><br><span>跳加叫，阻击</span></td>
-        <td colspan="2">5+ 支持，无单缺：<strong>2♣</strong><br>4+ 支持，有单缺：<strong> Splinter</strong></td>
+        <td colspan="2">5+ 支持，无单缺：<strong>2♣</strong><br>4+ 支持，有单缺：<span class="term" data-tooltip="3阶双跳新花报单缺"><strong>Splinter</strong></span></td>
       </tr>
       <tr>
         <th>无 4 张高花，均型</th>
@@ -302,7 +388,6 @@ title: 第二章：一阶花色应叫
   </div>
 </div>
 
-## 第二部分：搭档开叫一阶高花（1♥ / 1♠）
 
 <div class="quote-box">
   <p>高花开叫保证 5 张，应叫的核心是<strong>“表达对高花的支持程度”</strong>或<strong>“寻找其他出路”</strong>。</p>
@@ -320,7 +405,7 @@ title: 第二章：一阶花色应叫
       <li><strong>伯根加叫</strong>：叫 <strong>3♣</strong> 表示 4 张以上支持、7-9 点；叫 <strong>3♦</strong> 表示 4 张以上支持、10-12 点。</li>
       <li><strong>直接进局加叫</strong>（如 1♥-4♥）：<strong>想打并止叫。</strong>表示点力足够进局且有 5 张以上支持，但属于“限制性”牌力（通常没有满贯兴趣）。</li>
     </ul>
-    <p><strong>逻辑与“好牌慢叫”：</strong> 很多初学者以为 13 点以上就应该直接叫 4♥ 进局。但桥牌界有一句名言：<strong>“好牌慢叫”</strong>。如果你有进局实力且仍有满贯可能性，你应该先叫 <strong>2NT（Jacoby 2NT 约定叫）</strong> 或通过其他逼叫手段慢慢试探。只有在确定这手牌“打 4M 就够了”时，才直接封局。</p>
+    <p><strong>“好牌慢叫”：</strong> 很多初学者以为 13 点以上就应该直接叫 4♥ 进局。但如果你有进局实力且仍有满贯可能性，你应该先叫 <strong>2NT（Jacoby 2NT 约定叫）</strong> 或通过其他逼叫手段慢慢试探。只有在确定这手牌“没有满贯兴趣”时，才直接封局。</p>
   </div>
 </div>
 
@@ -984,6 +1069,40 @@ title: 第二章：一阶花色应叫
   .decision-table td span {
     color: #64748b;
     font-size: 0.85rem;
+  }
+  .term {
+    position: relative;
+    text-decoration: underline dotted;
+    text-underline-offset: 3px;
+    cursor: help;
+  }
+  .term::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 8px);
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 220px;
+    padding: 0.45rem 0.65rem;
+    border-radius: 6px;
+    background: #1e293b;
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: normal;
+    line-height: 1.4;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.18);
+  }
+  .term:hover::after,
+  .term:focus::after {
+    opacity: 1;
+    visibility: visible;
   }
   .decision-table tbody tr:last-child th,
   .decision-table tbody tr:last-child td {
