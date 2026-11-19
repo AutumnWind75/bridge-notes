@@ -312,78 +312,87 @@ title: 第二章：一阶花色应叫
 <div class="response-section highlight-section" style="margin-top: 2rem;">
   <div class="response-header">
     <span class="badge purple">决策</span>
-    <h3><strong>（没整理完！！！！！！！！）</strong>同伴开叫一阶高花，第一口应叫的决策逻辑</h3>
+    <h3>同伴开叫一阶高花，第一口应叫的决策逻辑</h3>
   </div>
   <div class="response-body">
 <div class="decision-table-wrapper">
-  <table class="decision-table">
+  <table class="decision-table high-major-decision-table">
     <thead>
       <tr>
-        <th>开叫 1♥</th>
-        <th>弱实力<br>6-10 点</th>
-        <th>邀请实力<br>11-12 点</th>
-        <th>逼局实力<br>13 点以上</th>
+        <th colspan="2">开叫 1♥ 后续叫</th>
+        <th>弱实力</th>
+        <th>邀请实力</th>
+        <th>逼局实力</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th>持 4 张 ♠</th>
-        <td colspan="3"><strong>1♠</strong>（逼局实力应优先支持同伴将牌）</td>
+        <th rowspan="3">有 3 张以上 ♥</th>
+        <th>3 张</th>
+        <td><strong>2♥</strong><br><span>6-10 点</span></td>
+        <td colspan="2"><strong>【特例】</strong>先用 1NT 或二盖一示强，再表示将牌支持</td>
       </tr>
       <tr>
-        <th>有 ♥ 支持</th>
-        <td>3+ 支持：<strong>2♥</strong><br>4+ 支持：<strong>3♣</strong>（伯根加叫）</td>
-        <td colspan="2">5+支持，无单缺：<strong>2♦</strong><br>4+支持，有单缺：<span class="term" data-tooltip="3阶双跳新花报单缺"><strong>Splinter</strong></span></td>
+        <th>4 张</th>
+        <td><strong>3♣</strong><br><span>伯根加叫，7-9 点</span></td>
+        <td rowspan="2"><strong>3♦</strong><br><span>伯根加叫，10-12 点</span><br>或<strong>Mini-Splinter 3♠</strong><br><span>10-12 点，有单缺</span></td>
+        <td rowspan="2"><strong>Jacoby 2NT</strong><br><span>13 点以上</span><br>或<strong>Splinter 4Y</strong><br><span>13-15 点，报单缺</span></td>
       </tr>
       <tr>
-        <th>无 4 张 ♠，均型</th>
-        <td><strong>1NT</strong></td>
-        <td><strong>2NT</strong><br><span>无将邀请</span></td>
-        <td><strong>3NT</strong><br><span>封局止叫</span></td>
+        <th>5 张以上</th>
+        <td><strong>4♥</strong><br><span>10 点以下，止叫</span></td>
       </tr>
       <tr>
-        <th>有梅花套</th>
-        <td>——</td>
-        <td>有 6 张 ♣：<strong>3♣</strong><br><span>邀请</span></td>
-        <td>有 5 张 ♣：<strong>2♣</strong><br><span>逼局</span></td>
+        <th rowspan="2">无 3 张 ♥</th>
+        <th>有 4 张以上 ♠</th>
+        <td colspan="2"><strong>1♠</strong><br><span>6-12 点</span></td>
+        <td rowspan="2"><span class="term" data-tooltip="低花=3张以上"><strong>二盖一</strong></span><br><span>13 点以上</span></td>
+      </tr>
+      <tr>
+        <th>无 4 张 ♠</th>
+        <td colspan="2"><strong>1NT</strong><br><span>6-12 点，无 4 张黑桃</span></td>
       </tr>
     </tbody>
   </table>
 </div>
 
 <div class="decision-table-wrapper">
-  <table class="decision-table">
+  <table class="decision-table high-major-decision-table">
     <thead>
       <tr>
-        <th>开叫 1♠</th>
-        <th>弱实力<br>6-10 点</th>
-        <th>邀请实力<br>11-12 点</th>
-        <th>逼局实力<br>13 点以上</th>
+        <th colspan="2">开叫 1♠ 后续叫</th>
+        <th>弱实力</th>
+        <th>邀请实力</th>
+        <th>逼局实力</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th>持 4 张高花</th>
-        <td colspan="3"><strong>1♥ 或 1♠</strong>（逼局实力应优先支持同伴将牌）</td>
+        <th rowspan="3">有 3 张以上 ♠</th>
+        <th>3 张</th>
+        <td><strong>2♠</strong><br><span>6-10 点</span></td>
+        <td colspan="2"><strong>【特例】</strong>先用 1NT 或二盖一示强，再表示将牌支持</td>
       </tr>
       <tr>
-        <th>无 4 张高花，有 ♣ 支持</th>
-        <td><strong>3♣</strong><br><span>跳加叫，阻击</span></td>
-        <td colspan="2">5+ 支持，无单缺：<strong>2♣</strong><br>4+ 支持，有单缺：<span class="term" data-tooltip="3阶双跳新花报单缺"><strong>Splinter</strong></span></td>
+        <th>4 张</th>
+        <td><strong>3♣</strong><br><span>伯根加叫，7-9 点</span></td>
+        <td rowspan="2"><strong>3♦</strong><br><span>伯根加叫，10-12 点</span><br>或<strong>Mini-Splinter 3♥</strong><br><span>10-12 点，有单缺</span></td>
+        <td rowspan="2"><strong>Jacoby 2NT</strong><br><span>13 点以上</span><br>或<strong>Splinter 4Y</strong><br><span>13-15 点，报单缺</span></td>
       </tr>
       <tr>
-        <th>无 4 张高花，均型</th>
-        <td><strong>1NT</strong></td>
-        <td><strong>2NT</strong><br><span>无将邀请</span></td>
-        <td><strong>3NT</strong><br><span>封局止叫</span></td>
+        <th>5 张以上</th>
+        <td><strong>4♠</strong><br><span>10 点以下，止叫</span></td>
       </tr>
       <tr>
-        <th>无 4 张高花，有 4 张 ♦</th>
-        <td colspan="3"><strong>1♦</strong></td>
+        <th colspan="2">无 3 张 ♠</th>
+        <td colspan="2"><strong>1NT</strong><br><span>6-12 点</span></td>
+        <td><span class="term" data-tooltip="低花=3张以上，♥=5张以上"><strong>二盖一</strong></span><br><span>13 点以上</span></td>
       </tr>
     </tbody>
   </table>
 </div>
+
+
 更弱的点力应考虑阻击叫。
   </div>
 </div>
@@ -400,7 +409,7 @@ title: 第二章：一阶花色应叫
   </div>
   <div class="response-body">
     <ul class="compact-list">
-      <li><strong>平加叫</strong>（如 1♥-2♥）：7-10 点，3 张以上支持。 <span class="marker ig">IG</span>（建设性邀请）。</li>
+      <li><strong>平加叫</strong>（如 1♥-2♥）：6-10 点，3 张以上支持。 </li>
       <li><strong>跳加叫</strong>（如 1♥-3♥）：5-7 点，通常 4 张以上支持。阻击叫，不逼叫，给对手制造困难。</li>
       <li><strong>伯根加叫</strong>：叫 <strong>3♣</strong> 表示 4 张以上支持、7-9 点；叫 <strong>3♦</strong> 表示 4 张以上支持、10-12 点。</li>
       <li><strong>直接进局加叫</strong>（如 1♥-4♥）：<strong>想打并止叫。</strong>表示点力足够进局且有 5 张以上支持，但属于“限制性”牌力（通常没有满贯兴趣）。</li>
@@ -1044,6 +1053,18 @@ title: 第二章：一阶花色应叫
     line-height: 1.5;
   }
   .decision-table tr > *:last-child { border-right: none; }
+  .decision-table tbody tr:last-child td:first-of-type {
+    border-right: 1px solid #e2e8f0;
+  }
+  .high-major-decision-table tbody > tr > th:first-child {
+    width: 15%;
+  }
+  .high-major-decision-table tbody > tr > th:nth-child(2) {
+    width: 14%;
+  }
+  .high-major-decision-table tbody > tr:nth-child(3) td:first-of-type {
+    border-right: 1px solid #e2e8f0;
+  }
   .decision-table thead th {
     background: #f8fafc;
     color: #475569;
