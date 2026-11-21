@@ -48,30 +48,30 @@ title: 第二章：一阶花色应叫
     <thead>
       <tr>
         <th>开叫 1♣</th>
-        <th>弱实力<br>6-10 点</th>
-        <th>邀请实力<br>11-12 点</th>
-        <th>逼局实力<br>13 点以上</th>
+        <th>弱实力</th>
+        <th>邀请实力（F1或IG）</th>
+        <th>逼局实力（FG）</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th>持 4 张高花</th>
-        <td colspan="3"><strong>1♥ 或 1♠</strong>（逼局实力应优先支持同伴将牌）</td>
+        <th>有 4 张高花</th>
+        <td colspan="3"><strong>1♥ 或 1♠</strong>（逼局实力应优先支持同伴将牌）<br><span>6 点以上，F1</span></td>
       </tr>
       <tr>
-        <th>无 4 张高花，有 5 张 ♣</th>
-        <td><strong>3♣</strong><br><span>跳加叫，建设性阻击</span></td>
-        <td colspan="2">无单缺：<strong>2♣</strong><br>有单缺：<span class="term" data-tooltip="3阶双跳新花报单缺"><strong>Splinter</strong></span></td>
+        <th>无 4 张高花</th>
+        <td><strong>1NT</strong><br><span>6-10 点</span></td>
+        <td><strong>2NT</strong><br><span>11-12 点，均型，IG</span></td>
+        <td><strong>3NT</strong><br><span>13-15 点，均型，FG</span></td>
       </tr>
       <tr>
-        <th>无 4 张高花，均型</th>
-        <td><strong>1NT</strong></td>
-        <td><strong>2NT</strong><br><span>无将邀请</span></td>
-        <td><strong>3NT</strong><br><span>封局止叫</span></td>
+        <th>无 4 张高花，有 5 张 ♣<br><span>此处无合适叫品时，应从 NT 中选择</span></th>
+        <td><strong>3♣</strong><br><span>5-7点，建设性阻击</span></td>
+        <td colspan="2">无单缺：<strong>2♣</strong><br><span>11 点以上，F1</span><br>有单缺：<span class="term" data-tooltip="3阶双跳新花报单缺"><strong>Splinter</strong></span><br><span>11 点以上，F1</span></td>
       </tr>
       <tr>
-        <th>无 4 张高花，有 4 张 ♦</th>
-        <td colspan="3"><strong>1♦</strong></td>
+        <th>无 4 张高花，有 4 张 ♦<br><span>此处无合适叫品时，应从 NT 中选择</span></th>
+        <td colspan="3"><strong>1♦</strong><br><span>6 点以上，F1</span></td>
       </tr>
     </tbody>
   </table>
@@ -82,133 +82,203 @@ title: 第二章：一阶花色应叫
     <thead>
       <tr>
         <th>开叫 1♦</th>
-        <th>弱实力<br>6-10 点</th>
-        <th>邀请实力<br>11-12 点</th>
-        <th>逼局实力<br>13 点以上</th>
+        <th>弱实力</th>
+        <th>邀请实力（F1或IG）</th>
+        <th>逼局实力（FG）</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th>持 4 张高花</th>
-        <td colspan="3"><strong>1♥ 或 1♠</strong>（逼局实力应优先支持同伴将牌）</td>
+        <th>有 4 张高花</th>
+        <td colspan="3"><strong>1♥ 或 1♠</strong>（逼局实力应优先支持同伴将牌）<br><span>6 点以上，F1</span></td>
       </tr>
       <tr>
-        <th>无 4 张高花，有 5 张 ♦</th>
-        <td><strong>3♦</strong><br><span>跳加叫，建设性阻击</span></td>
-        <td colspan="2">无单缺：<strong>2♦</strong><br>有单缺：<span class="term" data-tooltip="3阶双跳新花报单缺"><strong>Splinter</strong></span></td>
+        <th>无 4 张高花</th>
+        <td><strong>1NT</strong><br><span>6-10 点</span></td>
+        <td><strong>2NT</strong><br><span>11-12 点，均型，IG</span></td>
+        <td><strong>3NT</strong><br><span>13-15 点，均型，FG</span></td>
       </tr>
       <tr>
-        <th>无 4 张高花，均型</th>
-        <td><strong>1NT</strong></td>
-        <td><strong>2NT</strong><br><span>无将邀请</span></td>
-        <td><strong>3NT</strong><br><span>封局止叫</span></td>
+        <th>无 4 张高花，有 5 张 ♦<br><span>此处无合适叫品时，应从 NT 中选择</span></th>
+        <td><strong>3♦</strong><br><span>5-7点，建设性阻击</span></td>
+        <td colspan="2">无单缺：<strong>2♦</strong><br><span>11 点以上，F1</span><br>有单缺：<span class="term" data-tooltip="3阶双跳新花报单缺"><strong>Splinter</strong></span><br><span>11 点以上，F1</span></td>
       </tr>
       <tr>
-        <th>有梅花套</th>
+        <th>有 ♣ 套<br><span>此处无合适叫品时，应从 NT 中选择</span></th>
         <td>——</td>
-        <td>有 6 张 ♣：<strong>3♣</strong><br><span>邀请</span></td>
-        <td>有 5 张 ♣：<strong>2♣</strong><br><span>逼局</span></td>
+        <td>有 6 张 ♣：<strong>3♣</strong><br><span>9-11 点</span></td>
+        <td>有 5 张 ♣：<strong>2♣</strong><br><span>12 点以上，FG</span></td>
       </tr>
     </tbody>
   </table>
 </div>
 
-更弱的点力应考虑阻击叫。
+更弱的点力应考虑这种阻击叫：4-6 点，6 张以上可以 2 阶跳新花。
   </div>
 </div>
-
-
-<div class="response-section">
-  <div class="response-header">
-    <span class="badge purple">1</span>
-    <h3>应叫 1 阶高花（一盖一） <span class="marker f1">F1</span></h3>
-  </div>
-  <div class="response-body">
-    <p><strong>条件：</strong> 6 点以上，4 张以上高花。</p>
-    <p><strong>逻辑：</strong> 无论搭档开叫 1♣ 还是 1♦，只要你有 4 张高花，门槛极低的“一盖一”都是你的首选。因为在低阶寻找 4-4 或 5-3 的高花配合，是最容易成局的路径。</p>
-  </div>
-</div>
-
-<div class="response-section highlight-section">
-  <div class="response-header">
-    <span class="badge purple">2</span>
-    <h3>应叫 1♦（仅针对 1♣ 开叫） <span class="marker f1">F1</span></h3>
-  </div>
-  <div class="response-body">
-    <p><strong>条件：</strong> 6 点以上，4 张以上 ♦，且<strong>否认 4 张高花</strong>。</p>
-    <p><strong>逻辑：</strong> 当搭档开叫 1♣ 时，你叫 1♦ 表示你没有 4 张高花。如果你有高花，根据下面的 Walsh 原则，你应该已经叫出高花了。</p>
 
 <div class="callout-box">
   <strong>🌟 Walsh 应叫原则（高花优先）</strong>
   <p>搭档开叫 1♣ 时，如果你同时有 4 张高花和 5 张以上 ♦，请优先叫出高花，否则可能错过 4-4 的高花配合。</p>
 </div>
 
-  </div>
-</div>
 
-<div class="response-section">
+
+<div class="response-section highlight-section" style="margin-top: 2rem;">
   <div class="response-header">
-    <span class="badge purple">3</span>
-    <h3>应叫无将（1NT / 2NT / 3NT）</h3>
+    <span class="badge purple">决策</span>
+    <h3>开叫人再叫及后续叫品的决策逻辑</h3>
   </div>
   <div class="response-body">
-    <p><strong>条件：</strong> 均型牌，且<strong>否认 4 张高花</strong>。</p>
-    <ul class="compact-list">
-      <li>6-10 点叫 <strong>1NT</strong>（通常不逼叫）。</li>
-      <li>11-12 点叫 <strong>2NT</strong> <span class="marker ig">IG</span>（邀请搭档，若搭档是高限则进局）。</li>
-      <li>13-15 点直接叫 <strong>3NT</strong>（直接进局）。</li>
-    </ul>
-    <p><strong>逻辑：</strong> 既然找不到高花配合，就按点力高低叫无将。这和后面高花应叫的无将逻辑完全类似，都是“点力越高，叫得越高”。</p>
-  </div>
+
+### 开叫 1♣ 应叫 1♦
+此时很难有高花配合，因此后续再叫（若都不符合应就近寻找合适叫品）：
+<div class="decision-table-wrapper">
+  <table class="decision-table">
+    <thead>
+      <tr>
+        <th>1♣-1♦-?</th>
+        <th>弱实力</th>
+        <th>邀请实力</th>
+        <th>逼局实力</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>有 5 张 ♣，4 张 M（第二套）</span></th>
+        <td colspan="2"><strong>1♥ 或 1♠</strong><br><span>12-17 点</span></td>
+        <td><strong>2♥ 或 2♠</strong><br><span>18-21 点，FG</span></td>
+      </tr>
+      <tr>
+        <th>有 5 张 ♣， 4 张 ♦（第二套）</th>
+        <td><strong>2♦</strong><br><span>12-15 点</span></td>
+        <td><strong>3♦</strong><br><span>16-17 点</span></td>
+        <td><strong>3♥ 或 3♠</strong><br><span>Splinter，18-21 点，FG</span></td>
+      </tr>
+      <tr>
+        <th>有 6 张 ♣</th>
+        <td><strong>2♣</strong><br><span>12-15 点，或点力更强的坏套</span></td>
+        <td><strong>3♣</strong><br><span>15-17 点，♣ 好套，或点力更强的坏套</span></td>
+        <td><strong>4♣</strong><br><span>18-21 点，♣ 好套</span><br><strong>3NT</strong><br><span>7.5-9赢墩，♣ 坚固套，未叫花色有止</span></td>
+      </tr>
+      <tr>
+        <th>均型，可能有 4 张高花</th>
+        <td><strong>1NT</strong><br><span>12-14 点</span></td>
+        <td>不可能是 15-17 点<br>否则开叫就会直接开 1NT</td>
+        <td><strong>2NT</strong><br><span>18-19 点，FG（同理不可能是 20-21 点）</span></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
-<div class="response-section">
-  <div class="response-header">
-    <span class="badge purple">4</span>
-    <h3>低花简单加叫（低花反加叫） <span class="marker f1">F1</span></h3>
-  </div>
-  <div class="response-body">
-    <p><strong>条件：</strong> 11 点以上，5 张以上支持，逼叫一轮。</p>
-    <p><strong>逻辑：</strong> 在传统自然叫牌法中，加叫低花原本表示弱牌。现代体系将其改为<strong>强牌逼叫</strong>（即“低花反加叫”），旨在区分强弱。它告诉搭档：“我们至少有 11 点，别轻易 Pass。”</p>
-  </div>
+除开叫人再叫 1NT 外，后续应叫均自然。
+
+开叫人再叫 1NT 后，使用双路重询，其中唯三不自然的叫品是（注意 2NT 的约定和别处不同，因为应叫人已经表示自己有 4 张 ♦ 了）：
+- 2♣：转移至 2♦，♦ 套的弱止叫或任意邀请实力；
+- 2♦：人工逼局，不符合其他逼局的牌；
+- 2NT：5 张 ♦，4 张 ♣，IG。
+
+除 2NT 外，所有的邀请实力都必须通过 2♣ 转移。除这三者之外的叫品不是示弱就是逼局。
+
+<!-- <div class="decision-table-wrapper">
+  <table class="decision-table high-major-decision-table">
+    <thead>
+      <tr>
+        <th colspan="2">1♣-1♦-1NT-?</th>
+        <th>弱实力</th>
+        <th>邀请实力</th>
+        <th>逼局实力</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th colspan="2">有 6+ 张 ♦</th>
+        <td rowspan="4"><strong>2♣-2♦-Pass</strong></td>
+        <td><strong>2♣-2♦-3♦</strong></td>
+        <td><strong>3♦</strong></td>
+      </tr>
+      <tr>
+        <th rowspan="3">有 5 张 ♦</th>
+        <th>有 4 张 M</th>
+        <td><strong>2♣-2♦-2M</strong></td>
+        <td><strong>2M</strong></td>
+      </tr>
+      <tr>
+        <th>有 4 张 ♣</th>
+        <td><strong>2NT</strong></td>
+        <td><strong>3♣</strong><br><span>一般要 5 张以上 ♣</span><br></td>
+      </tr>
+      <tr>
+        <th>其他</th>
+        <td rowspan="2"><strong>2♣-2♦-2NT</strong><br><span>均型</span></td>
+        <td rowspan="2"><strong>2♦</strong><br><span>虚叫，FG</span><br><strong>3NT</strong><br><span>均型，未叫花色有止，自然叫</span></td>
+      </tr>
+      <tr>
+        <th colspan="2">其他</th>
+        <td><strong>Pass</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+
+### 开叫 1m 应叫 1M 
+核心是先看同伴 M 有没有配合，再看 NT 或 m 能不能打。若同伴 M 有配合且为强牌，可以采取一些并不直接表示支持的叫品。因此后续再叫：
+<div class="decision-table-wrapper">
+  <table class="decision-table">
+    <thead>
+      <tr>
+        <th>1m-1M-?</th>
+        <th>弱实力</th>
+        <th>邀请实力</th>
+        <th>逼局实力</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>（应叫 1♥ 后）有 4 张 ♠（不是第二套）</span></th>
+        <td colspan="3"><strong>1♠</strong></td>
+      </tr>
+      <tr>
+        <th>（开叫 1♣ 后）有 4 张 ♦（第二套）</span></th>
+        <td colspan="2"><strong>2♦</strong><br><span>12-17 点</span></td>
+        <td><strong>3♦</strong><br><span>18-21 点，FG</span></td>
+      </tr>
+      <tr>
+        <th>有可以逆叫的第二套新花</span></th>
+        <td>不表示</td>
+        <td colspan="2"><strong>二阶新花</strong><br><span>16-21 点，F1</span></td>
+      </tr>
+      <tr>
+        <th>有 4 张支持</span></th>
+        <td><strong>2M</strong><br><span>12-14 点</span></td>
+        <td><strong>3M</strong><br><span>15-17 点，IG</span></td>
+        <td><strong>4M</strong><br><span>18-19 点，均型</span><br><strong>跳逆叫</strong><br><span>Splinter，18+ 调整点</span></td>
+      </tr>
+      <tr>
+        <th>有 6 张原低花</th>
+        <td><strong>2m</strong><br><span>12-15 点，或点力更强的坏套</span></td>
+        <td><strong>3m</strong><br><span>15-17 点，好套，或点力更强的坏套</span></td>
+        <td><strong>4m</strong><br><span>18-21 点，好套，及 4 张应叫高花支持</span><br><strong>3NT</strong><br><span>7 张以上 ♣ 坚固套，未叫花色有止</span></td>
+      </tr>
+      <tr>
+        <th>均型</th>
+        <td><strong>1NT</strong><br><span>12-14 点，若 1♥ 后则否认 4 张 ♠</span></td>
+        <td>不可能是 15-17 点</td>
+        <td><strong>2NT</strong><br><span>18-19 点，FG</span></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
-<div class="response-section">
-  <div class="response-header">
-    <span class="badge purple">5</span>
-    <h3>应叫 2♣（二盖一逼局，仅针对 1♦ 开叫） <span class="marker fg">FG</span></h3>
-  </div>
-  <div class="response-body">
-    <p><strong>条件：</strong> 13 点以上，5 张以上 ♣ 套（通常为非均型），且<strong>否认 4 张高花</strong>。</p>
-    <p><strong>逻辑：</strong> 当搭档开叫 1♦ 时，你叫 2♣ 是低花体系中唯一的“二盖一逼局”。这告诉同伴：“我至少有 13 点且带有一套长梅花，我们已经具备进局实力。” 这通常是为了在同伴 ♦ 不配合时，利用长 ♣ 寻找 3NT 的赢墩来源，或是探索 5♣ 定约。</p>
-  </div>
-</div>
+除开叫人再叫 1NT 外，后续应叫均自然。
 
-<div class="response-section">
-  <div class="response-header">
-    <span class="badge purple">6</span>
-    <h3>跳叫新花（阻击）</h3>
-  </div>
-  <div class="response-body">
-    <ul class="compact-list">
-      <li><strong>2 阶弱跳新花：</strong>如 1♣-2♥。4-6 点，有 6 张长套。增加对手叫牌难度，不逼叫。</li>
-      <li><strong>1♦ 后叫 3♣：</strong>9-11 点，6 张以上 ♣。点力高于一般弱阻击，属于建设性阻击。它既剥夺了对手在 2 阶寻找高花配合的空间，又因为自身有一定牌力，如果同伴 ♦ 极配且 ♣ 有挡张，你们甚至有望探索 3NT 定约。</li>
-    </ul>
-  </div>
-</div>
+开叫人再叫 1NT 后，使用双路重询，其中唯三不自然的叫品是（注意 2NT 的约定和别处不同，因为应叫人没有表明自己的低花长度）：
+- 2♣：转移至 2♦，♦ 套的弱止叫或任意邀请实力；
+- 2♦：人工逼局，不符合其他逼局的牌；
+- 2NT：转移至 3♣。如果 Pass 为弱牌 ♣ 套；转移后应叫人再叫 3♦ 表示双低花 55+ 邀请。
 
-<div class="response-section">
-  <div class="response-header">
-    <span class="badge purple">7</span>
-    <h3>低花跳加叫（阻击）</h3>
-  </div>
-  <div class="response-body">
-    <p><strong>条件：</strong> 5 张以上将牌支持。</p>
-    <ul class="compact-list">
-      <li><strong>1♣ - 3♣：</strong> 5-7 点，5 张以上支持，阻击叫。</li>
-      <li><strong>1♦ - 3♦：</strong> 5-7 点，5 张以上支持，阻击叫。</li>
-    </ul>
-    <p><strong>逻辑：</strong> 这是纯粹的干扰性加叫。由于跳过了 2 阶，既占据了对手寻找高花配合的空间，又因为点力极低，不会给同伴传递错误的进局期望。</p>
+除 2NT 外，所有的邀请实力都必须通过 2♣ 转移。除这三者之外的叫品不是示弱就是逼局。
   </div>
 </div>
 
@@ -622,6 +692,49 @@ title: 第二章：一阶花色应叫
   <p><strong>为什么叫“自然”：</strong> 自然叫牌法之所以“自然”，就是因为它<strong>遵从人类直觉</strong>。叫出的花色通常代表真的有长度；点力越高，叫牌级别越高；有配合打有将，没配合打无将。只要理解了“找配合、看点力、定高度”这三条核心逻辑，你就能推演出绝大多数的基础叫牌。</p>
 </div>
 
+<div class="fourth-suit-box">
+  <h3>第四花色逼叫到局（FSF）</h3>
+  <p><strong>适用前提：</strong>只有在开叫人没有再叫 1NT 的序列中，才会出现第四花色逼叫。如果开叫人再叫了 1NT（如 <strong>1♣-1♦-1NT</strong>），后续应叫使用的是双路重询（2♣/2♦）。第四花色逼叫通常出现在如 <strong>1♣-1♦-1♥-1♠</strong> 的序列中，此时 1♠ 是第四花色。</p>
+  <p>应叫人叫出第四花色时承诺逼叫到局（GF），开叫人必须继续描述牌型，并按以下优先级叫牌：</p>
+
+  <h4>第一优先级：报止张</h4>
+  <p>第四花色逼叫的首要目的通常是试探 3NT，确认本方在第四花色上是否有挡张。</p>
+  <ul>
+    <li><strong>2NT：</strong>有第四花色挡张，且为低限实力（12-14 点）。</li>
+    <li><strong>3NT：</strong>有第四花色挡张，且为高限实力（15-17 点）。</li>
+  </ul>
+
+  <h4>第二优先级：报配合</h4>
+  <p>如果没有第四花色挡张，或者虽然有挡张但将定约更好，开叫人应优先寻找与应叫花色的配合。</p>
+  <ul>
+    <li><strong>2♦：</strong>没有第四花色挡张，但有 3 张 ♦ 支持，通常是低限。</li>
+    <li><strong>3♦：</strong>没有第四花色挡张，但有 3 张 ♦ 支持，通常是高限且有满贯兴趣。</li>
+  </ul>
+  <p><strong>注意：</strong>如果开叫人有 3 张 ♥ 支持，上一轮通常应直接加叫 2♥。此时叫 2♥ 更可能表示 2 张 ♥、没有第四花色挡张，并退回安全的 2 阶将牌。</p>
+
+  <h4>第三优先级：重叫自己的长套</h4>
+  <p>如果既没有第四花色挡张，也没有对同伴的配合，开叫人只能重叫原来的长套。</p>
+  <ul>
+    <li><strong>2♥：</strong>原本叫 1♥，表示没有第四花色挡张，也没有 3 张 ♦ 支持。</li>
+    <li><strong>3♣：</strong>原本叫 1♣，表示没有第四花色挡张，也没有 3 张 ♦ 支持，只能重述自己的 ♣ 套。</li>
+  </ul>
+
+  <h4>第四优先级：扣叫第四花色</h4>
+  <p>如果开叫人对 3NT 没兴趣且牌力极强，<strong>3♠</strong> 可以扣叫第四花色，表示有第一轮控制（缺门或 A/单张），并带有极强的满贯兴趣。</p>
+
+  <h4>实战牌例</h4>
+  <p>进程为 <strong>1♣-1♦-1♥-1♠（FSF）</strong>：</p>
+  <ul>
+    <li>持 ♠Kx、♥Qxxx、♦xx、♣AKxxx（12 点）时，叫 <strong>2NT</strong>，表示有 ♠ 挡张且是低限。</li>
+    <li>持 ♠xxx、♥KQxx、♦Axx、♣AQx（15 点）时，叫 <strong>2♦</strong>，表示没有 ♠ 挡张但有 3 张 ♦ 支持。</li>
+    <li>持 ♠xx、♥KQxxx、♦Qx、♣KQJx（13 点）时，叫 <strong>3♣</strong>，表示没有 ♠ 挡张，也没有 ♦ 配合，只能重叫自己的 ♣ 套。</li>
+    <li>持 ♠x、♥KQxxx、♦Axx、♣AKxx（16 点）时，叫 <strong>3♠</strong>，表示第四花色有控制并有极强满贯兴趣。</li>
+  </ul>
+
+  <h4>重要的后续原则</h4>
+  <p>既然应叫人叫出第四花色表示逼叫到局（GF），在叫牌达到 3NT、4 阶高花或 5 阶低花之前，任何一方都不能 Pass。只有双方确认最终定约（如停在 3NT 或 4♥），本轮叫牌才算结束。</p>
+</div>
+
 ---
 <div class="chapter-nav">
   <a href="/chapters/01-normal-opening" class="nav-btn prev">← 上一章：正常开叫</a>
@@ -886,6 +999,27 @@ title: 第二章：一阶花色应叫
   }
   .summary-box p:last-child { margin-bottom: 0; }
   .summary-box strong { color: #1e40af; }
+  .fourth-suit-box {
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0 2rem;
+    color: #78350f;
+    line-height: 1.65;
+  }
+  .fourth-suit-box h3 {
+    margin: 0 0 0.75rem;
+    color: #92400e;
+    font-size: 1.15rem;
+  }
+  .fourth-suit-box h4 {
+    margin: 1rem 0 0.35rem;
+    color: #92400e;
+  }
+  .fourth-suit-box p { margin: 0 0 0.5rem; }
+  .fourth-suit-box ul { margin: 0.25rem 0 0.5rem; padding-left: 1.5rem; }
+  .fourth-suit-box li { margin-bottom: 0.35rem; }
 
   /* 底部导航按钮 */
   .chapter-nav {
