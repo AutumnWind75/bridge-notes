@@ -8,7 +8,7 @@ title: 第二章：一阶花色应叫
 <div class="intro-card">
   <p>当搭档开叫 1 阶花色后，作为应叫方，你的首要任务是向搭档传递两个信息：<strong>我有没有配合？我的点力大概是多少？</strong>
 
-本章习题不涉及复杂的约定叫，但习题之后仍会详细介绍。这些叫品都是已经逼局实力用来试探满贯的叫品，初学者可视情况跳过。</p>
+对于第一口应叫，本章习题不涉及复杂的约定叫，但仍会详细介绍。这些叫品都是已经逼局实力用来试探满贯的叫品，初学者可视情况跳过。但是后续应叫中的约定叫（如双路重询）应当熟记。</p>
   
   <div class="marker-guide">
     <p><strong>📌 叫牌记号提示：</strong>本教程将使用以下缩写标记叫牌性质：</p>
@@ -26,6 +26,45 @@ title: 第二章：一阶花色应叫
     <li><strong>点力决定高度</strong>：点力越低叫得越低（为了安全），点力越高叫得越高（为了进局）。</li>
   </ul>
   <p class="pass-note">💡 <strong>补充：</strong>如果手牌点力少于 5 点，且没有极好的牌型，面对搭档的开叫通常选择 <strong>Pass</strong>，以免给搭档错误的进局希望。</p>
+</div>
+
+<div class="response-section highlight-section" style="margin-top: 2rem;">
+  <div class="response-header">
+    <span class="badge purple">规则</span>
+    <h3>通用叫牌规则</h3>
+  </div>
+  <div class="response-body">
+    <ol class="logic-list">
+      <li>
+        <strong>第三口的 Splinter 是且仅是以下情形：</strong>所有的一盖一之后，双跳新花；所有的二盖一之后，跳新花。
+        <details>
+          <summary>特例</summary>
+          <!-- 特例内容待补充 -->
+        </details>
+      </li>
+      <li>
+        <strong>所有的阻击是且仅是第二口跳加叫或跳叫新花：</strong>因为第三口及以后若没被插叫，就没有必要阻击。
+        <details>
+          <summary>特例</summary>
+          <!-- 特例内容待补充 -->
+        </details>
+      </li>
+      <li>
+        <strong>第四花色逼局当且仅当：</strong>叫牌序列中未出现过 NT，且未出现过其他逼局叫品。
+        <details>
+          <summary>特例</summary>
+          <!-- 特例内容待补充 -->
+        </details>
+      </li>
+      <li>
+        <strong>逼局叫品出现之后：</strong>在进局之前不能停止叫牌。在可以确信联手无法满贯时，应立刻叫出最好的进局叫品。
+        <details>
+          <summary>特例</summary>
+          <!-- 特例内容待补充 -->
+        </details>
+      </li>
+    </ol>
+  </div>
 </div>
 
 ## 第一部分：搭档开叫一阶低花（1♣ / 1♦）
@@ -157,8 +196,8 @@ title: 第二章：一阶花色应叫
       </tr>
       <tr>
         <th>有 6 张 ♣</th>
-        <td><strong>2♣</strong><br><span>12-15 点，或点力更强的坏套</span></td>
-        <td><strong>3♣</strong><br><span>15-17 点，♣ 好套，或点力更强的坏套</span></td>
+        <td><strong>2♣</strong><br><span>12-15 点，<br>或点力更强的坏套</span></td>
+        <td><strong>3♣</strong><br><span>15-17 点，♣ 好套，<br>或点力更强的坏套</span></td>
         <td><strong>4♣</strong><br><span>18-21 点，♣ 好套</span><br><strong>3NT</strong><br><span>7.5-9赢墩，♣ 坚固套，未叫花色有止</span></td>
       </tr>
       <tr>
@@ -240,9 +279,9 @@ title: 第二章：一阶花色应叫
         <td colspan="3"><strong>1♠</strong></td>
       </tr>
       <tr>
-        <th>（开叫 1♣ 后）有 4 张 ♦（第二套）</span></th>
-        <td colspan="2"><strong>2♦</strong><br><span>12-17 点</span></td>
-        <td><strong>3♦</strong><br><span>18-21 点，FG</span></td>
+        <th>（开叫 1♦ 后）有 4 张 ♣（第二套）</span></th>
+        <td colspan="2"><strong>2♣</strong><br><span>12-17 点</span></td>
+        <td><strong>3♣</strong><br><span>18-21 点，FG</span></td>
       </tr>
       <tr>
         <th>有可以逆叫的第二套新花</span></th>
@@ -257,8 +296,8 @@ title: 第二章：一阶花色应叫
       </tr>
       <tr>
         <th>有 6 张原低花</th>
-        <td><strong>2m</strong><br><span>12-15 点，或点力更强的坏套</span></td>
-        <td><strong>3m</strong><br><span>15-17 点，好套，或点力更强的坏套</span></td>
+        <td><strong>2m</strong><br><span>12-15 点，<br>或点力更强的坏套</span></td>
+        <td><strong>3m</strong><br><span>15-17 点，好套，<br>或点力更强的坏套</span></td>
         <td><strong>4m</strong><br><span>18-21 点，好套，及 4 张应叫高花支持</span><br><strong>3NT</strong><br><span>7 张以上 ♣ 坚固套，未叫花色有止</span></td>
       </tr>
       <tr>
@@ -282,50 +321,9 @@ title: 第二章：一阶花色应叫
   </div>
 </div>
 
-<!-- 第一部分练习开始 -->
-<div class="quiz-group">
-  <h3 class="quiz-group-title">📝 第一部分：应叫练习</h3>
-  
-  <!-- 练习 1 -->
-  <div class="quiz-card">
-    <div class="quiz-question"><strong>练习 1：</strong> 同伴开叫 <strong>1♣</strong>，上家 Pass。你手持以下牌，应该如何应叫？</div>
-    <div class="hand-box" style="font-size: 1rem; margin-top: 1rem;">
-      <span class="suit black">♠</span> K J x x &nbsp;&nbsp;&nbsp; <span class="suit red">♥</span> Q x x &nbsp;&nbsp;&nbsp; <span class="suit red">♦</span> J x x &nbsp;&nbsp;&nbsp; <span class="suit black">♣</span> x x x
-    </div>
-    <div class="quiz-options">
-      <button class="quiz-option" data-correct="false">A. Pass</button>
-      <button class="quiz-option" data-correct="true">B. 1♠</button>
-      <button class="quiz-option" data-correct="false">C. 1NT</button>
-      <button class="quiz-option" data-correct="false">D. 2NT</button>
-    </div>
-    <div class="quiz-explanation" style="display:none;">
-      <div class="answer-title">正确答案：B. 1♠</div>
-      <p>这手牌有 7 点。由于点力达到了 6 点且持有 4 张高花（♠ KJxx），根据 <strong>Walsh 应叫原则</strong>，必须优先叫出高花。不能选 1NT（1NT 明确否认 4 张高花），也不能选 2NT（2NT 要求 11-12 点邀请实力），更不能 Pass。</p>
-    </div>
-  </div>
-
-  <!-- 练习 2 -->
-  <div class="quiz-card">
-    <div class="quiz-question"><strong>练习 2：</strong> 同伴开叫 <strong>1♦</strong>，上家 Pass。你手持以下牌，应该如何应叫？</div>
-    <div class="hand-box" style="font-size: 1rem; margin-top: 1rem;">
-      <span class="suit black">♠</span> K x x &nbsp;&nbsp;&nbsp; <span class="suit red">♥</span> J x x &nbsp;&nbsp;&nbsp; <span class="suit red">♦</span> Q x &nbsp;&nbsp;&nbsp; <span class="suit black">♣</span> A Q x x x
-    </div>
-    <div class="quiz-options">
-      <button class="quiz-option" data-correct="false">A. 2♣</button>
-      <button class="quiz-option" data-correct="false">B. 3♣</button>
-      <button class="quiz-option" data-correct="true">C. 2NT</button>
-      <button class="quiz-option" data-correct="false">D. 3NT</button>
-    </div>
-    <div class="quiz-explanation" style="display:none;">
-      <div class="answer-title">正确答案：C. 2NT</div>
-      <p>这手牌共 12 个点，均型且没有 4 张高花。首先，点力不够直接进局叫 <strong>3NT</strong>（通常需 13-15 点）；其次，叫 <strong>2♣</strong> 属于二盖一逼局，要求 13 点以上；而 <strong>3♣</strong> 是 9-11 点、6 张以上的阻击叫，你只有 5 张。因此，最佳选择是叫 <strong>2NT</strong>（11-12 点邀请，同伴若是高限则进 3NT）。</p>
-    </div>
-  </div>
-</div>
-<!-- 第一部分练习结束 -->
 
 <!-- 第一部分进阶：Splinter -->
-<h2>🌟 第一部分进阶：Splinter（斯普林特）</h2>
+<!-- <h2>🌟 第一部分进阶：Splinter（斯普林特）</h2> -->
 <div class="response-section highlight-section">
   <div class="response-header">
     <span class="badge purple">进阶</span>
@@ -376,8 +374,54 @@ title: 第二章：一阶花色应叫
   </div>
 </div>
 
+<!-- 第一部分练习开始 -->
+<div class="quiz-group">
+  <h3 class="quiz-group-title">📝 第一部分：第一口应叫练习</h3>
+  
+  <!-- 练习 1 -->
+  <div class="quiz-card">
+    <div class="quiz-question"><strong>练习 1：</strong> 同伴开叫 <strong>1♣</strong>，上家 Pass。你手持以下牌，应该如何应叫？</div>
+    <div class="hand-box" style="font-size: 1rem; margin-top: 1rem;">
+      <span class="suit black">♠</span> K J x x &nbsp;&nbsp;&nbsp; <span class="suit red">♥</span> Q x x &nbsp;&nbsp;&nbsp; <span class="suit red">♦</span> J x x &nbsp;&nbsp;&nbsp; <span class="suit black">♣</span> x x x
+    </div>
+    <div class="quiz-options">
+      <button class="quiz-option" data-correct="false">A. Pass</button>
+      <button class="quiz-option" data-correct="true">B. 1♠</button>
+      <button class="quiz-option" data-correct="false">C. 1NT</button>
+      <button class="quiz-option" data-correct="false">D. 2NT</button>
+    </div>
+    <div class="quiz-explanation" style="display:none;">
+      <div class="answer-title">正确答案：B. 1♠</div>
+      <p>这手牌有 7 点。由于点力达到了 6 点且持有 4 张高花（♠ KJxx），根据 <strong>Walsh 应叫原则</strong>，必须优先叫出高花。不能选 1NT（1NT 明确否认 4 张高花），也不能选 2NT（2NT 要求 11-12 点邀请实力），更不能 Pass。</p>
+    </div>
+  </div>
+
+  <!-- 练习 2 -->
+  <div class="quiz-card">
+    <div class="quiz-question"><strong>练习 2：</strong> 同伴开叫 <strong>1♦</strong>，上家 Pass。你手持以下牌，应该如何应叫？</div>
+    <div class="hand-box" style="font-size: 1rem; margin-top: 1rem;">
+      <span class="suit black">♠</span> K x x &nbsp;&nbsp;&nbsp; <span class="suit red">♥</span> J x x &nbsp;&nbsp;&nbsp; <span class="suit red">♦</span> Q x &nbsp;&nbsp;&nbsp; <span class="suit black">♣</span> A Q x x x
+    </div>
+    <div class="quiz-options">
+      <button class="quiz-option" data-correct="false">A. 2♣</button>
+      <button class="quiz-option" data-correct="false">B. 3♣</button>
+      <button class="quiz-option" data-correct="true">C. 2NT</button>
+      <button class="quiz-option" data-correct="false">D. 3NT</button>
+    </div>
+    <div class="quiz-explanation" style="display:none;">
+      <div class="answer-title">正确答案：C. 2NT</div>
+      <p>这手牌共 12 个点，均型且没有 4 张高花。首先，点力不够直接进局叫 <strong>3NT</strong>（通常需 13-15 点）；其次，叫 <strong>2♣</strong> 属于二盖一逼局，要求 13 点以上；而 <strong>3♣</strong> 是 9-11 点、6 张以上的阻击叫，你只有 5 张。因此，最佳选择是叫 <strong>2NT</strong>（11-12 点邀请，同伴若是高限则进 3NT）。</p>
+    </div>
+  </div>
+</div>
+<!-- 第一部分练习结束 -->
+
+
 ## 第二部分：搭档开叫一阶高花（1♥ / 1♠）
 
+<div class="quote-box">
+  <p>高花开叫保证 5 张，应叫的核心是<strong>“表达对高花的支持程度”</strong>或<strong>“寻找其他出路”</strong>。</p>
+</div>
 
 <div class="response-section highlight-section" style="margin-top: 2rem;">
   <div class="response-header">
@@ -400,13 +444,13 @@ title: 第二章：一阶花色应叫
         <th rowspan="3">有 3 张以上 ♥</th>
         <th>3 张</th>
         <td><strong>2♥</strong><br><span>6-10 点</span></td>
-        <td colspan="2"><strong>【特例】</strong>先用 1NT 或二盖一示强，再表示将牌支持</td>
+        <td colspan="2"><strong>【特例】</strong>先叫 1♠，1NT 或二盖一，再表示将牌支持</td>
       </tr>
       <tr>
         <th>4 张</th>
         <td><strong>3♣</strong><br><span>伯根加叫，7-9 点</span></td>
-        <td rowspan="2"><strong>3♦</strong><br><span>伯根加叫，10-12 点</span><br>或<strong>Mini-Splinter 3♠</strong><br><span>10-12 点，有单缺</span></td>
-        <td rowspan="2"><strong>Jacoby 2NT</strong><br><span>13 点以上</span><br>或<strong>Splinter 4Y</strong><br><span>13-15 点，报单缺</span></td>
+        <td rowspan="2"><strong>3♦</strong><br><span>伯根加叫，10-12 点</span><br>或 <strong>Mini-Splinter 3♠</strong><br><span>10-12 点，有单缺</span></td>
+        <td rowspan="2"><strong>Jacoby 2NT</strong><br><span>13 点以上</span><br>或 <strong>Splinter 3NT/4m</strong><br><span>13-15 点，报单缺</span></td>
       </tr>
       <tr>
         <th>5 张以上</th>
@@ -441,13 +485,13 @@ title: 第二章：一阶花色应叫
         <th rowspan="3">有 3 张以上 ♠</th>
         <th>3 张</th>
         <td><strong>2♠</strong><br><span>6-10 点</span></td>
-        <td colspan="2"><strong>【特例】</strong>先用 1NT 或二盖一示强，再表示将牌支持</td>
+        <td colspan="2"><strong>【特例】</strong>先叫 1♠，1NT 或二盖一，再表示将牌支持</td>
       </tr>
       <tr>
         <th>4 张</th>
         <td><strong>3♣</strong><br><span>伯根加叫，7-9 点</span></td>
-        <td rowspan="2"><strong>3♦</strong><br><span>伯根加叫，10-12 点</span><br>或<strong>Mini-Splinter 3♥</strong><br><span>10-12 点，有单缺</span></td>
-        <td rowspan="2"><strong>Jacoby 2NT</strong><br><span>13 点以上</span><br>或<strong>Splinter 4Y</strong><br><span>13-15 点，报单缺</span></td>
+        <td rowspan="2"><strong>3♦</strong><br><span>伯根加叫，10-12 点</span><br>或 <strong>Mini-Splinter 3♥</strong><br><span>10-12 点，有单缺</span></td>
+        <td rowspan="2"><strong>Jacoby 2NT</strong><br><span>13 点以上</span><br>或 <strong>Splinter 3NT/4m</strong><br><span>13-15 点，报单缺</span></td>
       </tr>
       <tr>
         <th>5 张以上</th>
@@ -463,67 +507,27 @@ title: 第二章：一阶花色应叫
 </div>
 
 
-更弱的点力应考虑阻击叫。
+更弱的点力应考虑如下阻击叫：
   </div>
 </div>
 
 
-<div class="quote-box">
-  <p>高花开叫保证 5 张，应叫的核心是<strong>“表达对高花的支持程度”</strong>或<strong>“寻找其他出路”</strong>。</p>
-</div>
 
-<div class="response-section highlight-section">
+<div class="response-section">
   <div class="response-header">
-    <span class="badge orange">1</span>
-    <h3>对高花的加叫（平加叫 / 跳加叫 / 进局加叫）</h3>
+    <span class="badge purple">1</span>
+    <h3>对高花的跳加叫</h3>
   </div>
   <div class="response-body">
     <ul class="compact-list">
-      <li><strong>平加叫</strong>（如 1♥-2♥）：6-10 点，3 张以上支持。 </li>
       <li><strong>跳加叫</strong>（如 1♥-3♥）：5-7 点，通常 4 张以上支持。阻击叫，不逼叫，给对手制造困难。</li>
-      <li><strong>伯根加叫</strong>：叫 <strong>3♣</strong> 表示 4 张以上支持、7-9 点；叫 <strong>3♦</strong> 表示 4 张以上支持、10-12 点。</li>
-      <li><strong>直接进局加叫</strong>（如 1♥-4♥）：<strong>想打并止叫。</strong>表示点力足够进局且有 5 张以上支持，但属于“限制性”牌力（通常没有满贯兴趣）。</li>
     </ul>
-    <p><strong>“好牌慢叫”：</strong> 很多初学者以为 13 点以上就应该直接叫 4♥ 进局。但如果你有进局实力且仍有满贯可能性，你应该先叫 <strong>2NT（Jacoby 2NT 约定叫）</strong> 或通过其他逼叫手段慢慢试探。只有在确定这手牌“没有满贯兴趣”时，才直接封局。</p>
   </div>
 </div>
 
 <div class="response-section">
   <div class="response-header">
     <span class="badge purple">2</span>
-    <h3>一盖一应叫（1♥-1♠） <span class="marker f1">F1</span></h3>
-  </div>
-  <div class="response-body">
-    <p><strong>条件：</strong> 6 点以上，4 张以上黑桃。</p>
-    <p><strong>逻辑：</strong> 和低花开叫的一盖一类似，点力门槛极低。如果搭档开叫 1♠，则没有一盖一。</p>
-  </div>
-</div>
-
-<div class="response-section">
-  <div class="response-header">
-    <span class="badge purple">3</span>
-    <h3>应叫 1NT</h3>
-  </div>
-  <div class="response-body">
-    <p><strong>条件：</strong> 6-12 点，均型牌，且对搭档的高花没有 3 张支持。另外，当同伴开叫 1♥ 时，应叫 1NT 必须<strong>否认 4 张黑桃</strong>（有 4 张黑桃必须优先一盖一叫 1♠）。</p>
-    <p><strong>逻辑：</strong> 这是一个宽泛的半逼叫/不逼叫叫品。由于本体系中 <strong>2NT 被 Jacoby 2NT 占用</strong>，<strong>3NT 被 Splinter 占用</strong>，你无法通过跳叫无将来表达自然邀请或进局。因此，1NT 成了你在没有将牌配合且无 4 张高花时，最常用的过渡叫品。</p>
-  </div>
-</div>
-
-<div class="response-section">
-  <div class="response-header">
-    <span class="badge purple">4</span>
-    <h3>二盖一应叫（2♣ / 2♦ / 1♠-2♥） <span class="marker fg">FG</span></h3>
-  </div>
-  <div class="response-body">
-    <p><strong>条件：</strong> 13 点以上，3 张以上套（但 1♠-2♥ 表示 5 张以上红桃）。</p>
-    <p><strong>逻辑：</strong> 在二水平叫出另一门新花色（如 1♥-2♣、1♥-2♦、1♠-2♥），这是 2/1 体系中的<strong>逼局（FG）</strong>叫品。它告诉同伴：“我们至少有 13 点，这牌必须进局。” 逼局后，你们可以安安心心地寻找最佳定约或试探满贯。</p>
-  </div>
-</div>
-
-<div class="response-section">
-  <div class="response-header">
-    <span class="badge purple">5</span>
     <h3>跳叫新花（弱跳）</h3>
   </div>
   <div class="response-body">
@@ -532,9 +536,165 @@ title: 第二章：一阶花色应叫
   </div>
 </div>
 
+
+<div class="response-section highlight-section" style="margin-top: 2rem;">
+  <div class="response-header">
+    <span class="badge purple">决策</span>
+    <h3>开叫人再叫及后续叫品的决策逻辑</h3>
+  </div>
+  <div class="response-body">
+
+### 开叫 1♥ 应叫 1♠
+此时同伴可能没有红桃支持，但有 4 张黑桃，因此后续再叫：
+
+<div class="decision-table-wrapper">
+  <table class="decision-table">
+    <thead>
+      <tr>
+        <th>1♥-1♠-?</th>
+        <th>弱实力</th>
+        <th>邀请实力</th>
+        <th>逼局实力</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>有第二套 m</th>
+        <td colspan="2"><strong>2m</strong><br><span>11-17 点</span></td>
+        <td><strong>3m</strong><br><span>18-21 点，逼局</span></td>
+      </tr>
+      <tr>
+        <th>有 6 张 ♥</th>
+        <td><strong>2♥</strong><br><span>11-15 点，<br>或点力更强的坏套</span></td>
+        <td><strong>3♥</strong><br><span>15-17 点，好套，<br>或点力更强的坏套</span></td>
+        <td><strong>3NT</strong><br><span>6 张以上 ♥</span><br><strong>4♥</strong><br><span>通常 15-17 点，7 张以上 ♥</span></td>
+      </tr>
+      <tr>
+        <th>有 ♠ 配合</th>
+        <td><strong>2♠</strong><br><span>11-13 点，4 张支持</span></td>
+        <td><strong>3♠</strong><br><span>14-16 点，4 张支持</span></td>
+        <td><strong>4♣/4♦</strong><br><span>Splinter</span></td>
+      </tr>
+      <tr>
+        <th>均型</th>
+        <td><strong>1NT</strong><br><span>12-14 点</span></td>
+        <td>——</td>
+        <td><strong>2NT</strong><br><span>18-19 点</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+除开叫人再叫 1NT 外，后续应叫均自然。
+
+开叫人再叫 1NT 后，使用双路重询，其中唯三不自然的叫品是（注意 2NT 的约定和别处不同，因为应叫人没有表明自己的低花长度）：
+- 2♣：转移至 2♦，♦ 套的弱止叫或任意邀请实力；
+- 2♦：人工逼局，不符合其他逼局的牌；
+- 2NT：转移至 3♣。如果 Pass 为弱牌 ♣ 套；转移后应叫人再叫 3♦ 表示双低花 55+ 邀请。
+
+除 2NT 外，所有的邀请实力都必须通过 2♣ 转移。除这三者之外的叫品不是示弱就是逼局。
+
+  </div>
+</div>
+
+<!-- 第二部分进阶 1：Jacoby 2NT -->
+<!-- <h2>🌟 第二部分进阶：Jacoby 2NT</h2> -->
+<div class="response-section highlight-section">
+  <div class="response-header">
+    <span class="badge purple">进阶</span>
+    <h3>Jacoby 2NT（雅各比 2NT）的后续 <span class="marker fg">FG</span></h3>
+  </div>
+  <div class="response-body">
+<div class="j2nt-table-wrapper">
+<table class="j2nt-table">
+<thead>
+<tr>
+<th>开叫人的再叫</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="call-col"><strong>3阶新花</strong></td>
+<td>点力不限，<strong>所叫花色为单缺</strong>。</td>
+</tr>
+<tr>
+<td class="call-col"><strong>3阶将牌</strong></td>
+<td><strong>16 点以上</strong>，无单缺（好牌）。</td>
+</tr>
+<tr>
+<td class="call-col"><strong>3NT</strong></td>
+<td><strong>14-15 点</strong>，或 4 控以上，无单缺。</td>
+</tr>
+<tr>
+<td class="call-col"><strong>4阶跳新花</strong></td>
+<td>所叫花色 <strong>5 张以上</strong>，且至少 <strong>KQ 领头</strong>。</td>
+</tr>
+<tr>
+<td class="call-col"><strong>4阶将牌</strong></td>
+<td><strong>低限</strong>，无单缺，3 控以下（最弱的再叫，警告应叫人不要乱动）。</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+  </div>
+</div>
+
+<!-- 第二部分进阶 2：高花 Splinter 与 Mini-Splinter -->
+<!-- <h2>🌟 第二部分进阶：高花 Splinter 与 Mini-Splinter</h2> -->
+<div class="response-section highlight-section">
+  <div class="response-header">
+    <span class="badge purple">进阶</span>
+    <h3>高花 Splinter / Mini-Splinter <span class="marker fg">FG</span></h3>
+  </div>
+  <div class="response-body">
+    <p><strong>逻辑：</strong> 第一部分进阶中我们介绍了低花开叫后的 Splinter。在高花开叫后，同样可以使用这种表示“将牌强支持 + 某门单缺”的满贯试探工具。为了区分点力范围，自然体系进一步区分了 <strong>Splinter</strong> 和 <strong>Mini-Splinter</strong>（迷你斯普林特）。</p>
+    
+<div class="j2nt-table-wrapper" style="margin-top: 1.5rem;">
+<table class="j2nt-table">
+<thead>
+<tr>
+<th>叫牌过程</th>
+<th>类型</th>
+<th>点力与牌型要求</th>
+<th>后续问叫与答叫</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="call-col"><strong>1♥ - 3♠</strong></td>
+<td><span style="color: #b45309; font-weight: bold;">Mini-Splinter</span></td>
+<td>10-12 点，4 张以上将牌支持，有一门单缺。</td>
+<td>同伴加级 <strong>3NT</strong> 问单缺：<br>4♣=♣短，4♦=♦短，4♥=♠短。</td>
+</tr>
+<tr>
+<td class="call-col"><strong>1♠ - 3♥</strong></td>
+<td><span style="color: #b45309; font-weight: bold;">Mini-Splinter</span></td>
+<td>10-12 点，4 张以上将牌支持，有一门单缺。</td>
+<td>同伴加级 <strong>3♠</strong> 问单缺：<br>3NT=♥短，4♣=♣短，4♦=♦短。</td>
+</tr>
+<tr>
+<td class="call-col"><strong>1M - 3NT</strong></td>
+<td><span style="color: #b91c1c; font-weight: bold;">Splinter</span></td>
+<td>13-15 点，4 张以上将牌支持，<strong>M' 短</strong>。</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="call-col"><strong>1高花 - 4m</strong></td>
+<td><span style="color: #b91c1c; font-weight: bold;">Splinter</span></td>
+<td>13-15 点，4 张以上将牌支持，<strong>m 短</strong>。</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</div>
+  </div>
+</div>
+
 <!-- 第二部分练习开始 -->
 <div class="quiz-group">
-  <h3 class="quiz-group-title">📝 第二部分：应叫练习</h3>
+  <h3 class="quiz-group-title">📝 第二部分：第一口应叫练习</h3>
   
   <!-- 练习 1 -->
   <div class="quiz-card">
@@ -574,116 +734,6 @@ title: 第二章：一阶花色应叫
 </div>
 <!-- 第二部分练习结束 -->
 
-<!-- 第二部分进阶 1：Jacoby 2NT -->
-<h2>🌟 第二部分进阶：Jacoby 2NT</h2>
-<div class="response-section highlight-section">
-  <div class="response-header">
-    <span class="badge purple">进阶</span>
-    <h3>Jacoby 2NT（雅各比 2NT）及后续发展 <span class="marker fg">FG</span></h3>
-  </div>
-  <div class="response-body">
-    <p><strong>条件：</strong> 搭档开叫 1♥ 或 1♠ 后，你直接应叫 <strong>2NT</strong>（这里 2NT 不是无将，而是约定叫）。表示 13 点以上，4 张以上将牌支持，并逼局。</p>
-    <p><strong>逻辑：</strong> 这是一个极佳的满贯试探工具。当你对高花有强支持时，用 2NT 逼迫开叫人描述其牌型（单缺）和牌力（高低限）。</p>
-
-<div class="j2nt-table-wrapper">
-<table class="j2nt-table">
-<thead>
-<tr>
-<th>开叫人的再叫</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="call-col"><strong>3阶新花</strong>（如 1♠-2NT-3♣/3♦/3♥）</td>
-<td>点力不限，<strong>所叫花色为单缺</strong>。</td>
-</tr>
-<tr>
-<td class="call-col"><strong>3阶将牌</strong>（如 1♠-2NT-3♠）</td>
-<td><strong>16 点以上</strong>，无单缺（好牌）。</td>
-</tr>
-<tr>
-<td class="call-col"><strong>3NT</strong></td>
-<td><strong>14-15 点</strong>，或 4 控以上，无单缺。</td>
-</tr>
-<tr>
-<td class="call-col"><strong>4阶跳新花</strong>（如 1♠-2NT-4♣/4♦/4♥）</td>
-<td>所叫花色 <strong>5 张以上</strong>，且至少 <strong>KQ 领头</strong>。</td>
-</tr>
-<tr>
-<td class="call-col"><strong>4阶将牌</strong>（如 1♠-2NT-4♠）</td>
-<td><strong>低限</strong>，无单缺，3 控以下（最弱的再叫，警告应叫人不要乱动）。</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-  </div>
-</div>
-
-<!-- 第二部分进阶 2：高花 Splinter 与 Mini-Splinter -->
-<h2>🌟 第二部分进阶：高花 Splinter 与 Mini-Splinter</h2>
-<div class="response-section highlight-section">
-  <div class="response-header">
-    <span class="badge purple">进阶</span>
-    <h3>高花 Splinter / Mini-Splinter / 3NT <span class="marker fg">FG</span></h3>
-  </div>
-  <div class="response-body">
-    <p><strong>逻辑：</strong> 第一部分进阶中我们介绍了低花开叫后的 Splinter。在高花开叫后，同样可以使用这种表示“将牌强支持 + 某门单缺”的满贯试探工具。为了区分点力范围，自然体系进一步区分了 <strong>Splinter</strong> 和 <strong>Mini-Splinter</strong>（迷你斯普林特）。</p>
-    
-<div class="j2nt-table-wrapper" style="margin-top: 1.5rem;">
-<table class="j2nt-table">
-<thead>
-<tr>
-<th>叫牌过程</th>
-<th>类型</th>
-<th>点力与牌型要求</th>
-<th>后续问叫与答叫</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="call-col"><strong>1♥ - 3♠</strong></td>
-<td><span style="color: #b45309; font-weight: bold;">Mini-Splinter</span></td>
-<td>10-12 点，4 张以上将牌支持，有一门单缺。</td>
-<td>同伴加级 <strong>3NT</strong> 问单缺：<br>4♣=♣短，4♦=♦短，4♥=♠短。</td>
-</tr>
-<tr>
-<td class="call-col"><strong>1♠ - 3♥</strong></td>
-<td><span style="color: #b45309; font-weight: bold;">Mini-Splinter</span></td>
-<td>10-12 点，4 张以上将牌支持，有一门单缺。</td>
-<td>同伴加级 <strong>3♠</strong> 问单缺：<br>3NT=♥短，4♣=♣短，4♦=♦短。</td>
-</tr>
-<tr>
-<td class="call-col"><strong>1♥ - 3NT</strong></td>
-<td><span style="color: #b91c1c; font-weight: bold;">Splinter</span></td>
-<td>13-15 点，4 张以上将牌支持，<strong>♠ 短</strong>。</td>
-<td>—</td>
-</tr>
-<tr>
-<td class="call-col"><strong>1♠ - 3NT</strong></td>
-<td><span style="color: #b91c1c; font-weight: bold;">Splinter</span></td>
-<td>13-15 点，4 张以上将牌支持，<strong>♥ 短</strong>。</td>
-<td>—</td>
-</tr>
-<tr>
-<td class="call-col"><strong>1高花 - 4♣</strong></td>
-<td><span style="color: #b91c1c; font-weight: bold;">Splinter</span></td>
-<td>13-15 点，4 张以上将牌支持，<strong>♣ 短</strong>。</td>
-<td>—</td>
-</tr>
-<tr>
-<td class="call-col"><strong>1高花 - 4♦</strong></td>
-<td><span style="color: #b91c1c; font-weight: bold;">Splinter</span></td>
-<td>13-15 点，4 张以上将牌支持，<strong>♦ 短</strong>。</td>
-<td>—</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-  </div>
-</div>
 
 ## 补充规则与总结
 
