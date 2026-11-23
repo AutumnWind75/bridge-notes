@@ -96,3 +96,120 @@
   vertical-align: middle;
   letter-spacing: normal;
 }
+
+.site-body .summary-box {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.site-body .summary-box p {
+  margin: 0 0 1rem;
+  color: #1e3a8a;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.site-body .summary-box p:last-child { margin-bottom: 0; }
+.site-body .summary-box strong { color: #1e40af; }
+
+.site-body .chapter-table-wrapper {
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.site-body .chapter-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.site-body .chapter-table :is(th, td) {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.site-body .chapter-table thead th {
+  background: #f8fafc;
+  color: #475569;
+  font-weight: 600;
+}
+
+.site-body .chapter-table tbody th {
+  background: #fafafa;
+  text-align: left;
+  font-weight: 600;
+}
+
+.site-body .chapter-table .call-col { white-space: nowrap; }
+.site-body .chapter-table tbody tr:hover td { background: #f8fafc; }
+
+.site-body .decision-table {
+  min-width: 680px;
+  text-align: center;
+}
+
+.site-body .decision-table:not(.high-major-decision-table) tbody th { width: 24%; }
+.site-body .high-major-decision-table col:first-child { width: 15%; }
+.site-body .high-major-decision-table col:nth-child(2) { width: 14%; }
+
+.site-body .decision-table td { vertical-align: middle; }
+
+.site-body .decision-table td strong {
+  color: #1e293b;
+  font-size: 1.05rem;
+}
+
+.site-body .decision-table td span {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.site-body .decision-narrative h4 {
+  margin: 0 0 0.5rem;
+  color: #1e293b;
+}
+
+.site-body .term {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  cursor: help;
+}
+
+.site-body .term[data-tooltip] { position: relative; }
+
+.site-body .term[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 220px;
+  padding: 0.45rem 0.65rem;
+  border-radius: 6px;
+  background: #1e293b;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: normal;
+  line-height: 1.4;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.18);
+}
+
+.site-body .term[data-tooltip]:is(:hover, :focus)::after {
+  opacity: 1;
+  visibility: visible;
+}

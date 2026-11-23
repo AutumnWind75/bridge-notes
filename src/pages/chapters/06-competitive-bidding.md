@@ -9,12 +9,13 @@ title: 第六章：竞争叫
 
 <div class="quote-box">
   <p>为了便于描述，我们设定：敌方开叫了 <strong>1Y</strong>。<strong>H</strong> 代表比 Y 级别更高的未叫花色，<strong>L</strong> 代表比 Y 级别更低的未叫花色。</p>
-  <p><strong>以下逻辑只适用于自己和同伴此前均没有动作。若自己或同伴此前已经叫牌、加倍或再加倍，应参考后文。</strong></p>
+  <p><strong>以下逻辑适用于自己和同伴此前只有 Pass 或尚未轮到叫牌的情形。</strong> 自己或同伴已经叫出自然叫品、加倍或再加倍时，参见<a href="#第二口及以后">第二口及以后</a>。</p>
+  <p><strong>第二家</strong>紧接开叫人行动。<strong>第四家在平衡位置</strong>时，敌方开叫后已有两次 Pass。若敌方应叫人已出声，第四家按相应的竞争进程处理。</p>
 </div>
 
 <div class="artificial-opening-note">
   <strong>⚠️ 特殊人为开叫提醒</strong>
-  <p>面对精确叫牌法的 <strong>1♣</strong>，以及数学叫牌法的 <strong>1♣</strong> 和 <strong>1♦</strong> 这三种与实际叫出花色无关的人为开叫时，叫出敌方开叫花色均视为<strong>出套</strong>或<strong>阻击</strong>，而不是扣叫。</p>
+  <p>面对精确叫牌法的 <strong>1♣</strong>，以及数学叫牌法的 <strong>1♣</strong> 和 <strong>1♦</strong>，叫出敌方开叫花色可约定为<strong>出套</strong>或<strong>阻击</strong>。是否为扣叫按双方实际约定判断。</p>
   <p>其中，精确叫牌法和数学叫牌法的 <strong>1♣</strong> 均属于强开叫：对其<strong>加倍</strong>表示双高花 5-4 以上；无局 8+ 点，有局 11+ 点。</p>
   <p>其他叫品含义均保持不变。</p>
 </div>
@@ -25,13 +26,12 @@ title: 第六章：竞争叫
     <h3>敌方开叫 1Y 后的第一口竞叫</h3>
   </div>
   <div class="response-body">
-    <ol class="first-call-list">
-      <li><strong>先检查特殊叫品：</strong>优先判断是否满足<strong>迈克尔斯扣叫</strong>，或者第二家的<strong>2NT 非寻常无将</strong>。这两种叫品都优先于普通花色争叫和加倍。</li>
-      <li><strong>17 点以上任意牌型：</strong>不论牌型多么畸形，直接<strong>加倍</strong>；若有套，等自己的第二口再叫出套。</li>
-      <li><strong>有 5 张非敌方花色：</strong>若这门套比敌方花色高，8-16 点可以一盖一；若比敌方花色低，11-16 点可以二盖一。</li>
-      <li><strong>只有敌方花色的 5 张套：</strong>若没有其他合适的叫品，可以直接 Pass。即使对手打这门花色，也可能因为牌型不配合而宕很多。</li>
-      <li><strong>没有更具体的花色叫品：</strong>手上 12 点以上、其他花色都有 3 张以上支持时，可以<strong>加倍</strong>，表示对各门花色都有支持的竞争性牌力。</li>
-      <li><strong>最后检查无将和阻击：</strong>如果是均型牌，考虑是否有对应的无将叫品；如果满足张数、点力和牌质条件，则可以选择阻击叫。</li>
+    <ol class="compact-list">
+      <li><strong>先检查双套约定。</strong> 符合<strong>迈克尔斯扣叫</strong>或<strong>非寻常 2NT</strong>时，优先于普通花色争叫和加倍。第二家可叫非寻常 2NT。敌方一阶花色应叫后的用法见下表的叫牌示例。</li>
+      <li><strong>均型牌按座位考虑无将。</strong> 第二家 15–18 点可叫 <strong>1NT</strong>。第四家在平衡位置时，12–15 点可叫 <strong>1NT</strong>，19–20 点可叫自然 <strong>2NT</strong>。均型牌符合直接叫无将的条件且有 17 点以上时，也可以先加倍。</li>
+      <li><strong>长套可自然争叫。</strong> 未叫花色有 5 张以上时，较高级的套 8–16 点可一盖一，较低级的套 11–16 点可二盖一。满足相应的张数、点力和牌质条件时，也可选择阻击。</li>
+      <li><strong>需要加倍时区分两种牌。</strong> 17 点以上任意牌型可以加倍，有套可在自己的第二口再叫出。没有更具体的花色叫品时，第二家 12 点以上、其他花色各有 3 张以上，也可以加倍。第四家在平衡位置可适当降低这类加倍的点力要求。</li>
+      <li><strong>没有合适的叫品时可以 Pass。</strong> 例如只有敌方花色的 5 张套时，即使对方打这门花色，也可能因配合不佳而宕很多。</li>
     </ol>
   </div>
 </div>
@@ -41,7 +41,7 @@ title: 第六章：竞争叫
     <summary>迈克尔斯扣叫和第二家 2NT 约定叫有什么异同？</summary>
     <div class="faq-answer">
       <p>都是面对敌方一阶花色开叫，表示出 5-5 双套，点力集中在套里，有一定的干扰能力。</p>
-      <p>不同点在于：迈克尔斯扣叫第二家、第四家都能叫，且更具建设性；非寻常无将（2NT 约定）只能由第二家叫，更具阻击性，因为它不要求点力特别强。</p>
+      <p>迈克尔斯扣叫第二家、第四家都能叫，且更具建设性。非寻常 2NT 更具阻击性，第二家可以直接叫出，敌方已作一阶花色应叫时也有下表所列的用法。</p>
     </div>
   </details>
 
@@ -53,43 +53,44 @@ title: 第六章：竞争叫
   </details>
 
   <details class="faq-card">
-    <summary>为什么非寻常无将（2NT）只针对第二家而不看第四家？</summary>
+    <summary>第二家和第四家的 2NT 分别表示什么？</summary>
     <div class="faq-answer">
       <p>根本原因是第二家和第四家战略地位不同。</p>
       <p>第二家叫 2NT 主要是为了干扰敌方应叫；若真的抓到了 19-20 点的均型，应该直接加倍。</p>
-      <p>第四家作为平衡位置，主要任务是防止漏局。有 19-20 点强均型时，应该优先考虑能将牌型描述得更精确的 2NT；若真的抓到了 5-5 弱双套，应该 Pass。</p>
+      <p>敌方开叫后连续两次 Pass，第四家的主要任务是防止漏局。有 19–20 点强均型，可以直接叫自然 2NT，也可以先加倍。若抓到的是 5-5 弱双套，可以 Pass。</p>
+      <p>敌方应叫人已经出声时，第四家的 2NT 可作非寻常无将。例如 <strong>1♦–Pass–1♥–2NT</strong> 表示梅花和黑桃双套。</p>
     </div>
   </details>
 </div>
 
-<div class="j2nt-table-wrapper">
-<table class="j2nt-table">
+<div class="chapter-table-wrapper">
+<table class="chapter-table">
 <thead>
 <tr>
-<th>阶数</th>
-<th>NT</th>
-<th>H（较高级未叫套）</th>
-<th style="color: #e11d48;">Y（敌方开叫）</th>
-<th>L（较低级未叫套）</th>
+<th scope="col">阶数</th>
+<th scope="col">NT</th>
+<th scope="col">H（较高级未叫套）</th>
+<th scope="col" style="color: #e11d48;">Y（敌方开叫）</th>
+<th scope="col">L（较低级未叫套）</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="call-col"><strong>1 阶</strong></td>
-<td>第 2 家：15-18 点，均型<br>第 4 家：12-15 点，均型<br><span class="term" title="若为第四家叫 1NT，则后续 Stayman 应叫所需的点力也需要相应提升。">后续应叫同开 1NT</span></td>
+<th scope="row" class="call-col">1 阶</th>
+<td>第 2 家：15-18 点，均型<br>第 4 家（平衡位置）：12-15 点，均型<br><span class="term" title="若为第四家叫 1NT，则后续 Stayman 应叫所需的点力也需要相应提升。">后续应叫同开 1NT</span></td>
 <td>5 张以上套，8-16 点</td>
 <td style="color: #94a3b8;">——</td>
 <td style="color: #94a3b8;">——</td>
 </tr>
 <tr>
-<td class="call-col"><strong>2 阶</strong></td>
-<td>第 2 家：8-16 点，<span class="term" title="例如 1♦-2NT 表示5张♣和5张♥；1♦-Pass-1♥-2NT 表示5张♣和5张♠"><strong>最低级别的 2 个未叫套</strong></span><br>第 4 家：19-20 点，均型，后 <strong>3♣ Stayman</strong></td>
+<th scope="row" class="call-col">2 阶</th>
+<td>第 2 家：8-16 点，<strong class="term" title="1♦–2NT 表示 5 张 ♣ 和 5 张 ♥。">最低级别的 2 个未叫套</strong><br>第 4 家（敌方已应叫）：<span class="term" title="1♦–Pass–1♥–2NT 表示 5 张 ♣ 和 5 张 ♠。">非寻常 2NT 示例</span><br>第 4 家（平衡位置）：19-20 点，均型，后 <strong>3♣ Stayman</strong></td>
 <td>阻击叫</td>
 <td><strong>迈克尔斯扣叫: </strong><br>若Y为低花则至少5-5高花，8点以上，点集中在长套上<br>若Y为高花则5-5另一高花和任一低花，10点以上，点集中在长套上</td>
 <td>5 张以上套，11-16 点</td>
 </tr>
 <tr>
-<td class="call-col"><strong>3+ 阶</strong></td>
+<th scope="row" class="call-col">3+ 阶</th>
 <td style="color: #94a3b8;">——</td>
 <td>阻击叫</td>
 <td><strong>有一低花坚固套，或是高花套不适合加倍的畸形牌</strong></td>
@@ -103,7 +104,7 @@ title: 第六章：竞争叫
   <h3>加倍（X）</h3>
   <p>这是技术性的加倍，表示如下两个意思之一：</p>
   <ul>
-    <li>12+ 点，其他花色都有 3 张以上支持，第 4 家可适当降低点力要求；</li>
+    <li>第 2 家 12+ 点，其他花色都有 3 张以上支持，第 4 家在平衡位置可适当降低点力要求；</li>
     <li>17+ 点任意牌型。</li>
   </ul>
 </div>
@@ -137,7 +138,7 @@ title: 第六章：竞争叫
     <ol>
       <li>应叫均不逼叫，但同伴若有支持或高限时应尽量维持。</li>
       <li><u>跳应叫新花</u>是自然叫，表示开叫实力的邀请牌（6+ 好套；套质量不够的牌只能平叫出套）。</li>
-      <li><u>扣叫敌花</u>一般表示对同伴争叫花色有 3+ 张配合，且有邀请或以上牌力；<u>跳扣叫</u>通常显示 4+ 张支持且有 10+ 调整点；<u>双跳</u>仍然是 Splinter 爆裂叫，联手实力是进局以上且该花色单缺。</li>
+      <li><u>扣叫敌花</u>一般表示对同伴争叫花色有 3+ 张配合，且有邀请或以上牌力；<u>跳扣叫</u>通常显示 4+ 张支持且有 10+ 调整点；<u>双跳</u>仍然是 <span class="term" title="对同伴争叫花色有配合，联手够局，且所叫花色单缺。">Splinter 爆裂叫</span>，联手实力是进局以上且该花色单缺。</li>
       <li><u>平叫 1NT</u>通常是 8-11 点，敌方花色有止或有 3+ 张；牌力越低，止张越好。<u>跳叫 NT</u>要求敌方花色至少一止半：无局时争叫 8+ HCP，跳 2NT 约 12-13 点，14+ 点需扣叫后再叫无将；有局时争叫 10+ HCP，跳 2NT 约 11-12 点。若同伴二盖一争叫，<u>平叫 2NT</u>约为好 9 点至差 12 点，且敌方花色有止。<strong>注意：</strong>同伴争叫花色如为高花，<u>叫 NT</u>通常否认三张高花配合（1NT 例外：敌方花色有两止且有 9-10 点时，均型牌可以优先叫 1NT）。</li>
     </ol>
   </li>
@@ -223,52 +224,6 @@ title: 第六章：竞争叫
   .suit.red { color: #e11d48; font-size: 1.15em; line-height: 1; }
   .suit.black { color: #0f172a; font-size: 1.15em; line-height: 1; }
 
-  /* 表格样式（和前面章节完全统一） */
-  .j2nt-table-wrapper {
-    margin-top: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .j2nt-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-    font-size: 0.95rem;
-    min-width: 600px;
-  }
-  .j2nt-table th {
-    background: #f8fafc;
-    padding: 12px 16px;
-    color: #475569;
-    font-weight: 600;
-    border-bottom: 1px solid #e2e8f0;
-    white-space: nowrap;
-  }
-  .j2nt-table td {
-    padding: 12px 16px;
-    border-bottom: 1px solid #f1f5f9;
-    color: #334155;
-    line-height: 1.5;
-  }
-  .j2nt-table tr:last-child td { border-bottom: none; }
-  .j2nt-table tr:hover td { background: #f8fafc; }
-  .call-col { width: 15%; white-space: nowrap; }
-  .term {
-    text-decoration: underline;
-    text-decoration-style: dashed;
-    text-underline-offset: 3px;
-    cursor: help;
-  }
-  .first-call-list {
-    margin: 0;
-    padding-left: 1.5rem;
-  }
-  .first-call-list li {
-    margin-bottom: 0.75rem;
-  }
-  .first-call-list li:last-child { margin-bottom: 0; }
   .competitive-faq {
     display: flex;
     flex-direction: column;
@@ -345,9 +300,7 @@ title: 第六章：竞争叫
     color: #1e3a8a;
   }
   .bidding-principles h4:first-of-type { margin-top: 0; }
-  .bidding-principles p {
-    margin: 0 0 0.5rem;
-  }
+  .bidding-principles p { margin: 0 0 0.5rem; }
   .bidding-principles p:last-child { margin-bottom: 0; }
   .later-bidding-list {
     margin: 1.5rem 0 2rem;
