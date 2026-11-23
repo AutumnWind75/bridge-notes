@@ -110,6 +110,27 @@ title: 第六章：竞争叫
 
 ## 第二口及以后
 
+<div class="bidding-principles">
+  <h3>第二口及以后：基本原则</h3>
+
+  <h4>原则一：新花叫品的力度</h4>
+  <p><strong>平叫新花（1 阶或 2 阶）</strong>在同伴开叫后遭敌方争叫的常见序列中通常为逼叫一轮，表明应叫方具有继续参与叫牌的余力；此结论应限定于相应的叫牌空间和体系。若牌力不足，应 Pass 或直接加叫同伴的花色。跳叫新花通常为弱跳，具有占用叫牌空间的阻击性质。</p>
+  <p>例外情形是：敌方开叫、同伴争叫后再跳叫新花，此时跳叫新花可以表示邀请以上实力及约 6 张以上的优质套。</p>
+
+  <h4>原则二：扣叫敌方花色</h4>
+  <p>扣叫敌方花色具有约定性质，主要用于描述对同伴花色的良好支持，或说明存在特定长套和逼局以上牌力。扣叫通常显示对同伴花色 3 张以上支持，并带有邀请或更强实力；跳扣叫常表示 4 张以上支持及约 10 点以上调整点；双跳扣叫属于 Splinter，表示 4 张以上将牌支持、所叫花色存在单缺，并具有进局实力。</p>
+
+  <h4>原则三：加叫与 2NT</h4>
+  <p>跳加叫同伴花色通常具有阻击性质，无局时可相对保守，有局时则偏向进攻型牌力。跳叫 2NT 在竞争叫中通常不作自然无将理解，而是表示限制性加叫：对同伴花色有 4 张以上支持，约含 10-12 点牌型点，邀请进局。</p>
+
+  <h4>原则四：无将叫牌的止张与配合</h4>
+  <p>在敌方争叫或加倍后叫 NT，必须具备敌方花色的止张，通常至少有一止半；牌力越弱，对止张的质量要求越高。若同伴争叫或开叫的是高花，应叫 NT 通常否认 3 张以上支持，此时应优先加叫配合。</p>
+  <p>例外情形是：同伴开叫 1M 后遭敌方加倍。此时应叫人的 1NT 可以用作“做好加叫”，表示持有 3 张支持时约 9-11 点，持有 4 张支持时约 7-10 点，并以精确描述配合为优先，而不是冒险打无将。</p>
+
+  <h4>原则五：加倍与再加倍</h4>
+  <p>敌方加倍具有技术性含义时，我方直接应叫通常属于自愿应叫，一般应持有约 8 点以上的优质套。再加倍（XX）通常表示至少 11 点大牌点，未必持有同伴开叫花色的配合，并建立较强的实力信号。再加倍后，后续直接加倍多为惩罚性加倍，但平衡位置或开叫方的加倍仍可能具有合作性的例外。</p>
+</div>
+
 <ol class="later-bidding-list">
   <li>
     <strong>敌方开叫，同伴争叫，另一敌方若不叫牌：</strong>
@@ -305,6 +326,29 @@ title: 第六章：竞争叫
   }
   .double-explanation li { margin-bottom: 0.35rem; }
   .double-explanation li:last-child { margin-bottom: 0; }
+  .bidding-principles {
+    margin: 1.5rem 0;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #334155;
+    line-height: 1.7;
+  }
+  .bidding-principles h3 {
+    margin: 0 0 1rem;
+    color: #1e40af;
+    font-size: 1.1rem;
+  }
+  .bidding-principles h4 {
+    margin: 1rem 0 0.35rem;
+    color: #1e3a8a;
+  }
+  .bidding-principles h4:first-of-type { margin-top: 0; }
+  .bidding-principles p {
+    margin: 0 0 0.5rem;
+  }
+  .bidding-principles p:last-child { margin-bottom: 0; }
   .later-bidding-list {
     margin: 1.5rem 0 2rem;
     padding: 1.25rem 1.5rem 1.25rem 2.75rem;
