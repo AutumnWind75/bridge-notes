@@ -179,12 +179,6 @@ title: 第六章：竞争叫
   </li>
 </ol>
 
----
-<div class="chapter-nav">
-  <a href="/chapters/05-preemptive-opening" class="nav-btn prev">← 上一章：应叫阻击叫</a>
-  <a href="/chapters" class="nav-btn next">返回目录 →</a>
-</div>
-
 <style>
   /* 引用框样式 */
   .quote-box {

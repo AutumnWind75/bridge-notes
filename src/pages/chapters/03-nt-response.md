@@ -329,12 +329,6 @@ title: 第三章：无将开叫后的应叫
   </div>
 </div>
 
----
-<div class="chapter-nav">
-  <a href="/chapters/02-first-response" class="nav-btn prev">← 上一章：一阶花色应叫</a>
-  <a href="/chapters/04-strong-response" class="nav-btn next">下一章：2♣ 强牌应叫 →</a>
-</div>
-
 <style>
   /* 沿用之前的样式，确保表格和卡片显示一致 */
   .intro-card {

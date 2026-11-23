@@ -801,12 +801,6 @@ title: 第二章：一阶花色应叫
   <p>既然应叫人叫出第四花色表示逼叫到局（GF），在叫牌达到 3NT、4 阶高花或 5 阶低花之前，任何一方都不能 Pass。只有双方确认最终定约（如停在 3NT 或 4♥），本轮叫牌才算结束。</p>
 </div>
 
----
-<div class="chapter-nav">
-  <a href="/chapters/01-normal-opening" class="nav-btn prev">← 上一章：正常开叫</a>
-  <a href="/chapters/03-nt-response" class="nav-btn next">下一章：无将应叫 →</a>
-</div>
-
 <style>
   /* 简介卡片 */
   .intro-card {

@@ -197,12 +197,6 @@ title: 第一章：正常开叫
   <p style="color: #92400e; margin-top: 0.5rem; font-size: 0.9rem;"><em>底线：计算赢墩时，必须假设同伴一张有用的大牌都没有！</em></p>
 </div>
 
----
-<div class="chapter-nav">
-  <a href="/chapters" class="nav-btn prev">← 返回目录</a>
-  <a href="/chapters/02-first-response" class="nav-btn next">下一章：第一口应叫 →</a>
-</div>
-
 <style>
   /* 简介卡片 */
   .intro-card {

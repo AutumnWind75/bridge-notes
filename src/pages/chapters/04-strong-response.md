@@ -119,12 +119,6 @@ title: 第四章：2♣ 强牌应叫
   </div>
 </div>
 
----
-<div class="chapter-nav">
-  <a href="/chapters/03-nt-response" class="nav-btn prev">← 上一章：无将应叫</a>
-  <a href="/chapters/05-preemptive-opening" class="nav-btn next">下一章：应叫阻击叫 →</a>
-</div>
-
 <style>
   /* 通用样式复原 */
   .quote-box {

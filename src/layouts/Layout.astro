@@ -29,6 +29,20 @@ const formattedLastUpdate = lastUpdate
 			timeZone: 'Asia/Shanghai',
 		}).replace(/\//g, '-')
 	: '未知';
+
+const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
+const isChapterPage = currentPath.startsWith('/chapters/') && !currentPath.endsWith('/chapters');
+
+const chapters = [
+	{ path: '/chapters/01-normal-opening', title: '第一章：正常开叫', prev: '/chapters', prevTitle: '返回目录', next: '/chapters/02-first-response', nextTitle: '下一章：第一口应叫' },
+	{ path: '/chapters/02-first-response', title: '第二章：一阶花色应叫', prev: '/chapters/01-normal-opening', prevTitle: '上一章：正常开叫', next: '/chapters/03-nt-response', nextTitle: '下一章：无将应叫' },
+	{ path: '/chapters/03-nt-response', title: '第三章：无将应叫', prev: '/chapters/02-first-response', prevTitle: '上一章：一阶花色应叫', next: '/chapters/04-strong-response', nextTitle: '下一章：强牌应叫' },
+	{ path: '/chapters/04-strong-response', title: '第四章：2♣ 强牌应叫', prev: '/chapters/03-nt-response', prevTitle: '上一章：无将应叫', next: '/chapters/05-preemptive-opening', nextTitle: '下一章：应叫阻击叫' },
+	{ path: '/chapters/05-preemptive-opening', title: '第五章：应叫阻击叫', prev: '/chapters/04-strong-response', prevTitle: '上一章：强牌应叫', next: '/chapters/06-competitive-bidding', nextTitle: '下一章：竞争叫' },
+	{ path: '/chapters/06-competitive-bidding', title: '第六章：竞争叫', prev: '/chapters/05-preemptive-opening', prevTitle: '上一章：应叫阻击叫', next: '/chapters', nextTitle: '返回目录' },
+];
+
+const currentChapter = chapters.find((chapter) => chapter.path === currentPath);
 ---
 
 <!doctype html>
@@ -41,7 +55,20 @@ const formattedLastUpdate = lastUpdate
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="site-body">
+	<body class:list={['site-body', { 'chapter-page': isChapterPage }]}>
+		{isChapterPage && currentChapter && (
+			<header class="chapter-topbar">
+				<nav class="chapter-navigation" aria-label="章节导航">
+					<a class="top-nav-btn prev" href={currentChapter.prev} title={currentChapter.prevTitle}>
+						← <span>{currentChapter.prevTitle}</span>
+					</a>
+					<a class="top-nav-btn next" href={currentChapter.next} title={currentChapter.nextTitle}>
+						<span>{currentChapter.nextTitle}</span> →
+					</a>
+				</nav>
+				<h1 class="chapter-topbar-title">{currentChapter.title}</h1>
+			</header>
+		)}
 		<div class="repo-status" aria-label="博客更新信息">
 			<span class="last-update">最后更新：{formattedLastUpdate}</span>
 			<a
@@ -57,7 +84,7 @@ const formattedLastUpdate = lastUpdate
 				</svg>
 			</a>
 		</div>
-		<slot />
+		<div class="page-content"><slot /></div>
 	</body>
 </html>
 
@@ -67,6 +94,76 @@ const formattedLastUpdate = lastUpdate
 		margin: 0;
 		width: 100%;
 		height: 100%;
+	}
+	body.chapter-page {
+		padding-top: 64px;
+	}
+	.page-content {
+		min-height: 100%;
+	}
+	:global(.chapter-page .page-content > h1) {
+		display: none;
+	}
+	.chapter-topbar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 90;
+		height: 64px;
+		display: grid;
+		grid-template-columns: minmax(260px, 1fr) auto minmax(260px, 1fr);
+		align-items: center;
+		padding: 0 230px 0 1.25rem;
+		border-bottom: 1px solid #e2e8f0;
+		background: rgba(255, 255, 255, 0.96);
+		backdrop-filter: blur(10px);
+		box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05);
+		font-family: sans-serif;
+	}
+	.chapter-navigation {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		grid-column: 1;
+	}
+	.chapter-topbar-title {
+		grid-column: 2;
+		margin: 0;
+		color: #1e293b;
+		font-size: 1.15rem;
+		line-height: 1.2;
+		white-space: nowrap;
+	}
+	.top-nav-btn {
+		display: inline-flex;
+		align-items: center;
+		max-width: 180px;
+		min-height: 36px;
+		padding: 0.45rem 0.75rem;
+		border: 1px solid #e2e8f0;
+		border-radius: 7px;
+		background: #f8fafc;
+		color: #475569;
+		font-size: 0.82rem;
+		font-weight: 600;
+		text-decoration: none;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.top-nav-btn span {
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.top-nav-btn.next {
+		margin-left: 0.25rem;
+		background: #8b5cf6;
+		border-color: #8b5cf6;
+		color: #ffffff;
+	}
+	.top-nav-btn:hover {
+		filter: brightness(0.97);
 	}
 	.repo-status {
 		position: fixed;
@@ -121,6 +218,33 @@ const formattedLastUpdate = lastUpdate
 		.github-link {
 			width: 32px;
 			height: 32px;
+		}
+	}
+	@media (max-width: 900px) {
+		body.chapter-page {
+			padding-top: 112px;
+		}
+		.chapter-topbar {
+			height: 112px;
+			grid-template-columns: 1fr;
+			grid-template-rows: 52px 60px;
+			padding: 0 0.75rem 0.25rem;
+		}
+		.chapter-topbar-title {
+			grid-column: 1;
+			grid-row: 1;
+			justify-self: start;
+			max-width: calc(100% - 210px);
+			overflow: hidden;
+			text-overflow: ellipsis;
+			font-size: 1rem;
+		}
+		.chapter-navigation {
+			grid-column: 1;
+			grid-row: 2;
+		}
+		.top-nav-btn {
+			max-width: calc(50vw - 1.25rem);
 		}
 	}
 </style>

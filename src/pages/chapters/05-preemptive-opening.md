@@ -98,12 +98,6 @@ title: 第五章：应叫阻击叫
   </div>
 </div>
 
----
-<div class="chapter-nav">
-  <a href="/chapters/04-strong-response" class="nav-btn prev">← 上一章：2♣ 强牌应叫</a>
-  <a href="/chapters/06-competitive-bidding" class="nav-btn next">下一章：竞争叫 →</a>
-</div>
-
 <style>
   .quote-box {
     border-left: 3px solid #cbd5e1;
