@@ -36,44 +36,47 @@ title: 第二章：一阶花色应叫
   <div class="response-body">
     <ol class="logic-list">
       <li>
+        <strong>第二口的 <span class="term" title="跳叫新花，显示对同伴花色的配合和所叫花色的单缺。">Splinter</span> 是且仅是以下情形：</strong>同伴 1m 开叫后，双跳更高阶的新花，11-15 点；同伴 1M 开叫后，叫 3NT/4m，13-15 点（Mini-SPL 是且仅是同伴 1M 开叫后，叫 3M'，10-12 点）。
+      </li>
+      <li>
         <strong>第三口的 <span class="term" title="跳叫新花，显示对同伴花色的配合和所叫花色的单缺。">Splinter</span> 是且仅是以下情形：</strong>所有的一盖一之后，双跳新花；所有的二盖一、简单加叫（包括低花反加叫）之后，跳新花。
         <details>
-          <summary>特例（暂无）</summary>
-          <!-- 特例内容待补充 -->
+          <summary>特例</summary>
+          根据新睿 CCBA 文档，并非所有情况都被包含在里面了，但是上面描述的情况确实都是 Splinter。
         </details>
       </li>
       <li>
         <strong>所有的阻击是且仅是第二口跳加叫或跳叫新花：</strong>因为第三口及以后若没被插叫，就没有必要阻击。
         <details>
-          <summary>特例（暂无）</summary>
+          <summary>特例（待补充）</summary>
           <!-- 特例内容待补充 -->
         </details>
       </li>
       <li>
         <strong>第四花色逼局当且仅当：</strong>叫牌序列中未出现过 NT，且未出现过其他逼局叫品。
         <details>
-          <summary>特例（暂无）</summary>
+          <summary>特例（待补充）</summary>
           <!-- 特例内容待补充 -->
         </details>
       </li>
       <li>
         <strong>逼局叫品出现之后：</strong>在进局之前不能 Pass。在可以确信联手无法满贯时，应立刻叫出最好的进局叫品。
         <details>
-          <summary>特例（暂无）</summary>
+          <summary>特例（待补充）</summary>
           <!-- 特例内容待补充 -->
         </details>
       </li>
       <li>
         <strong>加叫的后续：</strong>若为 1m-2m 的低花反加叫，则再次简单加叫为低限，叫新花为第二套（允许4441型）；若为 1M-2M 的简单加叫，则叫新花为帮张邀叫。二者跳新花均为 Splinter。其他叫品均自然。
         <details>
-          <summary>特例（暂无）</summary>
+          <summary>特例（待补充）</summary>
           <!-- 特例内容待补充 -->
         </details>
       </li>
       <li>
         <strong>二盖一的后续：</strong>不能 Pass。简单加叫表示有支持，叫新花表示第二套（其中三阶新花需要有额外实力或长度），加叫自己的花色表示 6+ 套（跳加叫还表示有额外长度或实力，直接叫进局表示低限 7+ 好套或 8+ 任意套）；叫 2NT 表示均型无支持，未叫花色有止。
         <details>
-          <summary>特例</summary>
+          <summary>特例（待补充）</summary>
           <!-- 特例内容待补充 -->
         </details>
       </li>
@@ -174,6 +177,11 @@ title: 第二章：一阶花色应叫
   <p>没有 4 张高花时，再看低花和无将。1♣ 后有 4 张以上方块，可叫 1♦ 逼叫一轮。1♦ 后有 5 张以上梅花且达到 13 点，可用 2♣ 二盖一建立逼局，后续再探索 3NT 或 5♣。没有合适的花色应叫时，可按点力和牌型选择无将。</p>
   <p>有 5 张以上开叫低花支持时，11 点以上无单缺可简单加叫，低花反加叫逼叫一轮。15 点以下有单缺可用 <strong class="term" title="双跳新花报告单缺，显示开叫低花配合并逼局。">Splinter</strong>。5–7 点可跳加叫，占去对手寻找高花配合的空间。</p>
   <p>更弱的点力应考虑这种阻击叫：4-6 点，6 张以上可以 2 阶跳新花。1♦ 后跳叫 3♣ 则显示 9–11 点和 6 张以上梅花。</p>
+</div>
+
+<div class="decision-narrative">
+  <h4>注意</h4>
+  <p>若同伴开叫 1m，敌方争叫，则简单加叫不再是反加叫，而是弱支持。</p>
 </div>
   </div>
 </div>
