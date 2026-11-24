@@ -610,6 +610,13 @@ title: 第二章：一阶花色应叫
 
 除 2NT 外，所有的邀请实力都必须通过 2♣ 转移。除这三者之外的叫品不是示弱就是逼局。
 
+### 开叫 1M 应叫 2M
+此时若开叫人未到邀请实力应Pass，若为逼局实力应直接叫到局或 Splinter 跳叫单缺表示满贯兴趣，若为邀请实力应使用<strong>帮张邀叫</strong>：
+- 开叫人叫出新花色，承诺该花色至少有 3 张套，且<strong>需要同伴这套花色上的帮助</strong>；
+- 应叫人视点力和该套质量，叫 <strong>3M</strong> 或 <strong>4M</strong>（一般均止叫）。
+
+其他叫品均自然。
+
   </div>
 </div>
 
@@ -697,7 +704,7 @@ title: 第二章：一阶花色应叫
 <td>—</td>
 </tr>
 <tr>
-<th scope="row" class="call-col"><strong>1高花 - 4m</strong></th>
+<th scope="row" class="call-col"><strong>1M - 4m</strong></th>
 <td><strong class="term" title="支持开叫高花，所叫低花单缺。" style="color: #b91c1c;">Splinter</strong></td>
 <td>13-15 点，4 张以上将牌支持，<strong>m 短</strong>。</td>
 <td>—</td>
