@@ -23,7 +23,7 @@ title: 第二章：一阶花色应叫
   <ul class="logic-list">
     <li><strong>优先找配合</strong>：花色有配合，就打有将定约。张数越长，配合越好。</li>
     <li><strong>无配合看无将</strong>：没配合或配合不好，就看手里的止张是否足够打无将。</li>
-    <li><strong>点力决定高度</strong>：点力越低叫得越低（为了安全），点力越高叫得越高（为了进局）。</li>
+    <li><strong>点力决定高度</strong>：点力越低叫得越低（为了安全），点力越高叫得越高（为了进局）。<strong>但是当手牌形状畸形时，形状比点力更重要。</strong></li>
   </ul>
   <p class="pass-note">💡 <strong>补充：</strong>如果手牌点力少于 5 点，且没有极好的牌型，面对搭档的开叫通常选择 <strong>Pass</strong>，以免给搭档错误的进局希望。</p>
 </div>
@@ -94,23 +94,23 @@ title: 第二章：一阶花色应叫
     </thead>
     <tbody>
       <tr>
-        <th scope="row">有 4 张高花</th>
-        <td colspan="3"><strong>1♥ 或 1♠</strong>（逼局实力应优先支持同伴将牌）<br><span>6 点以上，F1</span></td>
+        <th scope="row">有 4 张 M</th>
+        <td colspan="3"><strong>1M</strong>（逼局实力应优先支持同伴将牌或叫出更长的套）<br><span>6 点以上，F1</span></td>
       </tr>
       <tr>
-        <th scope="row">无 4 张高花</th>
+        <th scope="row">无 4 张 M</th>
         <td><strong>1NT</strong><br><span>6-10 点</span></td>
         <td><strong>2NT</strong><br><span>11-12 点，均型，IG</span></td>
         <td><strong>3NT</strong><br><span>13-15 点，均型，FG</span></td>
       </tr>
       <tr>
-        <th scope="row">无 4 张高花，有 5 张 ♣<br><span>此处无合适叫品时，应从 NT 中选择</span></th>
+        <th scope="row">无 4 张 M，有 5 张 ♣<br><span>此处无合适叫品时，应从 NT 中选择</span></th>
         <td><strong>3♣</strong><br><span>5-7点，建设性阻击</span></td>
         <td>无单缺：<strong>2♣</strong><br><span>11 点以上，F1</span></td>
-        <td>无单缺：<strong>2♣</strong><br><span>11 点以上，F1</span><br>有单缺：<strong class="term" title="3 阶双跳新花，显示开叫低花配合和所叫花色单缺。">Splinter</strong><br><span>11 点以上，FG</span></td>
+        <td>无单缺：<strong>2♣</strong><br><span>11 点以上，F1</span><br>有单缺：<strong class="term" title="3 阶双跳新花，显示开叫低花配合和所叫花色单缺。">Splinter 3♦/♥/♠</strong><br><span>11-15 点，FG</span></td>
       </tr>
       <tr>
-        <th scope="row">无 4 张高花，有 4 张 ♦<br><span>此处无合适叫品时，应从 NT 中选择</span></th>
+        <th scope="row">无 4 张 M，有 4 张 ♦<br><span>此处无合适叫品时，应从 NT 中选择</span></th>
         <td colspan="3"><strong>1♦</strong><br><span>6 点以上，F1</span></td>
       </tr>
     </tbody>
@@ -129,20 +129,20 @@ title: 第二章：一阶花色应叫
     </thead>
     <tbody>
       <tr>
-        <th scope="row">有 4 张高花</th>
-        <td colspan="3"><strong>1♥ 或 1♠</strong>（逼局实力应优先支持同伴将牌）<br><span>6 点以上，F1</span></td>
+        <th scope="row">有 4 张 M</th>
+        <td colspan="3"><strong>1M</strong>（逼局实力应优先支持同伴将牌或叫出更长的套）<br><span>6 点以上，F1</span></td>
       </tr>
       <tr>
-        <th scope="row">无 4 张高花</th>
+        <th scope="row">无 4 张 M</th>
         <td><strong>1NT</strong><br><span>6-10 点</span></td>
         <td><strong>2NT</strong><br><span>11-12 点，均型，IG</span></td>
         <td><strong>3NT</strong><br><span>13-15 点，均型，FG</span></td>
       </tr>
       <tr>
-        <th scope="row">无 4 张高花，有 5 张 ♦<br><span>此处无合适叫品时，应从 NT 中选择</span></th>
+        <th scope="row">无 4 张 M，有 5 张 ♦<br><span>此处无合适叫品时，应从 NT 中选择</span></th>
         <td><strong>3♦</strong><br><span>5-7点，建设性阻击</span></td>
         <td>无单缺：<strong>2♦</strong><br><span>11 点以上，F1</span></td>
-        <td>无单缺：<strong>2♦</strong><br><span>11 点以上，F1</span><br>有单缺：<strong class="term" title="3 阶双跳新花，显示开叫低花配合和所叫花色单缺。">Splinter</strong><br><span>11 点以上，FG</span></td>
+        <td>无单缺：<strong>2♦</strong><br><span>11 点以上，F1</span><br>有单缺：<strong class="term" title="3 阶双跳新花，显示开叫低花配合和所叫花色单缺。">Splinter 3♥/♠</strong><br><span>11-15 点，FG</span></td>
       </tr>
       <tr>
         <th scope="row">有 ♣ 套<br><span>此处无合适叫品时，应从 NT 中选择</span></th>
@@ -158,7 +158,7 @@ title: 第二章：一阶花色应叫
   <h4>如何选择第一口应叫</h4>
   <p>先看高花。持 4 张以上高花时，通常先一盖一，在低阶寻找高花配合。持逼局实力且能支持同伴开叫的低花时，按表优先表示配合。</p>
   <p>没有 4 张高花时，再看低花和无将。1♣ 后有 4 张以上方块，可叫 1♦ 逼叫一轮。1♦ 后有 5 张以上梅花且达到 13 点，可用 2♣ 二盖一建立逼局，后续再探索 3NT 或 5♣。没有合适的花色应叫时，可按点力和牌型选择无将。</p>
-  <p>有 5 张以上开叫低花支持时，11 点以上无单缺可简单加叫，低花反加叫逼叫一轮。有单缺可用 <strong class="term" title="双跳新花报告单缺，显示开叫低花配合并逼局。">Splinter</strong>。5–7 点可跳加叫 3♣ 或 3♦，占去对手寻找高花配合的空间。</p>
+  <p>有 5 张以上开叫低花支持时，11 点以上无单缺可简单加叫，低花反加叫逼叫一轮。15 点以下有单缺可用 <strong class="term" title="双跳新花报告单缺，显示开叫低花配合并逼局。">Splinter</strong>。5–7 点可跳加叫，占去对手寻找高花配合的空间。</p>
   <p>更弱的点力应考虑这种阻击叫：4-6 点，6 张以上可以 2 阶跳新花。1♦ 后跳叫 3♣ 则显示 9–11 点和 6 张以上梅花。</p>
 </div>
   </div>
@@ -166,7 +166,7 @@ title: 第二章：一阶花色应叫
 
 <div class="callout-box">
   <strong>🌟 Walsh 应叫原则（高花优先）</strong>
-  <p>搭档开叫 1♣ 时，如果你同时有 4 张高花和 5 张以上 ♦，请优先叫出高花，否则可能错过 4-4 的高花配合。</p>
+  <p>搭档开叫 1♣ 时，如果你同时有 4 张高花和 5 张以上 ♦，请优先叫出高花，否则可能错过 4-4 的高花配合。<strong>但是持逼局实力应优先叫出更长的套以便后续逆叫。</strong></p>
 </div>
 
 
@@ -193,14 +193,14 @@ title: 第二章：一阶花色应叫
     <tbody>
       <tr>
         <th scope="row">有 5 张 ♣，4 张 M（第二套）</th>
-        <td colspan="2"><strong>1♥ 或 1♠</strong><br><span>12-17 点</span></td>
-        <td><strong>2♥ 或 2♠</strong><br><span>18-21 点，FG</span></td>
+        <td colspan="2"><strong>1M</strong><br><span>12-17 点</span></td>
+        <td><strong>2M</strong><br><span>18-21 点，FG</span></td>
       </tr>
       <tr>
         <th scope="row">有 5 张 ♣， 4 张 ♦（第二套）</th>
         <td><strong>2♦</strong><br><span>12-15 点</span></td>
         <td><strong>3♦</strong><br><span>16-17 点</span></td>
-        <td><strong>3♥ 或 3♠</strong><br><span class="term" title="双跳新花，显示方块配合和所叫高花单缺。">Splinter</span><span>，18-21 点，FG</span></td>
+        <td><strong class="term" title="双跳新花，显示方块配合和所叫高花单缺。">Splinter 3M</strong><br><span>18-21 点，FG</span></td>
       </tr>
       <tr>
         <th scope="row">有 6 张 ♣</th>
@@ -300,7 +300,7 @@ title: 第二章：一阶花色应叫
         <th scope="row">有 4 张支持</th>
         <td><strong>2M</strong><br><span>12-14 点</span></td>
         <td><strong>3M</strong><br><span>15-17 点，IG</span></td>
-        <td><strong>4M</strong><br><span>18-19 点，均型</span><br><strong>跳逆叫</strong><br><span class="term" title="跳逆叫新花，显示应叫高花配合和所叫花色单缺。">Splinter</span><span>，18+ 调整点</span></td>
+        <td><strong>4M</strong><br><span>18-19 点，均型</span><br><strong class="term" title="双跳新花，显示方块配合和所叫高花单缺。">Splinter 跳逆叫</strong><br><span>18+ 调整点</span></td>
       </tr>
       <tr>
         <th scope="row">有 6 张原低花</th>
@@ -458,8 +458,8 @@ title: 第二章：一阶花色应叫
       </tr>
       <tr>
         <th scope="row">4 张</th>
-        <td><strong>3♣</strong><br><span>伯根加叫，7-9 点</span></td>
-        <td rowspan="2"><strong>3♦</strong><br><span>伯根加叫，10-12 点</span><br>或 <strong class="term" title="表示红桃配合和一门单缺。开叫人可用 3NT 问单缺。">Mini-Splinter 3♠</strong><br><span>10-12 点，有单缺</span></td>
+        <td><strong>伯根加叫 3♣</strong><br><span>7-9 点</span></td>
+        <td rowspan="2"><strong>伯根加叫 3♦</strong><br><span>10-12 点</span><br>或 <strong class="term" title="表示红桃配合和一门单缺。开叫人可用 3NT 问单缺。">Mini-Splinter 3♠</strong><br><span>10-12 点，有单缺</span></td>
         <td rowspan="2"><strong>Jacoby 2NT</strong><br><span>13 点以上</span><br>或 <strong class="term" title="表示红桃配合。3NT 报黑桃单缺，4m 报所叫低花单缺。">Splinter 3NT/4m</strong><br><span>13-15 点，报单缺</span></td>
       </tr>
       <tr>
@@ -503,8 +503,8 @@ title: 第二章：一阶花色应叫
       </tr>
       <tr>
         <th scope="row">4 张</th>
-        <td><strong>3♣</strong><br><span>伯根加叫，7-9 点</span></td>
-        <td rowspan="2"><strong>3♦</strong><br><span>伯根加叫，10-12 点</span><br>或 <strong class="term" title="表示黑桃配合和一门单缺。开叫人可用 3♠ 问单缺。">Mini-Splinter 3♥</strong><br><span>10-12 点，有单缺</span></td>
+        <td><strong>伯根加叫 3♣</strong><br><span>7-9 点</span></td>
+        <td rowspan="2"><strong>伯根加叫 3♦</strong><br><span>10-12 点</span><br>或 <strong class="term" title="表示黑桃配合和一门单缺。开叫人可用 3♠ 问单缺。">Mini-Splinter 3♥</strong><br><span>10-12 点，有单缺</span></td>
         <td rowspan="2"><strong>Jacoby 2NT</strong><br><span>13 点以上</span><br>或 <strong class="term" title="表示黑桃配合。3NT 报红桃单缺，4m 报所叫低花单缺。">Splinter 3NT/4m</strong><br><span>13-15 点，报单缺</span></td>
       </tr>
       <tr>
@@ -577,7 +577,7 @@ title: 第二章：一阶花色应叫
       <tr>
         <th scope="row">有第二套 m</th>
         <td colspan="2"><strong>2m</strong><br><span>11-17 点</span></td>
-        <td><strong>3m</strong><br><span>18-21 点，逼局</span></td>
+        <td><strong>3m</strong><br><span>18-21 点，FG</span></td>
       </tr>
       <tr>
         <th scope="row">有 6 张 ♥</th>
@@ -589,13 +589,13 @@ title: 第二章：一阶花色应叫
         <th scope="row">有 ♠ 配合</th>
         <td><strong>2♠</strong><br><span>11-13 点，4 张支持</span></td>
         <td><strong>3♠</strong><br><span>14-16 点，4 张支持</span></td>
-        <td><strong>4♣/4♦</strong><br><span class="term" title="显示对黑桃的配合和所叫低花的单缺。">Splinter</span></td>
+        <td><strong class="term" title="显示对黑桃的配合和所叫低花的单缺。">Splinter 4m</strong><br><span>FG</span></td>
       </tr>
       <tr>
         <th scope="row">均型</th>
         <td><strong>1NT</strong><br><span>12-14 点</span></td>
         <td>——</td>
-        <td><strong>2NT</strong><br><span>18-19 点</span></td>
+        <td><strong>2NT</strong><br><span>18-19 点，FG</span></td>
       </tr>
     </tbody>
   </table>
