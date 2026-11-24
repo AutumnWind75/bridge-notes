@@ -9,7 +9,7 @@ title: 第五章：应叫阻击叫
   <p><strong>弱二开叫描述：</strong> 第 1/2/3 家为弱阻击，<strong>6-10 点，6 张以上套</strong>（套越长，点力可酌情降低）；第 4 家为 <strong>9-12 点，6 张以上好套</strong>。</p>
 </div>
 
-## 5.1 第一应叫（同伴开叫 2<span class="suit red">♦</span>/2<span class="suit red">♥</span>/2<span class="suit black">♠</span> 后）
+## 第一应叫（同伴开叫 2<span class="suit red">♦</span>/2<span class="suit red">♥</span>/2<span class="suit black">♠</span> 后）
 
 <div class="response-section">
   <div class="response-header">

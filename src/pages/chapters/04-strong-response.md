@@ -9,7 +9,7 @@ title: 第四章：2♣ 强牌应叫
   <p><strong>2♣ 开叫描述：</strong> 强开叫。22 点以上任意牌型。</p>
 </div>
 
-## 4.1 第一应叫（2♣ - ?）
+## 第一应叫（2♣ - ?）
 
 <div class="response-section">
   <div class="response-header">
@@ -44,7 +44,7 @@ title: 第四章：2♣ 强牌应叫
   </div>
 </div>
 
-## 4.2 2♦ 应叫的后续（2♣ - 2♦ - ?）
+## 2♦ 应叫的后续（2♣ - 2♦ - ?）
 
 <div class="response-section">
   <div class="response-header">
@@ -80,7 +80,7 @@ title: 第四章：2♣ 强牌应叫
   </div>
 </div>
 
-## 4.3 2NT 应叫的后续（2♣ - 2NT - ?）
+## 2NT 应叫的后续（2♣ - 2NT - ?）
 
 <div class="response-section">
   <div class="response-header">

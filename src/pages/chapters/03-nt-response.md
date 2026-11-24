@@ -9,7 +9,7 @@ title: 第三章：无将开叫后的应叫
   <p>无将开叫（1NT 15-17 点，2NT 20-21 点）精确描述了牌力与均型牌，但缺失了高花和低花配合的信息。因此，本章将大量使用<strong>约定叫</strong>来寻找高花配合或试探满贯。</p>
 </div>
 
-## 第一部分：同伴开叫 1NT（15-17 点均型）后
+## 同伴开叫 1NT（15-17 点均型）后
 
 <div class="quote-box">
   <p>1NT 开叫后，应叫方的所有 2 阶叫品（除 2NT 外）通常都是约定叫，用于寻找配合。</p>
@@ -55,7 +55,7 @@ title: 第三章：无将开叫后的应叫
     <h3>2♦ / 2♥ 转移叫（Jacoby Transfer）</h3>
   </div>
   <div class="response-body">
-    <p><strong>目的：</strong> 让牌力较强、拥有大牌的开叫人成为庄家，保护其手中的大牌不被首攻穿梭。应叫人可以持 0 点长套，也可以是逼局实力。</p>
+    <p><strong>目的：</strong> 让牌力较强、拥有大牌的开叫人成为庄家，保护其手中的大牌不被首攻穿梭。应叫人可以持 <strong>0 点</strong>长套，也可以是逼局实力。</p>
     <div class="j2nt-table-wrapper">
 <table class="j2nt-table">
 <thead>
@@ -196,7 +196,7 @@ title: 第三章：无将开叫后的应叫
   </div>
   <div class="response-body">
     <p><strong>条件：</strong> 16-17 点，均型牌。</p>
-    <p><strong>逻辑：</strong> 邀请开叫人在高限时上 6NT。注意：这里不是问 A。</p>
+    <p><strong>逻辑：</strong> 邀请开叫人在高限时上 6NT。注意：这里不是罗马关键张。</p>
   </div>
 </div>
 
@@ -210,7 +210,7 @@ title: 第三章：无将开叫后的应叫
   </div>
 </div>
 
-## 第二部分：同伴开叫 2NT（20-21 点均型）后
+## 同伴开叫 2NT（20-21 点均型）后
 
 <div class="quote-box">
   <p>2NT 开叫后，由于点力极高，应叫方通常只要考虑寻找高花配合或直接试探满贯。</p>
