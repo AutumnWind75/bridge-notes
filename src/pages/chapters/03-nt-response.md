@@ -44,35 +44,37 @@ title: 第三章：无将开叫后的应叫
 <tbody>
 <tr>
 <td class="summary-row-label">有 6 张 M</td>
-<td rowspan="2">2♦/♥-2M<br><span>点力没有下限</span></td>
-<td>2♦/♥–2M–3M<br><span>邀请</span></td>
-<td>Texas 转移：4♦/♥-4M<br><span>逼局，无满贯兴趣</span></td>
+<td rowspan="2"><strong>2♦/♥</strong>-2♥/♠<br><span>点力没有下限</span></td>
+<td><strong>2♦/♥</strong>–2♥/♠–3♥/♠<br><span>邀请</span></td>
+<td>Texas 转移：<strong>4♦/♥</strong>-4♥/♠<br><span>逼局，无满贯兴趣</span></td>
 </tr>
 <tr>
 <td class="summary-row-label">有 5 张 M</td>
-<td>2♦/♥–2M–2NT<br><span>邀请，不保证均型</span><br>2♦–2♥–2♠<br><span>邀请，5-5 双高花</span></td>
-<td>2♦/♥–2M–新花<br><span>逼局，显示第二套</span></td>
+<td><strong>2♦/♥</strong>–2♥/♠–2NT<br><span>邀请，不保证均型</span><br><strong>2♦</strong>–2♥–2♠<br><span>邀请，5-5 双高花</span></td>
+<td><strong>2♦/♥</strong>–2♥/♠–新花<br><span>逼局，显示第二套</span></td>
 </tr>
 <tr>
 <td class="summary-row-label">有 4 张 M</td>
 <td>—</td>
-<td colspan="2">Stayman：2♣<br><span>8 点以上</span></td>
+<td colspan="2">Stayman <strong>2♣</strong><br><span>8 点以上</span></td>
 </tr>
 <tr>
 <td class="summary-row-label">有低花长套</td>
 <td>2♠–3♣–Pass / 3♦<br><span>0-7 点，6 张以上 ♣/♦</span></td>
-<td>3m<br><span>8-9 点，6 张 ♣/♦，邀请 3NT</span><br>2♠–3♣–4m<br><span>6-7 点，7 张低花，畸形牌</span></td>
-<td>3M<br><span>14-15 点，5-4 低花，M 单缺</span><br>2♠–3♣–3NT<br><span>14-15 点，5-4 低花，5-4-2-2 牌型</span><br>4♠<br><span>10-14 调整点，6-5 低花，畸形</span></td>
+<td><strong>3m</strong><br><span>8-9 点，6 张 ♣/♦，邀请 3NT</span><br><strong>2♠</strong>–3♣–4m<br><span>6-7 点，7 张低花，畸形牌</span></td>
+<td><strong>3M</strong><br><span>14-15 点，5-4 低花，M 单缺</span><br><strong>2♠</strong>–3♣–3NT<br><span>14-15 点，5-4 低花，5-4-2-2 牌型</span><br><strong>4♠</strong><br><span>10-14 调整点，6-5 低花，畸形</span></td>
 </tr>
 <tr>
 <td class="summary-row-label">均型</td>
 <td>—</td>
-<td>2NT<br><span>8-9 点，无 4 张高花</span></td>
-<td>3NT<br><span>进局止叫</span><br>4NT<br><span>15-17 点，示量邀请；任意 4-3-3-3，或无 4 张高花的 4-4-3-2</span></td>
+<td><strong>2NT</strong><br><span>8-9 点，无 4 张高花</span></td>
+<td><strong>3NT</strong><br><span>进局止叫</span><br><strong>4NT</strong><br><span>15-17 点，示量邀请；任意 4-3-3-3，或无 4 张高花的 4-4-3-2</span></td>
 </tr>
 </tbody>
 </table>
 </div>
+
+注意：Jacoby 转移后的 2NT 不保证均型，而只表示应叫人是邀请实力，让开叫人选局打！
 
 
 ## 同伴开叫 2NT（20-21 点均型）后
