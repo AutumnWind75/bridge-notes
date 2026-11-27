@@ -9,164 +9,7 @@ title: 第三章：无将开叫后的应叫
   <p>无将开叫（1NT 15-17 点，2NT 20-21 点）精确描述了牌力与均型牌，但缺失了高花和低花配合的信息。因此，本章将大量使用<strong>约定叫</strong>来寻找高花配合或试探满贯。</p>
 </div>
 
-## 同伴开叫 1NT（15-17 点均型）后
-
-<div class="quote-box">
-  <p>1NT 开叫后，应叫方的所有 2 阶叫品（除 2NT 外）通常都是约定叫，用于寻找配合。</p>
-</div>
-
-<div class="response-section highlight-section">
-  <div class="response-header">
-    <span class="badge purple">约定</span>
-    <h3>2♣ 斯台曼（Stayman）</h3>
-  </div>
-  <div class="response-body">
-    <p><strong>目的：</strong> 寻找 4-4 高花配合。应叫人通常有 8 点以上，且至少有一门 4 张高花。</p>
-    <div class="j2nt-table-wrapper">
-<table class="j2nt-table">
-<thead>
-<tr>
-<th>开叫人的答叫</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="call-col"><strong>2♦</strong></td>
-<td>否认 4 张高花。</td>
-</tr>
-<tr>
-<td class="call-col"><strong>2♥</strong></td>
-<td>有 4 张红心（可能同时有 4 张黑桃）。</td>
-</tr>
-<tr>
-<td class="call-col"><strong>2♠</strong></td>
-<td>有 4 张黑桃，否认 4 张红心。</td>
-</tr>
-</tbody>
-</table>
-</div>
-  </div>
-</div>
-
-<div class="response-section">
-  <div class="response-header">
-    <span class="badge purple">约定</span>
-    <h3>2♦ / 2♥ 转移叫（Jacoby Transfer）</h3>
-  </div>
-  <div class="response-body">
-    <p><strong>目的：</strong> 让牌力较强、拥有大牌的开叫人成为庄家，保护其手中的大牌不被首攻穿梭。应叫人可以持 <strong>0 点</strong>长套，也可以是逼局实力。</p>
-    <div class="j2nt-table-wrapper">
-<table class="j2nt-table">
-<thead>
-<tr>
-<th>应叫人叫品</th>
-<th>开叫人必须叫</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="call-col"><strong>2♦</strong></td>
-<td><strong>2♥</strong></td>
-<td>应叫人至少有 5 张红心。</td>
-</tr>
-<tr>
-<td class="call-col"><strong>2♥</strong></td>
-<td><strong>2♠</strong></td>
-<td>应叫人至少有 5 张黑桃。</td>
-</tr>
-</tbody>
-</table>
-</div>
-  </div>
-</div>
-
-<div class="response-section highlight-section">
-  <div class="response-header">
-    <span class="badge purple">约定</span>
-    <h3>2♠ 低花转移（转 3♣）</h3>
-  </div>
-  <div class="response-body">
-    <p><strong>目的：</strong> 处理应叫人的低花牌型。开叫人必须无条件叫 3♣。根据应叫人后续的叫牌，区分弱牌和逼局牌。</p>
-    <div class="j2nt-table-wrapper">
-<table class="j2nt-table">
-<thead>
-<tr>
-<th>后续叫牌</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="call-col"><strong>Pass</strong></td>
-<td>单套弱低花，通常是长梅花，不想打 1NT。</td>
-</tr>
-<tr>
-<td class="call-col"><strong>3♦</strong></td>
-<td>双套弱低花（至少 5-5），让开叫人在 3♦ 和 3♣ 中选一个。</td>
-</tr>
-<tr>
-<td class="call-col"><strong>3♥ / 3♠</strong></td>
-<td>双低花逼局牌，所叫花色为单缺，告诉同伴“我两门低花都很长且有满贯兴趣”。</td>
-</tr>
-</tbody>
-</table>
-</div>
-  </div>
-</div>
-
-<div class="response-section">
-  <div class="response-header">
-    <span class="badge purple">自然</span>
-    <h3>2NT（自然邀请）</h3>
-  </div>
-  <div class="response-body">
-    <p><strong>条件：</strong> 8-9 点，均型牌，无 4 张高花。</p>
-    <p><strong>逻辑：</strong> 邀请开叫人如果是 16-17 点的高限，就叫 3NT 进局；如果是 15 点低限，就 Pass。</p>
-  </div>
-</div>
-
-<div class="response-section">
-  <div class="response-header">
-    <span class="badge purple">自然</span>
-    <h3>3♣ / 3♦（低花邀请）</h3>
-  </div>
-  <div class="response-body">
-    <p><strong>条件：</strong> 8-9 点，6 张以上的 ♣ 或 ♦ 长套。</p>
-    <p><strong>逻辑：</strong> 邀请开叫人在高限且配合好时叫 3NT。</p>
-  </div>
-</div>
-
-<div class="response-section highlight-section">
-  <div class="response-header">
-    <span class="badge purple">约定</span>
-    <h3>3♥ / 3♠（低花 5-4，逼局）</h3>
-  </div>
-  <div class="response-body">
-    <p><strong>条件：</strong> 双低花至少 5-4，逼局实力（通常 10 点以上）。</p>
-    <div class="j2nt-table-wrapper">
-<table class="j2nt-table">
-<thead>
-<tr>
-<th>应叫人叫品</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="call-col"><strong>3♥</strong></td>
-<td>双低花（♣和♦），<strong>红心单张</strong>。</td>
-</tr>
-<tr>
-<td class="call-col"><strong>3♠</strong></td>
-<td>双低花（♣和♦），<strong>黑桃单张</strong>。</td>
-</tr>
-</tbody>
-</table>
-</div>
-  </div>
-</div>
+在任何情况下，若确定要打无将定约，可使用 Gerber 问 A：
 
 <div class="response-section">
   <div class="response-header">
@@ -174,41 +17,63 @@ title: 第三章：无将开叫后的应叫
     <h3>4♣ 戈伯问 A（Gerber）</h3>
   </div>
   <div class="response-body">
-    <p><strong>逻辑：</strong> 直接问开叫人手里有几个 A。</p>
+    <p><strong>逻辑：</strong> 适用于无将定约。直接问开叫人手里有几个 A。</p>
     <p><strong>答叫：</strong> <strong>4♦</strong> = 0 或 4 个 A；<strong>4♥</strong> = 1 个 A；<strong>4♠</strong> = 2 个 A；<strong>4NT</strong> = 3 个 A。</p>
   </div>
 </div>
 
-<div class="response-section">
-  <div class="response-header">
-    <span class="badge purple">约定</span>
-    <h3>4♦ / 4♥ 德克萨斯转移叫（Texas）</h3>
-  </div>
-  <div class="response-body">
-    <p><strong>目的：</strong> 与 2♦/2♥ 的转移叫类似，也是为了保护开叫人，但 <strong>4♦</strong> 转移至 <strong>4♥</strong>，<strong>4♥</strong> 转移至 <strong>4♠</strong>，且应叫人通常承诺 6 张以上高花，主要是直接进局止叫，阻断了对手的干扰。</p>
-  </div>
+
+## 同伴开叫 1NT（15-17 点均型）后
+
+<div class="quote-box">
+  <p>1NT 开叫后，应叫方的所有 2 阶叫品（除 2NT 外）通常都是约定叫，用于寻找配合。</p>
 </div>
 
-<div class="response-section">
-  <div class="response-header">
-    <span class="badge purple">自然</span>
-    <h3>4NT（示量邀请）</h3>
-  </div>
-  <div class="response-body">
-    <p><strong>条件：</strong> 16-17 点，均型牌。</p>
-    <p><strong>逻辑：</strong> 邀请开叫人在高限时上 6NT。注意：这里不是罗马关键张。</p>
-  </div>
+<!-- ### 1NT 开叫后的应叫总览 -->
+
+<div class="j2nt-table-wrapper">
+<table class="j2nt-table nt-response-summary-table">
+<thead>
+<tr>
+<th>开叫 1NT 后续叫</th>
+<th>弱牌</th>
+<th>邀请</th>
+<th>强牌</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="summary-row-label">有 6 张 M</td>
+<td rowspan="2">2♦/♥-2M<br><span>点力没有下限</span></td>
+<td>2♦/♥–2M–3M<br><span>邀请</span></td>
+<td>Texas 转移：4♦/♥-4M<br><span>逼局，无满贯兴趣</span></td>
+</tr>
+<tr>
+<td class="summary-row-label">有 5 张 M</td>
+<td>2♦/♥–2M–2NT<br><span>邀请，不保证均型</span><br>2♦–2♥–2♠<br><span>邀请，5-5 双高花</span></td>
+<td>2♦/♥–2M–新花<br><span>逼局，显示第二套</span></td>
+</tr>
+<tr>
+<td class="summary-row-label">有 4 张 M</td>
+<td>—</td>
+<td colspan="2">Stayman：2♣<br><span>8 点以上</span></td>
+</tr>
+<tr>
+<td class="summary-row-label">有低花长套</td>
+<td>2♠–3♣–Pass / 3♦<br><span>0-7 点，6 张以上 ♣/♦</span></td>
+<td>3m<br><span>8-9 点，6 张 ♣/♦，邀请 3NT</span><br>2♠–3♣–4m<br><span>6-7 点，7 张低花，畸形牌</span></td>
+<td>3M<br><span>14-15 点，5-4 低花，M 单缺</span><br>2♠–3♣–3NT<br><span>14-15 点，5-4 低花，5-4-2-2 牌型</span><br>4♠<br><span>10-14 调整点，6-5 低花，畸形</span></td>
+</tr>
+<tr>
+<td class="summary-row-label">均型</td>
+<td>—</td>
+<td>2NT<br><span>8-9 点，无 4 张高花</span></td>
+<td>3NT<br><span>进局止叫</span><br>4NT<br><span>15-17 点，示量邀请；任意 4-3-3-3，或无 4 张高花的 4-4-3-2</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 
-<div class="response-section">
-  <div class="response-header">
-    <span class="badge purple">约定</span>
-    <h3>4♠（6-5 低花选局）</h3>
-  </div>
-  <div class="response-body">
-    <p><strong>逻辑：</strong> 表示 6 张梅花和 5 张方块，极度畸形，让开叫人选择打 5♣ 还是 5♦。</p>
-  </div>
-</div>
 
 ## 同伴开叫 2NT（20-21 点均型）后
 
@@ -295,16 +160,6 @@ title: 第三章：无将开叫后的应叫
 </tbody>
 </table>
 </div>
-  </div>
-</div>
-
-<div class="response-section">
-  <div class="response-header">
-    <span class="badge purple">约定</span>
-    <h3>4♣ 戈伯问 A（Gerber）</h3>
-  </div>
-  <div class="response-body">
-    <p><strong>逻辑：</strong> 与 1NT 后的 4♣ 相同。直接问 A，按 0/4, 1, 2, 3 回答 4♦, 4♥, 4♠, 4NT。</p>
   </div>
 </div>
 
@@ -431,6 +286,26 @@ title: 第三章：无将开叫后的应叫
     border-bottom: 1px solid #f1f5f9;
     color: #334155;
     line-height: 1.5;
+  }
+  .nt-response-summary-table {
+    min-width: 900px;
+    text-align: center;
+  }
+  .nt-response-summary-table th,
+  .nt-response-summary-table td {
+    border-left: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .nt-response-summary-table td span {
+    color: #64748b;
+    font-size: 0.85rem;
+  }
+  .nt-response-summary-table .summary-row-label {
+    width: 15%;
+    white-space: nowrap;
+    font-weight: 600;
   }
   .j2nt-table tr:last-child td { border-bottom: none; }
   .j2nt-table tr:hover td { background: #f8fafc; }
