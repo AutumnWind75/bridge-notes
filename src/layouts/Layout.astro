@@ -69,6 +69,26 @@ const currentChapter = chapters.find((chapter) => chapter.path === currentPath);
 				<h1 class="chapter-topbar-title">{currentChapter.title}</h1>
 			</header>
 		)}
+		{isChapterPage && (
+			<>
+				<button
+					class="toc-toggle"
+					type="button"
+					aria-expanded="false"
+					aria-controls="chapter-toc"
+				>
+					☷ 章节目录
+				</button>
+				<aside class="chapter-toc" id="chapter-toc" aria-label="本章目录" hidden>
+					<div class="chapter-toc-scroll">
+						<h2>本章目录</h2>
+						<nav aria-label="Markdown 小节">
+							<ul class="chapter-toc-list"></ul>
+						</nav>
+					</div>
+				</aside>
+			</>
+		)}
 		<div class="repo-status" aria-label="博客更新信息">
 			<span class="last-update">最后更新：{formattedLastUpdate}</span>
 			<a
@@ -85,6 +105,79 @@ const currentChapter = chapters.find((chapter) => chapter.path === currentPath);
 			</a>
 		</div>
 		<div class="page-content"><slot /></div>
+		{isChapterPage && (
+			<script>
+				const toc = document.querySelector<HTMLElement>('#chapter-toc');
+				const tocList = document.querySelector<HTMLUListElement>('.chapter-toc-list');
+				const tocToggle = document.querySelector<HTMLButtonElement>('.toc-toggle');
+				const content = document.querySelector<HTMLElement>('.page-content');
+
+				if (toc && tocList && tocToggle && content) {
+					const headings = Array.from(content.querySelectorAll<HTMLElement>('h2, h3'));
+
+					headings.forEach((heading, index) => {
+						if (!heading.id) heading.id = `chapter-section-${index + 1}`;
+						const item = document.createElement('li');
+						item.className = `chapter-toc-item level-${heading.tagName.toLowerCase()}`;
+						const link = document.createElement('a');
+						link.href = `#${heading.id}`;
+						link.textContent = heading.innerText.trim();
+						item.append(link);
+						tocList.append(item);
+					});
+
+					toc.hidden = headings.length === 0;
+					tocToggle.hidden = headings.length === 0;
+
+					const isMobileToc = () => window.matchMedia('(max-width: 900px)').matches;
+					const updateTocToggle = () => {
+						const isOpen = isMobileToc()
+							? document.body.classList.contains('toc-open')
+							: !document.body.classList.contains('toc-collapsed');
+						tocToggle.setAttribute('aria-expanded', String(isOpen));
+						tocToggle.textContent = isOpen ? '× 收起目录' : '☷ 展开目录';
+					};
+					const closeToc = () => {
+						if (isMobileToc()) document.body.classList.remove('toc-open');
+						updateTocToggle();
+					};
+
+					tocToggle.addEventListener('click', () => {
+						if (isMobileToc()) {
+							document.body.classList.toggle('toc-open');
+						} else {
+							document.body.classList.toggle('toc-collapsed');
+						}
+						updateTocToggle();
+					});
+					window.addEventListener('resize', updateTocToggle);
+					updateTocToggle();
+
+					tocList.addEventListener('click', (event) => {
+						if ((event.target as HTMLElement).closest('a')) closeToc();
+					});
+
+					const updateActiveHeading = () => {
+						const activeHeading = [...headings]
+							.reverse()
+							.find((heading) => heading.getBoundingClientRect().top <= 150) ?? headings[0];
+
+						tocList.querySelectorAll('a').forEach((link) => {
+							if (link.hash === `#${activeHeading.id}`) {
+								link.classList.add('active');
+								link.setAttribute('aria-current', 'location');
+							} else {
+								link.classList.remove('active');
+								link.removeAttribute('aria-current');
+							}
+						});
+					};
+
+					window.addEventListener('scroll', updateActiveHeading, { passive: true });
+					updateActiveHeading();
+				}
+			</script>
+		)}
 	</body>
 </html>
 
@@ -101,8 +194,20 @@ const currentChapter = chapters.find((chapter) => chapter.path === currentPath);
 	.page-content {
 		min-height: 100%;
 	}
+	:global(.chapter-page .page-content) {
+		margin-left: 280px;
+		margin-right: 1.25rem;
+		transition: margin-left 0.2s ease;
+	}
+	:global(body.chapter-page.toc-collapsed .page-content) {
+		margin-left: 4.5rem;
+	}
 	:global(.chapter-page .page-content > h1) {
 		display: none;
+	}
+	:global(.chapter-page .page-content h2),
+	:global(.chapter-page .page-content h3) {
+		scroll-margin-top: 84px;
 	}
 	.chapter-topbar {
 		position: fixed;
@@ -165,6 +270,92 @@ const currentChapter = chapters.find((chapter) => chapter.path === currentPath);
 	.top-nav-btn:hover {
 		filter: brightness(0.97);
 	}
+	.chapter-toc {
+		position: fixed;
+		top: 120px;
+		bottom: 1rem;
+		left: 1rem;
+		z-index: 80;
+		width: 245px;
+		box-sizing: border-box;
+		overflow: hidden;
+		border: 1px solid #e2e8f0;
+		border-radius: 10px;
+		background: rgba(255, 255, 255, 0.97);
+		box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+		font-family: sans-serif;
+		transition: transform 0.2s ease, visibility 0s;
+	}
+	.chapter-toc-scroll {
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		padding: 1rem 0.75rem;
+		overflow-y: auto;
+	}
+	:global(body.chapter-page.toc-collapsed) .chapter-toc {
+		visibility: hidden;
+		transform: translateX(calc(-100% - 1rem));
+		transition: transform 0.2s ease, visibility 0s linear 0.2s;
+	}
+	.chapter-toc[hidden],
+	.toc-toggle[hidden] {
+		display: none;
+	}
+	.chapter-toc-scroll h2 {
+		margin: 0 0 0.75rem;
+		padding: 0 0.5rem 0.65rem;
+		border-bottom: 1px solid #e2e8f0;
+		color: #1e293b;
+		font-size: 0.95rem;
+	}
+	.chapter-toc-list {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.chapter-toc-item a {
+		display: block;
+		padding: 0.45rem 0.55rem;
+		border-radius: 6px;
+		color: #475569;
+		font-size: 0.86rem;
+		line-height: 1.4;
+		text-decoration: none;
+	}
+	.chapter-toc-item.level-h3 a {
+		padding-left: 1.25rem;
+		font-size: 0.82rem;
+	}
+	.chapter-toc-item a:hover {
+		background: #f8fafc;
+		color: #6d28d9;
+	}
+	.chapter-toc-item a.active {
+		background: #f3e8ff;
+		color: #6d28d9;
+		font-weight: 600;
+	}
+	.toc-toggle {
+		display: inline-flex;
+		position: fixed;
+		top: 76px;
+		left: 1rem;
+		z-index: 96;
+		align-items: center;
+		gap: 0.4rem;
+		padding: 0.55rem 0.75rem;
+		border: 1px solid #c4b5fd;
+		border-radius: 999px;
+		background: #7c3aed;
+		color: #ffffff;
+		font: 600 0.84rem sans-serif;
+		box-shadow: 0 4px 14px rgba(91, 33, 182, 0.25);
+		cursor: pointer;
+	}
 	.repo-status {
 		position: fixed;
 		top: 1rem;
@@ -224,6 +415,11 @@ const currentChapter = chapters.find((chapter) => chapter.path === currentPath);
 		body.chapter-page {
 			padding-top: 112px;
 		}
+		:global(.chapter-page .page-content),
+		:global(body.chapter-page.toc-collapsed .page-content) {
+			margin-left: 0;
+			margin-right: 0;
+		}
 		.chapter-topbar {
 			height: 112px;
 			grid-template-columns: 1fr;
@@ -245,6 +441,29 @@ const currentChapter = chapters.find((chapter) => chapter.path === currentPath);
 		}
 		.top-nav-btn {
 			max-width: calc(50vw - 1.25rem);
+		}
+		.chapter-toc {
+			top: 120px;
+			bottom: 1rem;
+			left: 0.75rem;
+			width: min(300px, calc(100vw - 1.5rem));
+			z-index: 95;
+			transform: translateX(calc(-100% - 1rem));
+			visibility: hidden;
+			transition: transform 0.2s ease, visibility 0s linear 0.2s;
+		}
+		:global(body.toc-open) .chapter-toc {
+			transform: translateX(0);
+			visibility: visible;
+			transition: transform 0.2s ease, visibility 0s;
+		}
+		.toc-toggle {
+			display: inline-flex;
+			bottom: 1rem;
+			top: auto;
+			left: 0.75rem;
+			padding: 0.65rem 0.85rem;
+			font-size: 0.88rem;
 		}
 	}
 </style>
