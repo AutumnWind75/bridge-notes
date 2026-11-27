@@ -113,12 +113,14 @@ const currentChapter = chapters.find((chapter) => chapter.path === currentPath);
 				const content = document.querySelector<HTMLElement>('.page-content');
 
 				if (toc && tocList && tocToggle && content) {
-					const headings = Array.from(content.querySelectorAll<HTMLElement>('h2, h3'));
+					const headings = Array.from(content.querySelectorAll<HTMLElement>('h2, h3, h4, h5, h6'));
 
 					headings.forEach((heading, index) => {
 						if (!heading.id) heading.id = `chapter-section-${index + 1}`;
 						const item = document.createElement('li');
-						item.className = `chapter-toc-item level-${heading.tagName.toLowerCase()}`;
+						const headingLevel = Number(heading.tagName.slice(1));
+						item.className = `chapter-toc-item level-${headingLevel}`;
+						item.style.setProperty('--toc-indent', `${headingLevel - 2}rem`);
 						const link = document.createElement('a');
 						link.href = `#${heading.id}`;
 						link.textContent = heading.innerText.trim();
@@ -317,24 +319,29 @@ const currentChapter = chapters.find((chapter) => chapter.path === currentPath);
 		padding: 0;
 		list-style: none;
 	}
-	.chapter-toc-item a {
+	:global(.chapter-toc-item a) {
 		display: block;
 		padding: 0.45rem 0.55rem;
+		padding-left: calc(0.55rem + var(--toc-indent, 0rem));
 		border-radius: 6px;
 		color: #475569;
 		font-size: 0.86rem;
 		line-height: 1.4;
 		text-decoration: none;
 	}
-	.chapter-toc-item.level-h3 a {
-		padding-left: 1.25rem;
+	:global(.chapter-toc-item.level-3 a) {
 		font-size: 0.82rem;
 	}
-	.chapter-toc-item a:hover {
+	:global(.chapter-toc-item.level-4 a),
+	:global(.chapter-toc-item.level-5 a),
+	:global(.chapter-toc-item.level-6 a) {
+		font-size: 0.8rem;
+	}
+	:global(.chapter-toc-item a:hover) {
 		background: #f8fafc;
 		color: #6d28d9;
 	}
-	.chapter-toc-item a.active {
+	:global(.chapter-toc-item a.active) {
 		background: #f3e8ff;
 		color: #6d28d9;
 		font-weight: 600;
